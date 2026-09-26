@@ -2,7 +2,7 @@
 <html lang="es-MX">
 <head>
 <meta charset="utf-8">
-<title>Autos Ochoa · Desarrollo Organizacional e Innovación en Talento</title>
+<title>Autos Ochoa · Plan de talento 2026–2027</title>
 <meta name="description" content="Reto Final de Administración del Talento Humano: ocho módulos de desarrollo organizacional para el plan de expansión «Ochoa 5».">
 <style>
 @font-face{font-family:"Inter";src:url("fonts/Inter-400.ttf") format("truetype");font-weight:400;font-style:normal}
@@ -317,6 +317,21 @@ td b, td strong{font-weight:650}
 .concl p{font-size:8.3pt;line-height:1.42;margin-bottom:4px}
 .refs ul li{font-size:6.9pt;line-height:1.32;margin-bottom:1.5px}
 .gantt .row-sep{grid-column:1/-1;height:1px;background:var(--line2)}
+
+/* ---------- Qué cambia para cada quien ---------- */
+.people{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pcard{border:1px solid var(--line);border-radius:8px;padding:9px 12px;background:#fff}
+.pcard h3{font-size:8pt;letter-spacing:.02em;text-transform:none;color:var(--navy);margin-bottom:5px;font-family:var(--serif);font-size:11pt;font-weight:600}
+.pcard ul{font-size:8.2pt;line-height:1.4}
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.next>div{border-top:3px solid var(--accent);padding-top:6px}
+.next span{display:block;font-size:6.6pt;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.next b{display:block;font-size:9pt;margin:2px 0 3px}
+.next ul{font-size:7.8pt;line-height:1.4}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+.faq>div{border-left:3px solid var(--navy);padding:2px 0 2px 10px}
+.faq b{display:block;font-size:8.4pt;color:var(--ink);margin-bottom:1px}
+.faq p{margin:0;font-size:8pt;color:var(--ink2);line-height:1.4}
 </style>
 </head>
 <body>
@@ -326,134 +341,134 @@ td b, td strong{font-weight:650}
   <div class="content">
     <div class="cover-top"><span>Autos Ochoa — Grupo Ochoa</span><span>Monterrey, Nuevo León</span></div>
     <div class="cover-rule"></div>
-    <div class="cover-kicker">Sistema Integral de Gestión de Talento · Parte 2</div>
-    <h1 class="cover-title">Herramientas de desarrollo organizacional e innovación en talento humano</h1>
-    <p class="cover-sub">Informe estratégico para el plan de expansión «Ochoa 5»: ocho módulos que fortalecen el clima laboral, la cultura, la experiencia del colaborador y la sostenibilidad del talento, con prácticas de Industria 4.0 y estándares de excelencia.</p>
+    <div class="cover-kicker">Plan de talento · Parte 2</div>
+    <h1 class="cover-title">Cómo vamos a formar, cuidar y hacer crecer a nuestra gente</h1>
+    <p class="cover-sub">Ocho acciones de Recursos Humanos para abrir cuatro sucursales nuevas sin perder lo que nos hace Autos Ochoa. Septiembre 2026 – agosto 2027.</p>
     <div class="cover-stats">
-      <div><div class="v">1 → 5</div><div class="l">puntos de venta en 12 meses<br>Guadalupe · San Nicolás · Apodaca · Saltillo</div></div>
-      <div><div class="v">8 → 34</div><div class="l">colaboradores<br>26 posiciones netas</div></div>
-      <div><div class="v">5 → 60</div><div class="l">unidades vendidas al mes<br>venta consolidada</div></div>
-      <div><div class="v">4.5 → 49</div><div class="l">unidades de punto de equilibrio<br>el umbral se multiplica por 11</div></div>
+      <div><div class="v">1 → 5</div><div class="l">sucursales en 12 meses<br>Guadalupe · San Nicolás · Apodaca · Saltillo</div></div>
+      <div><div class="v">8 → 34</div><div class="l">personas en el equipo<br>26 puestos nuevos</div></div>
+      <div><div class="v">5 → 60</div><div class="l">autos vendidos al mes<br>entre todas las sucursales</div></div>
+      <div><div class="v">4.5 → 49</div><div class="l">autos al mes para no perder<br>(punto de equilibrio)</div></div>
     </div>
     <div class="cover-mods">
-      <div><b>1</b><span>Capacitación y Desarrollo<small>Plan de Formación Blended «Academia Ochoa»</small></span></div>
-      <div><b>5</b><span>Responsabilidad Social y Talento<small>Tres políticas ASG de inclusión y equidad</small></span></div>
-      <div><b>2</b><span>Clima Laboral y Experiencia del Colaborador<small>Diagnóstico simulado y plan de mejora a 6 meses</small></span></div>
-      <div><b>6</b><span>Sucesión y Talento Clave<small>Metodología 9-Box y mapa de sucesión</small></span></div>
-      <div><b>3</b><span>Employee Branding y Fidelización<small>EVP, plan de comunicación y fidelización</small></span></div>
-      <div><b>7</b><span>Digitalización y Metodologías Ágiles<small>HR Tech y Scrum/Kanban de RH</small></span></div>
-      <div><b>4</b><span>Gestión del Desempeño y Competencias<small>Modelo de 6 competencias y evaluación 360°</small></span></div>
-      <div><b>8</b><span>Innovación Organizacional y Excelencia<small>Copiloto Modelo Ochoa y certificación recomendada</small></span></div>
+      <div><b>1</b><span>Capacitación y Desarrollo<small>Academia Ochoa: formación presencial y en línea</small></span></div>
+      <div><b>5</b><span>Responsabilidad Social<small>Tres políticas de inclusión y equidad</small></span></div>
+      <div><b>2</b><span>Clima Laboral y Experiencia<small>Encuesta «Pulso Ochoa» y plan de 6 meses</small></span></div>
+      <div><b>6</b><span>Sucesión y Talento Clave<small>Mapa de talento de 9 cuadros (9-Box)</small></span></div>
+      <div><b>3</b><span>Marca Empleadora y Permanencia<small>Lo que ofrecemos y cómo cuidamos al equipo</small></span></div>
+      <div><b>7</b><span>Digitalización y Agilidad<small>Herramientas digitales y ciclos de 2 semanas</small></span></div>
+      <div><b>4</b><span>Desempeño y Competencias<small>Seis competencias y evaluación 360°</small></span></div>
+      <div><b>8</b><span>Innovación y Excelencia<small>Las prácticas del fundador en el CRM y certificación</small></span></div>
     </div>
     <div class="cover-foot"><span>Administración del Talento Humano · Reto Final</span><span>Septiembre 2026</span></div>
   </div>
 </section>
 
-<!-- =============================== 2 · RESUMEN =============================== -->
+<!-- =============================== 2 · EN POCAS PALABRAS =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Resumen ejecutivo</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>En pocas palabras</b></header>
   <div class="content">
-    <h1>Resumen ejecutivo</h1>
-    <p class="lead">La Parte 1 del Sistema Integral de Gestión de Talento (SIGT) resolvió cómo <strong>atraer, seleccionar, contratar y pagar</strong> al perfil crítico de Autos Ochoa: el <strong>Gerente de Sucursal</strong>, único rol con responsabilidad directa sobre el punto de equilibrio de cada plaza (10 unidades mensuales). Esta Parte 2 diseña lo que ocurre después de la firma: cómo se forma, cómo se evalúa, cómo vive la empresa, por qué se queda, quién lo sucede y cómo la organización aprende más rápido que su competencia.</p>
-    <p>El plan «Ochoa 5» lleva a la empresa de 8 a 34 colaboradores y de 1 a 5 sucursales en doce meses. En ese escenario, contratar bien no basta: una sucursal cuyo gerente se certifica tarde, cuyo equipo no sabe quién da seguimiento a cada prospecto —hoy el 97% de los prospectos «Contactado» no avanza— o cuyo líder se va a los seis meses, cuesta <strong>~$200,000 de margen por cada mes sin liderazgo</strong> y <strong>~$500,000 por cada salida no deseada</strong>. Las ocho herramientas de este informe atacan esas tres restricciones y cada una se ancla de forma explícita a un objetivo estratégico de RH definido en la Parte 1:</p>
+    <h1>En pocas palabras</h1>
+    <p class="lead">Autos Ochoa va a pasar de una a cinco sucursales en un año. Para lograrlo necesitamos a la persona correcta al frente de cada una: el <strong>Gerente de Sucursal</strong>. En la Parte 1 definimos cómo contratarlo y cuánto pagarle. Este documento explica <strong>qué vamos a hacer a partir de ahora</strong> para prepararlo, evaluarlo, cuidarlo y tener quién lo reemplace, y cómo eso ayuda a todo el equipo.</p>
+    <p><strong>¿Por qué ahora?</strong> Con cinco sucursales tendremos que vender casi 49 autos al mes solo para no perder dinero; hoy bastan 4.5. Cada mes que una sucursal opera sin un gerente preparado deja de ganar cerca de <strong>$200,000</strong>, y cuando un gerente se va, reemplazarlo cuesta alrededor de <strong>$500,000</strong>. Además, hoy el 97% de los clientes que contactamos no avanza porque nadie es responsable de darles seguimiento. Todo lo que proponemos apunta a tres objetivos, los mismos de la Parte 1:</p>
     <div class="oe-cards">
-      <div class="oe-card" style="--c:var(--oe1)"><span class="oe o1">OE-1</span><div class="t">Cobertura anticipada del talento crítico</div><div class="m">Gerente contratado y certificado 60 días antes de abrir. <b>KPI:</b> Índice de Cobertura Anticipada 100% · time-to-hire ≤45 días.</div></div>
-      <div class="oe-card" style="--c:var(--oe2)"><span class="oe o2">OE-2</span><div class="t">Calidad de contratación que replique el modelo</div><div class="m">Sucursal en punto de equilibrio en ≤120 días. <b>KPI:</b> Quality of Hire ≥80% (≥10 u/mes y ≥18% de cierre).</div></div>
-      <div class="oe-card" style="--c:var(--oe3)"><span class="oe o3">OE-3</span><div class="t">Retención del talento crítico y blindaje legal</div><div class="m">Conservar al talento formado. <b>KPI:</b> rotación no deseada ≤10% anual · cero contingencias laborales.</div></div>
+      <div class="oe-card" style="--c:var(--oe1)"><span class="oe o1">OE-1</span><div class="t">Gerente listo antes de abrir</div><div class="m">Contratado y certificado 60 días antes de la apertura, en las 4 sucursales. Vacante cubierta en 45 días o menos.</div></div>
+      <div class="oe-card" style="--c:var(--oe2)"><span class="oe o2">OE-2</span><div class="t">Sucursal rentable en 4 meses</div><div class="m">Que cada sucursal venda al menos 10 autos al mes antes de 120 días. Meta: 4 de cada 5 gerentes.</div></div>
+      <div class="oe-card" style="--c:var(--oe3)"><span class="oe o3">OE-3</span><div class="t">Que el talento se quede</div><div class="m">Que se vayan menos del 10% de los gerentes al año, siempre cumpliendo la ley laboral.</div></div>
     </div>
     <div>
-      <h2>Matriz de alineación de los ocho módulos</h2>
+      <h2>Las ocho acciones</h2>
       <table>
-        <thead><tr><th style="width:24%">Módulo · producto</th><th style="width:28%">Restricción de negocio que ataca</th><th style="width:14%">Objetivos</th><th style="width:25%">KPI líder · periodo</th><th style="width:9%;text-align:right">Inversión anual</th></tr></thead>
+        <thead><tr><th style="width:22%">Acción</th><th style="width:31%">Qué problema resuelve</th><th style="width:13%">Objetivo</th><th style="width:25%">Cómo sabremos que funciona</th><th style="width:9%;text-align:right">Costo al año</th></tr></thead>
         <tbody>
-          <tr><td><b>1 · Capacitación y Desarrollo</b><br><span class="muted">Plan de Formación Blended</span></td><td>El gerente llega a la apertura sin dominar el Modelo Ochoa; curva de aprendizaje de 120 días</td><td class="oes"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span></td><td>100% de gerentes certificados Nivel 1 a T-60 · por apertura</td><td class="num" style="text-align:right">$60,000</td></tr>
-          <tr><td><b>2 · Clima y Experiencia</b><br><span class="muted">Diagnóstico y plan a 6 meses</span></td><td>Roles difusos, atención de WhatsApp fuera de horario y percepción de reglas distintas para la familia</td><td class="oes"><span class="oe o3">OE-3</span><span class="oe o2">OE-2</span></td><td>Índice de clima de 54% a ≥70% favorable · mes 6</td><td class="num" style="text-align:right">$30,000</td></tr>
-          <tr><td><b>3 · Employee Branding</b><br><span class="muted">Comunicación y fidelización</span></td><td>Competir por gerentes contra Autos Trefa y Credimotors, con más marca y presupuesto</td><td class="oes"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></td><td>Rotación crítica ≤10% · anual; 40% de contrataciones por canal propio</td><td class="num" style="text-align:right">$40,000</td></tr>
-          <tr><td><b>4 · Desempeño</b><br><span class="muted">Competencias y 360°</span></td><td>Ninguna contratación se ha evaluado formalmente; sin evidencia para el KPI de calidad</td><td class="oes"><span class="oe o2">OE-2</span></td><td>Quality of Hire ≥80% · día 120; 360° semestral</td><td class="num" style="text-align:right">$10,000</td></tr>
-          <tr><td><b>5 · Responsabilidad Social</b><br><span class="muted">Tres políticas ASG</span></td><td>Giro masculinizado, comisiones informales y transición a segunda generación familiar</td><td class="oes"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></td><td>Brecha salarial ajustada por banda ≤5% · semestral</td><td class="num" style="text-align:right">$20,000</td></tr>
-          <tr><td><b>6 · Sucesión y Talento Clave</b><br><span class="muted">9-Box y mapa de sucesión</span></td><td>Dependencia total de la contratación externa y del fundador</td><td class="oes"><span class="oe o1">OE-1</span><span class="oe o3">OE-3</span></td><td>≥60% de puestos críticos con sucesor listo · semestral</td><td class="num" style="text-align:right">$12,000</td></tr>
-          <tr><td><b>7 · Digitalización y Ágil</b><br><span class="muted">HR Tech + Scrum/Kanban</span></td><td>26 contrataciones y 4 aperturas con una sola Coordinación de RH</td><td class="oes"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span></td><td>Time-to-hire ≤45 días · por vacante</td><td class="num" style="text-align:right">$0*</td></tr>
-          <tr><td><b>8 · Innovación y Excelencia</b><br><span class="muted">Copiloto IA + certificación</span></td><td>25 años de conocimiento concentrados en una sola persona</td><td class="oes"><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></td><td>Time-to-productivity ≤90 días en la 2.ª cohorte · por cohorte</td><td class="num" style="text-align:right">$69,000</td></tr>
+          <tr><td><b>1 · Academia Ochoa</b></td><td>Gerentes que llegan a abrir sin conocer nuestra forma de trabajar</td><td class="oes"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span></td><td>100% certificados 60 días antes de abrir</td><td class="num" style="text-align:right">$60,000</td></tr>
+          <tr><td><b>2 · Encuesta y plan de clima</b></td><td>Nadie sabe quién da seguimiento, WhatsApp fuera de horario y reglas que se sienten distintas para la familia</td><td class="oes"><span class="oe o3">OE-3</span><span class="oe o2">OE-2</span></td><td>Clima favorable de 54% a 70% o más en mayo 2027</td><td class="num" style="text-align:right">$30,000</td></tr>
+          <tr><td><b>3 · Marca empleadora</b></td><td>Competimos por gerentes con Trefa y Credimotors, que tienen más presupuesto</td><td class="oes"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></td><td>Menos del 10% de los gerentes se va al año</td><td class="num" style="text-align:right">$40,000</td></tr>
+          <tr><td><b>4 · Evaluación del desempeño</b></td><td>Hoy no evaluamos a nadie de forma formal</td><td class="oes"><span class="oe o2">OE-2</span></td><td>4 de cada 5 gerentes en su meta a los 120 días</td><td class="num" style="text-align:right">$10,000</td></tr>
+          <tr><td><b>5 · Políticas de inclusión</b></td><td>Giro con mayoría de hombres, comisiones por fuera y trato distinto a familiares</td><td class="oes"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></td><td>Diferencia de sueldo en el mismo puesto de 5% o menos</td><td class="num" style="text-align:right">$20,000</td></tr>
+          <tr><td><b>6 · Plan de sucesión</b></td><td>Todo gerente viene de fuera y el conocimiento depende del fundador</td><td class="oes"><span class="oe o1">OE-1</span><span class="oe o3">OE-3</span></td><td>6 de cada 10 puestos clave con reemplazo listo</td><td class="num" style="text-align:right">$12,000</td></tr>
+          <tr><td><b>7 · Digital y ágil</b></td><td>Una sola persona de RH para 26 contrataciones y 4 aperturas</td><td class="oes"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span></td><td>Vacante de gerente cubierta en 45 días o menos</td><td class="num" style="text-align:right">$0*</td></tr>
+          <tr><td><b>8 · Innovación</b></td><td>25 años de experiencia concentrados en una sola persona</td><td class="oes"><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></td><td>Gerente nuevo en su meta en 90 días (antes 120)</td><td class="num" style="text-align:right">$69,000</td></tr>
         </tbody>
       </table>
-      <p class="small" style="margin-top:4px">* La nómina con registro electrónico de asistencia (~$24,500 anuales) ya está presupuestada en la Parte 1; el resto usa activos existentes. Montos estimados en pesos mexicanos.</p>
+      <p class="small" style="margin-top:4px">* La nómina con checador electrónico (~$24,500 al año) ya está en el presupuesto de la Parte 1; lo demás usa herramientas que ya tenemos. Montos estimados en pesos.</p>
     </div>
     <div class="invest">
-      <div class="v">$241,000<small>INVERSIÓN INCREMENTAL ANUAL</small></div>
-      <p>Equivale a <b>menos de la mitad del costo de una sola salida no deseada de un Gerente</b> (~$500,000) y a <b>≈1% de la utilidad bruta anual a meta</b> ($23.0 millones = 60 unidades × $32,000 × 12 meses). Si las herramientas evitan una sola salida o adelantan un mes la llegada de una sucursal al punto de equilibrio, se pagan solas.</p>
+      <div class="v">$241,000<small>COSTO TOTAL AL AÑO</small></div>
+      <p>Es <b>menos de la mitad de lo que cuesta perder a un solo gerente</b> (~$500,000) y cerca del <b>1% de la utilidad bruta del año</b> cuando lleguemos a la meta ($23 millones). Si evitamos una sola salida o una sucursal llega un mes antes a su meta, el plan se paga solo.</p>
     </div>
-    <div class="callout"><h4>Tesis del informe</h4><p>La cultura que Autos Ochoa construyó en 25 años con 8 personas no se replica sola en cinco sucursales. Estas herramientas convierten la cercanía familiar y el conocimiento del fundador en procesos medibles, con dueño, fecha e indicador.</p></div>
+    <div class="callout"><h4>La idea central</h4><p>Lo que construimos en 25 años con 8 personas no se copia solo en cinco sucursales. Hay que enseñarlo, cuidarlo y medirlo. Cada acción tiene un responsable, una fecha y una forma de saber si funcionó.</p></div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>2</b></footer>
 </section>
 
 <!-- =============================== 3 · MÓDULO 1 =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 1 · Capacitación y Desarrollo</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 1 · Capacitación y Desarrollo</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">01</div><div><div class="eyebrow">Módulo 1 · Capacitación y Desarrollo</div><h1>«Academia Ochoa»: plan de formación <em>blended</em></h1></div></div>
+    <div class="mod-head"><div class="mod-num">01</div><div><div class="eyebrow">Módulo 1 · Capacitación y Desarrollo</div><h1>Academia Ochoa: preparar a cada gerente antes de abrir</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">Plan de Formación Blended de 3 niveles</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente de Sucursal (5) y banca de Asesores Senior</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">100% de gerentes certificados Nivel 1 a T-60 · por apertura</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Plan de formación mixto: presencial y en línea</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Gerentes y asesores que pueden llegar a gerente</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">100% de gerentes certificados 60 días antes de abrir</span></div>
     </div>
     <div class="cols" style="grid-template-columns:.92fr 1.08fr">
       <div>
         <h3>Objetivo del programa</h3>
-        <p>Que el <strong>100% de los Gerentes de Sucursal</strong> obtenga la Certificación Modelo Ochoa Nivel 1 al menos <strong>60 días antes de la apertura</strong> (OE-1) y que al menos 4 de 5 lleven su sucursal a <strong>≥10 unidades mensuales con ≥18% de cierre en ≤120 días</strong> (OE-2). En paralelo, certificar a 4 Asesores Senior en Nivel 3 como banca de sucesión al cierre de agosto de 2027.</p>
+        <p>Que cada gerente conozca y domine la forma de trabajar de Autos Ochoa <strong>antes de abrir su sucursal</strong>, y que en máximo <strong>120 días</strong> su sucursal venda al menos <strong>10 autos al mes</strong> con un cierre de 18% o más. Al mismo tiempo, preparar a 4 asesores senior para que puedan ser los próximos gerentes.</p>
       </div>
       <div>
-        <h3>Audiencia</h3>
+        <h3>A quién va dirigido</h3>
         <table class="t-tight">
-          <thead><tr><th style="width:44%">Segmento</th><th class="num">Pers.</th><th>Ruta</th><th class="num" style="text-align:right">h/año</th></tr></thead>
+          <thead><tr><th style="width:44%">Quién</th><th class="num">Personas</th><th>Qué cursa</th><th class="num" style="text-align:right">Horas/año</th></tr></thead>
           <tbody>
-            <tr><td><b>Gerentes de Sucursal</b></td><td class="num">5</td><td>Niveles 1 · 2 · 3</td><td class="num" style="text-align:right">80</td></tr>
-            <tr><td>Asesores Comerciales</td><td class="num">15</td><td>Nivel 1 · 39-B</td><td class="num" style="text-align:right">48</td></tr>
-            <tr><td>Asesores Senior (banca)</td><td class="num">4</td><td>+ Nivel 3</td><td class="num" style="text-align:right">+40</td></tr>
-            <tr><td>Coord. de Expedientes</td><td class="num">5</td><td>Nivel 1 parcial</td><td class="num" style="text-align:right">32</td></tr>
-            <tr><td>Padrinos y Dir. Comercial</td><td class="num">2–5</td><td>Formadores</td><td class="num" style="text-align:right">12</td></tr>
+            <tr><td><b>Gerentes de Sucursal</b></td><td class="num">5</td><td>Niveles 1, 2 y 3</td><td class="num" style="text-align:right">80</td></tr>
+            <tr><td>Asesores comerciales</td><td class="num">15</td><td>Nivel 1</td><td class="num" style="text-align:right">48</td></tr>
+            <tr><td>Asesores senior con potencial</td><td class="num">4</td><td>Además, Nivel 3</td><td class="num" style="text-align:right">+40</td></tr>
+            <tr><td>Coordinadores de expedientes</td><td class="num">5</td><td>Parte del Nivel 1</td><td class="num" style="text-align:right">32</td></tr>
+            <tr><td>Padrinos y Dir. Comercial</td><td class="num">2–5</td><td>Cómo enseñar</td><td class="num" style="text-align:right">12</td></tr>
           </tbody>
         </table>
       </div>
     </div>
     <div>
-      <h3>Temas clave · tres niveles de certificación</h3>
+      <h3>Temas clave · tres niveles</h3>
       <div class="levels">
-        <div class="level"><div class="lh"><b>Nivel 1 · Fundamentos Ochoa</b><span>Días 1–30 · 24 horas · certificación a T-60</span></div>
-          <ul><li>Promesa de marca: procedencia, inspección y garantía de 1 a 3 años</li><li>CRM con IA y WhatsApp: etapas, próxima acción fechada, respuesta &lt;2 h</li><li>Crédito automotriz con las 5 financieras aliadas y el crédito interno</li><li>Expediente vehicular completo</li><li>Obligaciones del líder: jornada de 46 h, prima dominical y asistencia</li></ul></div>
-        <div class="level"><div class="lh"><b>Nivel 2 · Gestión de sucursal</b><span>Días 31–120 · 32 horas · meta ≥10 u/mes</span></div>
-          <ul><li>Disciplina de embudo: cero acciones vencidas y recuperación de leads fríos</li><li>Cierre consultivo y manejo de objeciones de crédito</li><li>Inventario y precio: rotación y unidades de más de 90 días (hoy 91%)</li><li>Finanzas de sucursal: margen de $32,000 por unidad y punto de equilibrio</li><li>Coaching 1:1 y rutina diaria del equipo comercial</li></ul></div>
-        <div class="level"><div class="lh"><b>Nivel 3 · Liderazgo 4.0</b><span>Meses 5–12 · 24 horas · banca de sucesión</span></div>
-          <ul><li>Lectura de tableros y People Analytics para decidir</li><li>Kanban de sucursal y círculos de mejora continua</li><li>Liderazgo incluyente, NOM-035 y prevención de riesgo psicosocial</li><li>Evaluación 360° y desarrollo de sucesores</li><li>Uso responsable de IA y de datos personales de clientes</li></ul></div>
+        <div class="level"><div class="lh"><b>Nivel 1 · Lo básico de Autos Ochoa</b><span>Primeros 30 días · 24 horas</span></div>
+          <ul><li>Lo que prometemos al cliente: auto revisado, con garantía y papeles en orden</li><li>Usar el CRM y responder en menos de 2 horas</li><li>El crédito con las 5 financieras y el crédito propio</li><li>Lo que la ley pide al líder: horarios, domingos y registro de asistencia</li></ul></div>
+        <div class="level"><div class="lh"><b>Nivel 2 · Dirigir la sucursal</b><span>Días 31 a 120 · 32 horas</span></div>
+          <ul><li>Que ningún cliente se quede sin seguimiento</li><li>Cerrar la venta entendiendo lo que el cliente necesita</li><li>Mover los autos que llevan más de 90 días</li><li>Entender los números: margen por auto y punto de equilibrio</li></ul></div>
+        <div class="level"><div class="lh"><b>Nivel 3 · Liderar con datos</b><span>Meses 5 a 12 · 24 horas</span></div>
+          <ul><li>Leer los tableros y decidir con datos</li><li>Liderar con respeto y cuidar la salud emocional del equipo (NOM-035)</li><li>Evaluar y preparar a quien te reemplazará</li><li>Usar la inteligencia artificial con responsabilidad</li></ul></div>
       </div>
     </div>
     <div>
-      <h3>Metodología blended · modelo 70-20-10</h3>
-      <div class="split"><div style="flex:70;background:var(--navy)">70% · en el puesto: Reto de Embudo Real y operación supervisada</div><div style="flex:20;background:#2a5a99">20% · social</div><div style="flex:10;background:var(--accent)">10% · formal</div></div>
+      <h3>Cómo se enseña · aprender haciendo (modelo 70-20-10)</h3>
+      <div class="split"><div style="flex:70;background:var(--navy)">70% en el trabajo diario, con clientes y casos reales</div><div style="flex:20;background:#2a5a99">20% con otros</div><div style="flex:10;background:var(--accent)">10% cursos</div></div>
       <div class="method">
         <div class="card"><h3><span>Presencial</span><span class="muted">~45% de las horas</span></h3>
-          <ul><li><b>Talleres trimestrales</b> en la matriz con <em>role-play</em> sobre conversaciones reales</li><li><b>Padrino</b>: 1 hora semanal por 90 días y operación supervisada del embudo</li><li><b>Mentoría mensual con el fundador</b> y Consejo Comercial como caso vivo</li><li><b>Crédito automotriz</b> impartido con Afirme, Motorfy y Banregio</li></ul></div>
-        <div class="card"><h3><span>Digital</span><span class="muted">~55% de las horas</span></h3>
-          <ul><li><b>Google Classroom</b>: microcápsulas de 10–15 min del equipo que ya produce un video diario</li><li><b>Simulador en el CRM</b>: 10 conversaciones con retroalimentación de la IA</li><li><b>Píldora diaria por WhatsApp</b> con tabla de posiciones (gamificación)</li><li><b>Evaluación en línea</b> y constancia DC-3 (STPS) por nivel</li></ul></div>
+          <ul><li><b>Talleres</b> cada tres meses en la matriz, practicando con conversaciones reales</li><li><b>Un padrino</b> que acompaña 1 hora a la semana durante 90 días</li><li><b>Una charla al mes con el fundador</b></li><li><b>Cursos de crédito</b> con Afirme, Motorfy y Banregio</li></ul></div>
+        <div class="card"><h3><span>En línea</span><span class="muted">~55% de las horas</span></h3>
+          <ul><li><b>Videos cortos</b> de 10 a 15 minutos en Google Classroom</li><li><b>Simulador en el CRM</b> para practicar con 10 conversaciones reales</li><li><b>Una pregunta diaria por WhatsApp</b> con tabla de posiciones</li><li><b>Examen en línea</b> y constancia oficial DC-3 (STPS) por nivel</li></ul></div>
       </div>
     </div>
     <div>
-      <h3>KPI de impacto · modelo Kirkpatrick + retorno</h3>
-      <table>
-        <thead><tr><th style="width:13%">Nivel</th><th style="width:42%">Qué se mide</th><th style="width:13%">Meta</th><th>Periodo · fuente</th></tr></thead>
+      <h3>Cómo sabremos que funciona</h3>
+      <table class="t-tight">
+        <thead><tr><th style="width:17%">Pregunta</th><th style="width:40%">Qué medimos</th><th style="width:15%">Meta</th><th>Cada cuándo</th></tr></thead>
         <tbody>
-          <tr><td>1 · Reacción</td><td>Satisfacción del participante (escala 1–5)</td><td class="num">≥4.5</td><td>Cierre de cada módulo · Classroom</td></tr>
-          <tr><td>2 · Aprendizaje</td><td>Gerentes certificados en Nivel 1 a T-60</td><td class="num">100% (5 de 5)</td><td>Por apertura · expediente de certificación</td></tr>
-          <tr><td>3 · Conducta</td><td>Acciones vencidas al cierre del día · respuesta en &lt;2 horas</td><td class="num">0 · ≥90%</td><td>Semanal; cortes 30-60-90 días · CRM</td></tr>
-          <tr><td>4 · Resultados</td><td>Time-to-productivity: días hasta ≥10 unidades/mes</td><td class="num">≤120 días</td><td>Día 120 de cada gerente · KPI-2</td></tr>
-          <tr><td>Retorno</td><td>(Margen incremental − costo) ÷ costo · horas por persona</td><td class="num">≥3:1 · ≥40 h</td><td>Anual, agosto 2027 · Finanzas</td></tr>
+          <tr><td>¿Les gustó?</td><td>Calificación que dan al curso</td><td class="num">4.5 de 5 o más</td><td>Al terminar cada módulo</td></tr>
+          <tr><td>¿Aprendieron?</td><td>Gerentes certificados 60 días antes de abrir</td><td class="num">100% (5 de 5)</td><td>En cada apertura</td></tr>
+          <tr><td>¿Lo aplican?</td><td>Clientes sin seguimiento al final del día · respuesta en menos de 2 horas</td><td class="num">0 · 90% o más</td><td>Cada semana</td></tr>
+          <tr><td>¿Da resultados?</td><td>Días para que la sucursal venda 10 autos al mes</td><td class="num">120 o menos</td><td>Al día 120 de cada gerente</td></tr>
+          <tr><td>¿Vale la pena?</td><td>Lo que se gana contra lo que cuesta · horas por persona</td><td class="num">3 a 1 · 40 h</td><td>Cada año (agosto 2027)</td></tr>
         </tbody>
       </table>
     </div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>El Modelo Ochoa —CRM con IA, cinco financieras, garantía y procedencia— no existe como formación en el mercado: si la empresa no lo enseña, nadie lo hará. Además sostiene el contrato con capacitación inicial (art. 39-B) de la Parte 1.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>Cada mes sin liderazgo consolidado cuesta ~$200,000 de margen por sucursal. Recortar 30 días de curva en las 4 aperturas protege ~$800,000 con $60,000 de inversión y sostiene la meta de 60 unidades.</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>Nuestra forma de vender (CRM con IA, cinco financieras, garantía y papeles en regla) no se aprende en ningún otro lado. Si no la enseñamos nosotros, nadie lo va a hacer.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Cada mes sin un gerente preparado cuesta ~$200,000. Si cada gerente llega a su meta 30 días antes, en las 4 aperturas protegemos ~$800,000 con $60,000 de inversión.</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>3</b></footer>
@@ -461,56 +476,56 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 4 · MÓDULO 2 (A) =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 2 · Clima y Experiencia</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 2 · Clima y Experiencia</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">02</div><div><div class="eyebrow">Módulo 2 · Clima Laboral y Experiencia del Colaborador</div><h1>Diagnóstico «Pulso Ochoa» y plan de mejora</h1></div></div>
+    <div class="mod-head"><div class="mod-num">02</div><div><div class="eyebrow">Módulo 2 · Clima Laboral y Experiencia del Colaborador</div><h1>Encuesta «Pulso Ochoa»: escuchar al equipo para mejorar</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">Diagnóstico simulado y plan de mejora a 6 meses</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o3">OE-3</span><span class="oe o2">OE-2</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente de Sucursal como dueño del clima de su equipo</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">Índice de clima 54% → ≥70% favorable · mayo 2027</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Encuesta de clima, resultados simulados y plan de 6 meses</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o3">OE-3</span><span class="oe o2">OE-2</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Todo el equipo; cada gerente cuida el clima de su sucursal</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">Clima favorable de 54% a 70% o más en mayo 2027</span></div>
     </div>
-    <p><strong>Diseño del instrumento.</strong> 24 reactivos Likert en 8 dimensiones, una pregunta eNPS y dos abiertas. Anónimo, ~8 minutos, respondido desde el teléfono por un enlace de WhatsApp; solo se reportan segmentos con 3 o más respuestas. Segmentación por puesto, sucursal y antigüedad. Complementa —no sustituye— la Guía de Referencia II de la NOM-035-STPS-2018, obligatoria para centros de 16 a 50 personas.</p>
+    <p><strong>Cómo es la encuesta.</strong> Son 27 preguntas: 24 se contestan del 1 al 5, una pregunta si recomendarías Autos Ochoa como lugar para trabajar y dos son abiertas. Es <strong>anónima</strong>, toma unos 8 minutos y se contesta desde el celular con un enlace de WhatsApp. Solo mostramos resultados de grupos de 3 personas o más, para que nadie pueda ser identificado. Complementa la encuesta que pide la ley (NOM-035, Guía de Referencia II).</p>
     <div>
-      <h3>Cuestionario de clima laboral</h3>
+      <h3>Las 24 preguntas, en 8 temas</h3>
       <div class="q-grid">
-        <div class="q-dim"><div class="qh">D1 · Claridad de rol y responsabilidades<span>1–3</span></div><ol start="1"><li>Sé exactamente qué resultados se esperan de mí cada semana.</li><li>Está claro quién es responsable de dar seguimiento a cada prospecto.</li><li>Conozco mis indicadores de desempeño y cómo se miden.</li></ol></div>
-        <div class="q-dim"><div class="qh">D5 · Equidad y trato justo<span>13–15</span></div><ol start="13"><li>Las reglas aplican igual para todos, sean o no familiares de los dueños.</li><li>Las promociones se deciden con criterios claros y conocidos.</li><li>Aquí nadie recibe un trato distinto por su género, edad u origen.</li></ol></div>
-        <div class="q-dim"><div class="qh">D2 · Liderazgo del jefe directo<span>4–6</span></div><ol start="4"><li>Mi jefe me da retroalimentación útil al menos una vez por semana.</li><li>Mi jefe reconoce cuando hago bien mi trabajo.</li><li>Confío en las decisiones que toma mi jefe.</li></ol></div>
-        <div class="q-dim"><div class="qh">D6 · Desarrollo y carrera<span>16–18</span></div><ol start="16"><li>Conozco los requisitos para crecer al siguiente puesto.</li><li>Recibo la capacitación que necesito para hacer bien mi trabajo.</li><li>Veo un futuro para mí en Autos Ochoa en los próximos dos años.</li></ol></div>
-        <div class="q-dim"><div class="qh">D3 · Carga, jornada y desconexión<span>7–9</span></div><ol start="7"><li>Puedo hacer mi trabajo dentro de mi jornada sin horas extra habituales.</li><li>Fuera de mi horario no se espera que conteste mensajes de trabajo.</li><li>El rol de domingos y descansos es justo y se publica con anticipación.</li></ol></div>
-        <div class="q-dim"><div class="qh">D7 · Herramientas y tecnología<span>19–21</span></div><ol start="19"><li>El CRM me facilita el trabajo en lugar de complicarlo.</li><li>Tengo el equipo necesario (teléfono, computadora, conexión).</li><li>La información que necesito está disponible cuando la necesito.</li></ol></div>
-        <div class="q-dim"><div class="qh">D4 · Compensación y reconocimiento<span>10–12</span></div><ol start="10"><li>Entiendo cómo se calculan mis comisiones y bonos.</li><li>Lo que gano es justo frente a empresas similares.</li><li>Mis comisiones se pagan completas, a tiempo y dentro de la nómina.</li></ol></div>
-        <div class="q-dim"><div class="qh">D8 · Orgullo, pertenencia y comunicación<span>22–24</span></div><ol start="22"><li>Me siento orgulloso(a) de decir que trabajo en Autos Ochoa.</li><li>Me entero de las decisiones importantes antes que por rumores.</li><li>Me siento parte del equipo aunque trabaje en otra sucursal.</li></ol></div>
+        <div class="q-dim"><div class="qh">D1 · Claridad de mi rol<span>1–3</span></div><ol start="1"><li>Sé exactamente qué resultados se esperan de mí cada semana.</li><li>Está claro quién es responsable de dar seguimiento a cada cliente.</li><li>Conozco mis indicadores y cómo se miden.</li></ol></div>
+        <div class="q-dim"><div class="qh">D5 · Trato justo<span>13–15</span></div><ol start="13"><li>Las reglas son iguales para todos, sean o no de la familia.</li><li>Los ascensos se deciden con criterios claros y conocidos.</li><li>Aquí nadie recibe un trato distinto por su género, edad u origen.</li></ol></div>
+        <div class="q-dim"><div class="qh">D2 · Mi jefe directo<span>4–6</span></div><ol start="4"><li>Mi jefe me da retroalimentación útil al menos una vez por semana.</li><li>Mi jefe reconoce cuando hago bien mi trabajo.</li><li>Confío en las decisiones que toma mi jefe.</li></ol></div>
+        <div class="q-dim"><div class="qh">D6 · Crecimiento<span>16–18</span></div><ol start="16"><li>Sé qué necesito para crecer al siguiente puesto.</li><li>Recibo la capacitación que necesito para hacer bien mi trabajo.</li><li>Me veo en Autos Ochoa dentro de dos años.</li></ol></div>
+        <div class="q-dim"><div class="qh">D3 · Carga de trabajo y descanso<span>7–9</span></div><ol start="7"><li>Puedo hacer mi trabajo en mi horario sin quedarme de más seguido.</li><li>Fuera de mi horario no se espera que conteste mensajes de trabajo.</li><li>El rol de domingos es justo y se publica con anticipación.</li></ol></div>
+        <div class="q-dim"><div class="qh">D7 · Herramientas<span>19–21</span></div><ol start="19"><li>El CRM me facilita el trabajo en lugar de complicarlo.</li><li>Tengo el equipo que necesito (celular, computadora, internet).</li><li>Encuentro la información que necesito cuando la necesito.</li></ol></div>
+        <div class="q-dim"><div class="qh">D4 · Sueldo y reconocimiento<span>10–12</span></div><ol start="10"><li>Entiendo cómo se calculan mis comisiones y bonos.</li><li>Lo que gano es justo comparado con empresas parecidas.</li><li>Mis comisiones se pagan completas, a tiempo y en mi recibo de nómina.</li></ol></div>
+        <div class="q-dim"><div class="qh">D8 · Orgullo y comunicación<span>22–24</span></div><ol start="22"><li>Me siento orgulloso(a) de decir que trabajo en Autos Ochoa.</li><li>Me entero de las decisiones importantes antes que por rumores.</li><li>Me siento parte del equipo aunque trabaje en otra sucursal.</li></ol></div>
       </div>
     </div>
     <div class="cols" style="grid-template-columns:1.1fr 1fr;align-items:start">
       <div>
-        <h3>Escala de respuesta · reactivos 1–24</h3>
+        <h3>Cómo se contesta · preguntas 1 a 24</h3>
         <div class="scale"><div><b>1</b>Totalmente en desacuerdo</div><div><b>2</b>En desacuerdo</div><div><b>3</b>Ni de acuerdo ni en desacuerdo</div><div class="fav"><b>4</b>De acuerdo</div><div class="fav"><b>5</b>Totalmente de acuerdo</div></div>
-        <p class="small" style="margin-top:4px"><b>% favorable</b> = respuestas 4 y 5. Zonas: <b>fortaleza</b> ≥75% · <b>atención</b> 60–74% · <b>crítica</b> &lt;60%.</p>
+        <p class="small" style="margin-top:4px"><b>Favorable</b> = respuestas 4 y 5. Tema <b>fuerte</b>: 75% o más · <b>a vigilar</b>: 60–74% · <b>urgente</b>: menos de 60%.</p>
       </div>
       <div>
-        <h3>Preguntas complementarias</h3>
-        <p class="small" style="margin-bottom:2px"><b>25 · eNPS.</b> Del 0 al 10, ¿qué tan probable es que recomiendes Autos Ochoa como lugar para trabajar? (promotores 9–10 menos detractores 0–6)</p>
-        <p class="small" style="margin-bottom:2px"><b>26 · Abierta.</b> ¿Qué es lo que más te hace querer quedarte?</p>
-        <p class="small"><b>27 · Abierta.</b> Si pudieras cambiar una sola cosa de tu trabajo, ¿cuál sería?</p>
+        <h3>Tres preguntas más</h3>
+        <p class="small" style="margin-bottom:2px"><b>25.</b> Del 0 al 10, ¿qué tanto recomendarías Autos Ochoa como lugar para trabajar? (eNPS: los que ponen 9–10 menos los que ponen 0–6)</p>
+        <p class="small" style="margin-bottom:2px"><b>26.</b> ¿Qué es lo que más te hace querer quedarte?</p>
+        <p class="small"><b>27.</b> Si pudieras cambiar una sola cosa de tu trabajo, ¿cuál sería?</p>
       </div>
     </div>
     <div>
-      <h3>Experiencia del colaborador · momentos que importan en el ciclo de vida</h3>
+      <h3>La experiencia del colaborador · seis momentos que vamos a cuidar</h3>
       <div class="journey">
-        <div><span class="dot">1</span><b>Postulación</b><span>Por WhatsApp, respuesta en ≤48 h y banda visible.</span></div>
-        <div><span class="dot">2</span><b>Día 1</b><span>Contrato, alta en el IMSS y carta del fundador.</span></div>
-        <div><span class="dot">3</span><b>Días 1–30</b><span>Padrino asignado y certificación Nivel 1 de la Academia.</span></div>
-        <div><span class="dot">4</span><b>Primer cierre</b><span>Reconocimiento público en el boletín «Motor Ochoa».</span></div>
-        <div><span class="dot">5</span><b>Día 120</b><span>Evaluación formal, plan de desarrollo y ruta de carrera escrita.</span></div>
-        <div><span class="dot">6</span><b>Salida</b><span>Entrevista estructurada y red «Alumni Ochoa» de puertas abiertas.</span></div>
+        <div><span class="dot">1</span><b>Postularse</b><span>Por WhatsApp, con respuesta en 48 horas y sueldo visible.</span></div>
+        <div><span class="dot">2</span><b>Primer día</b><span>Contrato firmado, alta en el IMSS y carta del fundador.</span></div>
+        <div><span class="dot">3</span><b>Primer mes</b><span>Un padrino y el Nivel 1 de la Academia.</span></div>
+        <div><span class="dot">4</span><b>Primera venta</b><span>Reconocimiento público en el boletín del equipo.</span></div>
+        <div><span class="dot">5</span><b>Día 120</b><span>Evaluación, plan personal y ruta de carrera.</span></div>
+        <div><span class="dot">6</span><b>Si se va</b><span>Plática de salida y puertas abiertas para volver.</span></div>
       </div>
     </div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>Con 8 personas el clima se leía en el pasillo; con 34 en cinco plazas deja de verse. La NOM-035 obliga a identificar riesgos psicosociales, y el giro trabaja fines de semana y atiende WhatsApp fuera de horario.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>El clima anticipa la rotación (OE-3) y el seguimiento comercial (OE-2): un equipo que no sabe quién es dueño de cada prospecto replica el 97% de prospectos estancados en cada sucursal nueva.</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>Con 8 personas el ambiente se nota en el pasillo; con 34 en cinco lugares, ya no. Además, la ley (NOM-035) nos pide revisar el estrés y la carga de trabajo.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Un equipo que no sabe quién atiende a cada cliente pierde ventas. Si mejora el clima, mejora el seguimiento y se va menos gente (OE-2 y OE-3).</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>4</b></footer>
@@ -518,66 +533,66 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 5 · MÓDULO 2 (B) =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 2 · Resultados y plan de mejora</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 2 · Resultados y plan de mejora</b></header>
   <div class="content">
     <div>
-      <h2>Resultados simulados · levantamiento de noviembre de 2026 (Fase 1)</h2>
-      <p class="small">Escenario simulado: 16 de 17 colaboradores (8 actuales y 9 incorporados en las Fases 0 y 1). Los valores se construyeron a partir de los hallazgos del diagnóstico interno y de la Parte 1.</p>
+      <h2>Resultados simulados · noviembre de 2026</h2>
+      <p class="small">Así podrían verse los resultados. Los armamos con lo que ya sabemos de la empresa por el diagnóstico interno y la Parte 1; la encuesta real se aplicará en noviembre.</p>
     </div>
     <div class="tiles">
-      <div class="tile"><div class="tv">54%</div><div class="tl">Índice global de clima (promedio de % favorable en 8 dimensiones)</div></div>
-      <div class="tile"><div class="tv">+19</div><div class="tl">eNPS: 44% promotores, 31% pasivos, 25% detractores</div></div>
-      <div class="tile"><div class="tv">94%</div><div class="tl">Participación: 16 de 17 colaboradores respondieron</div></div>
-      <div class="tile"><div class="tv">Medio</div><div class="tl">Riesgo NOM-035 en «Jornada de trabajo» e «Interferencia trabajo-familia»</div></div>
+      <div class="tile"><div class="tv">54%</div><div class="tl">del equipo ve el clima de forma favorable</div></div>
+      <div class="tile"><div class="tv">+19</div><div class="tl">¿Recomendarías trabajar aquí? (eNPS): 44% sí, 25% no</div></div>
+      <div class="tile"><div class="tv">94%</div><div class="tl">contestó la encuesta (16 de 17 personas)</div></div>
+      <div class="tile"><div class="tv">Medio</div><div class="tl">riesgo NOM-035 en horarios y en la vida familiar</div></div>
     </div>
     <div>
-      <h3>% de respuestas favorables por dimensión · ordenado de mayor a menor</h3>
+      <h3>% de respuestas favorables por tema · de mayor a menor</h3>
       <div class="bars">
-        <div class="lab">D8 · Orgullo y pertenencia</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:85%;background:var(--good)"></span></div><div class="val"><b>85%</b> · 4.4 <span class="zone"><i style="background:var(--good)"></i>Fortaleza</span></div>
-        <div class="lab">D2 · Liderazgo del jefe directo</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:74%;background:var(--warn)"></span></div><div class="val"><b>74%</b> · 3.9 <span class="zone"><i style="background:var(--warn)"></i>Atención</span></div>
-        <div class="lab">D7 · Herramientas y tecnología</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:72%;background:var(--warn)"></span></div><div class="val"><b>72%</b> · 3.8 <span class="zone"><i style="background:var(--warn)"></i>Atención</span></div>
-        <div class="lab">D6 · Desarrollo y carrera</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:50%;background:var(--crit)"></span></div><div class="val"><b>50%</b> · 3.3 <span class="zone"><i style="background:var(--crit)"></i>Crítica</span></div>
-        <div class="lab">D4 · Compensación</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:44%;background:var(--crit)"></span></div><div class="val"><b>44%</b> · 3.1 <span class="zone"><i style="background:var(--crit)"></i>Crítica</span></div>
-        <div class="lab">D5 · Equidad y trato justo</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:40%;background:var(--crit)"></span></div><div class="val"><b>40%</b> · 2.9 <span class="zone"><i style="background:var(--crit)"></i>Crítica</span></div>
-        <div class="lab">D3 · Carga y desconexión</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:38%;background:var(--crit)"></span></div><div class="val"><b>38%</b> · 2.8 <span class="zone"><i style="background:var(--crit)"></i>Crítica</span></div>
-        <div class="lab">D1 · Claridad de rol</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:31%;background:var(--crit)"></span></div><div class="val"><b>31%</b> · 2.6 <span class="zone"><i style="background:var(--crit)"></i>Crítica</span></div>
+        <div class="lab">D8 · Orgullo</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:85%;background:var(--good)"></span></div><div class="val"><b>85%</b> <span class="zone"><i style="background:var(--good)"></i>Fuerte</span></div>
+        <div class="lab">D2 · Mi jefe directo</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:74%;background:var(--warn)"></span></div><div class="val"><b>74%</b> <span class="zone"><i style="background:var(--warn)"></i>A vigilar</span></div>
+        <div class="lab">D7 · Herramientas</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:72%;background:var(--warn)"></span></div><div class="val"><b>72%</b> <span class="zone"><i style="background:var(--warn)"></i>A vigilar</span></div>
+        <div class="lab">D6 · Crecimiento</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:50%;background:var(--crit)"></span></div><div class="val"><b>50%</b> <span class="zone"><i style="background:var(--crit)"></i>Urgente</span></div>
+        <div class="lab">D4 · Sueldo</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:44%;background:var(--crit)"></span></div><div class="val"><b>44%</b> <span class="zone"><i style="background:var(--crit)"></i>Urgente</span></div>
+        <div class="lab">D5 · Trato justo</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:40%;background:var(--crit)"></span></div><div class="val"><b>40%</b> <span class="zone"><i style="background:var(--crit)"></i>Urgente</span></div>
+        <div class="lab">D3 · Carga y descanso</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:38%;background:var(--crit)"></span></div><div class="val"><b>38%</b> <span class="zone"><i style="background:var(--crit)"></i>Urgente</span></div>
+        <div class="lab">D1 · Claridad de rol</div><div class="track"><span class="ref" style="left:60%"></span><span class="ref" style="left:75%"></span><span class="bar" style="width:31%;background:var(--crit)"></span></div><div class="val"><b>31%</b> <span class="zone"><i style="background:var(--crit)"></i>Urgente</span></div>
       </div>
-      <div class="axis"><div></div><div class="ticks"><span style="left:0;transform:none">0%</span><span style="left:25%">25%</span><span style="left:50%">50%</span><span style="left:60%">60</span><span style="left:75%">75</span><span style="left:100%;transform:translateX(-100%)">100%</span></div><div>% favorable · media 1–5</div></div>
+      <div class="axis"><div></div><div class="ticks"><span style="left:0;transform:none">0%</span><span style="left:25%">25%</span><span style="left:50%">50%</span><span style="left:60%">60</span><span style="left:75%">75</span><span style="left:100%;transform:translateX(-100%)">100%</span></div><div>% favorable</div></div>
     </div>
-    <div class="card soft"><h3>Hallazgos</h3>
+    <div class="card soft"><h3>Lo que nos dice</h3>
       <ul class="small" style="columns:2;column-gap:18px">
-        <li><b>Claridad de rol (31%) es la dimensión más baja</b> y confirma el diagnóstico interno: «nadie tiene el cierre y seguimiento como función exclusiva». Con menos de 6 meses de antigüedad cae a 20%.</li>
-        <li><b>Carga y desconexión (38%)</b>: los asesores (25%) reportan WhatsApp fuera de horario y domingos sin rol; es el riesgo NOM-035 y el de la jornada de 46 horas de 2027.</li>
-        <li><b>Equidad (40%)</b>: se percibe que las reglas no son iguales para familiares y no familiares, la principal causa de fuga del talento profesional según la Parte 1.</li>
-        <li><b>Fortaleza a capitalizar</b>: el orgullo de pertenencia (85%) —25 años y una historia familiar real— es el ancla de la propuesta de valor del Módulo 3.</li>
+        <li><b>Lo más bajo es la claridad de rol (31%):</b> la gente no sabe quién le da seguimiento a cada cliente. Es la misma falla que hoy deja caer al 97% de los prospectos.</li>
+        <li><b>Carga y descanso (38%):</b> los asesores contestan WhatsApp fuera de horario y no saben qué domingos les toca trabajar.</li>
+        <li><b>Trato justo (40%):</b> se siente que las reglas no son iguales para familiares y no familiares.</li>
+        <li><b>Lo mejor es el orgullo (85%):</b> la historia familiar de 25 años es nuestra fortaleza y la base del Módulo 3.</li>
       </ul></div>
     <div>
       <h3>Plan de mejora a 6 meses · diciembre 2026 a mayo 2027</h3>
       <table class="gmonths t-tight">
-        <thead><tr><th style="width:17%">Dimensión · meta</th><th>Acción</th><th style="width:15%">Responsable</th><th class="m">Dic</th><th class="m">Ene</th><th class="m">Feb</th><th class="m">Mar</th><th class="m">Abr</th><th class="m">May</th></tr></thead>
+        <thead><tr><th style="width:16%">Tema · meta</th><th>Qué vamos a hacer</th><th style="width:15%">Responsable</th><th class="m">Dic</th><th class="m">Ene</th><th class="m">Feb</th><th class="m">Mar</th><th class="m">Abr</th><th class="m">May</th></tr></thead>
         <tbody>
-          <tr><td rowspan="2"><b>D1 Claridad de rol</b><br><span class="num">31% → 65%</span></td><td>Perfiles por competencias y matriz RACI del embudo: un dueño único por prospecto</td><td>Dir. Comercial + RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
-          <tr><td>Tablero individual en el CRM con 3 indicadores semanales visibles</td><td>Sistemas y CRM</td><td class="m"></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
-          <tr><td rowspan="2"><b>D3 Carga y desconexión</b><br><span class="num">38% → 60%</span></td><td>Política de desconexión: guardias pagadas y asistente de IA que responde y agenda fuera de horario</td><td>Dir. General + RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
-          <tr><td>Rol dominical publicado a 30 días y jornada de 46 h sin reducir percepciones (1 de enero de 2027)</td><td>RH + Finanzas</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm a"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
-          <tr><td rowspan="2"><b>D5 Equidad</b><br><span class="num">40% → 65%</span></td><td>Publicar el tabulador de 6 bandas y la política «Mismo puesto, misma banda» (Módulo 5)</td><td>Dirección General</td><td class="m"><i class="gm a"></i></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
-          <tr><td>Comité de promociones con integrante no familiar y buzón anónimo de ética</td><td>Dir. General + RH</td><td class="m"></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td></tr>
-          <tr><td><b>D4 Compensación</b><br><span class="num">44% → 65%</span></td><td>Simulador de comisiones en el CRM, variable 100% visible en el CFDI y reconocimiento «Club 10»</td><td>Finanzas + Sistemas</td><td class="m"></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td></tr>
-          <tr><td><b>D6 Desarrollo</b><br><span class="num">50% → 70%</span></td><td>Ruta de carrera a 24 meses publicada y Academia Ochoa Niveles 1–3 (Módulo 1)</td><td>Coordinación de RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td></tr>
-          <tr><td><b>Transversal</b></td><td>Pulso mensual de 5 preguntas por WhatsApp, entrevistas de permanencia y re-medición completa en mayo</td><td>Coordinación de RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm a"></i></td></tr>
+          <tr><td rowspan="2"><b>D1 Claridad de rol</b><br><span class="num">31% → 65%</span></td><td>Escribir quién es responsable de cada cliente y de cada paso de la venta</td><td>Dir. Comercial y RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
+          <tr><td>Tablero personal en el CRM con 3 números de la semana</td><td>Sistemas</td><td class="m"></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
+          <tr><td rowspan="2"><b>D3 Carga y descanso</b><br><span class="num">38% → 60%</span></td><td>Guardias pagadas; fuera de horario el asistente de IA contesta y agenda</td><td>Dir. General y RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
+          <tr><td>Rol de domingos con un mes de anticipación y jornada de 46 horas sin bajar sueldos (1 de enero)</td><td>RH y Finanzas</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm a"></i></td><td class="m"><i class="gm"></i></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
+          <tr><td rowspan="2"><b>D5 Trato justo</b><br><span class="num">40% → 65%</span></td><td>Publicar las bandas de sueldo, iguales para todos (Módulo 5)</td><td>Dirección General</td><td class="m"><i class="gm a"></i></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td><td class="m"></td></tr>
+          <tr><td>Comité de ascensos con alguien que no sea de la familia y buzón anónimo</td><td>Dir. General y RH</td><td class="m"></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td></tr>
+          <tr><td><b>D4 Sueldo</b><br><span class="num">44% → 65%</span></td><td>Calculadora de comisiones en el CRM, todo en nómina, y reconocimiento «Club 10»</td><td>Finanzas y Sistemas</td><td class="m"></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td></tr>
+          <tr><td><b>D6 Crecimiento</b><br><span class="num">50% → 70%</span></td><td>Publicar el plan de carrera a 24 meses y abrir la Academia (Módulo 1)</td><td>RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td></tr>
+          <tr><td><b>Para todos</b></td><td>Encuesta rápida de 5 preguntas cada mes, pláticas de permanencia y encuesta completa en mayo</td><td>RH</td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm"></i></td><td class="m"><i class="gm a"></i></td></tr>
         </tbody>
       </table>
-      <p class="small" style="margin-top:3px"><span class="zone"><i style="background:var(--navy)"></i>Ejecución</span> &nbsp; <span class="zone"><i style="background:var(--accent)"></i>Hito</span> &nbsp; Las dimensiones en zona de atención o fortaleza (D2, D7, D8) se mantienen con seguimiento del pulso mensual.</p>
+      <p class="small" style="margin-top:3px"><span class="zone"><i style="background:var(--navy)"></i>Trabajo</span> &nbsp; <span class="zone"><i style="background:var(--accent)"></i>Fecha clave</span> &nbsp; Los temas fuertes o a vigilar (D2, D7, D8) se siguen con la encuesta mensual.</p>
     </div>
     <div>
-      <h3>KPI de clima laboral</h3>
+      <h3>Cómo sabremos que funciona</h3>
       <table class="t-tight">
-        <thead><tr><th>Indicador</th><th>Qué mide</th><th>Línea base → meta</th><th>Periodo</th></tr></thead>
+        <thead><tr><th>Qué medimos</th><th>Hoy → meta</th><th>Cada cuándo</th></tr></thead>
         <tbody>
-          <tr><td><b>Índice global de clima</b></td><td>Promedio de % favorable de las 8 dimensiones</td><td class="num">54% → ≥70%</td><td>Semestral; corte en mayo 2027</td></tr>
-          <tr><td><b>eNPS</b></td><td>Disposición a recomendar la empresa como empleador</td><td class="num">+19 → ≥+30</td><td>Semestral</td></tr>
-          <tr><td><b>Ejecución del plan</b></td><td>Acciones terminadas en la fecha comprometida</td><td class="num">≥90%</td><td>Mensual, en comité de dirección</td></tr>
-          <tr><td><b>Ausentismo</b></td><td>Días de ausencia no programada ÷ días laborables</td><td class="num">≤2%</td><td>Mensual · registro electrónico</td></tr>
+          <tr><td><b>Clima favorable</b> (promedio de los 8 temas)</td><td class="num">54% → 70% o más</td><td>Cada 6 meses; corte en mayo 2027</td></tr>
+          <tr><td><b>¿Recomendarías trabajar aquí?</b> (eNPS)</td><td class="num">+19 → +30 o más</td><td>Cada 6 meses</td></tr>
+          <tr><td><b>Acciones del plan hechas a tiempo</b></td><td class="num">90% o más</td><td>Cada mes, en la junta de Dirección</td></tr>
+          <tr><td><b>Faltas no programadas</b></td><td class="num">2% o menos</td><td>Cada mes, con el checador</td></tr>
         </tbody>
       </table>
     </div>
@@ -587,73 +602,73 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 6 · MÓDULO 3 =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 3 · Employee Branding y Fidelización</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 3 · Marca Empleadora y Permanencia</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">03</div><div><div class="eyebrow">Módulo 3 · Employee Branding y Fidelización</div><h1>Plan de comunicación y fidelización del talento</h1></div></div>
+    <div class="mod-head"><div class="mod-num">03</div><div><div class="eyebrow">Módulo 3 · Employee Branding y Fidelización</div><h1>Por qué trabajar aquí y cómo cuidamos al equipo</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">EVP, comunicación y fidelización</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente de Sucursal y Asesores Senior</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">Rotación crítica ≤10% · anual; 40% de contrataciones por canal propio</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Propuesta de valor, plan de comunicación y acciones para retener</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Gerentes y asesores senior, y quienes queremos atraer</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">Menos del 10% de gerentes se va al año</span></div>
     </div>
     <div class="evp">
-      <q>Aquí no vendes autos: diriges un negocio, con 25 años de respaldo y la tecnología que ningún lote de Monterrey tiene.</q>
-      <div class="src">Propuesta de valor<br>al empleado (EVP)<br>perfil crítico</div>
+      <q>Aquí no vendes autos: diriges un negocio, con 25 años de respaldo y la tecnología que ningún otro lote de Monterrey tiene.</q>
+      <div class="src">Lo que ofrecemos<br>(propuesta de valor<br>al empleado, EVP)</div>
     </div>
     <div class="pillars">
-      <div class="pillar"><b>1 · Autonomía real</b>Diriges ~$384,000 de margen mensual y decides precios en el Consejo Comercial.<span class="pr">Prueba: consejo mensual</span></div>
-      <div class="pillar"><b>2 · Crecimiento escrito</b>Asesor → Senior → Gerente → Regional en 24 meses, con criterios públicos.<span class="pr">Prueba: promociones publicadas</span></div>
-      <div class="pillar"><b>3 · Ingreso transparente</b>Variable sobre margen real, 100% en nómina; gerente en el P75.<span class="pr">Prueba: bandas publicadas</span></div>
-      <div class="pillar"><b>4 · Tecnología</b>CRM con IA integrado a WhatsApp, Academia Ochoa y constancias DC-3.<span class="pr">Prueba: simulador</span></div>
-      <div class="pillar"><b>5 · Familia con reglas</b>Un fundador que empezó como taxista y reglas iguales para todos.<span class="pr">Prueba: Módulo 5</span></div>
+      <div class="pillar"><b>1 · Decides</b>Diriges tu sucursal y opinas en precios y campañas cada mes.<span class="pr">Prueba: consejo de gerentes</span></div>
+      <div class="pillar"><b>2 · Creces</b>De asesor a gerente regional en 24 meses, con reglas claras.<span class="pr">Prueba: ascensos publicados</span></div>
+      <div class="pillar"><b>3 · Ganas claro</b>Tu comisión sale del margen real y se paga completa en nómina.<span class="pr">Prueba: sueldos publicados</span></div>
+      <div class="pillar"><b>4 · Herramientas</b>CRM con IA, Academia Ochoa y constancias oficiales.<span class="pr">Prueba: simulador</span></div>
+      <div class="pillar"><b>5 · Mismas reglas</b>Una familia de 25 años con las mismas reglas para todos.<span class="pr">Prueba: Módulo 5</span></div>
     </div>
     <div>
-      <h3>Plan de comunicación interno y externo</h3>
+      <h3>Plan de comunicación · hacia dentro y hacia fuera</h3>
       <table class="t-tight">
-        <thead><tr><th style="width:21%">Canal · acción</th><th style="width:39%">Mensaje o contenido</th><th style="width:10%">Frecuencia</th><th style="width:12%">Responsable</th><th>Métrica</th></tr></thead>
+        <thead><tr><th style="width:22%">Qué hacemos</th><th style="width:35%">Qué contamos</th><th style="width:13%">Cada cuándo</th><th style="width:12%">Quién</th><th>Cómo lo medimos</th></tr></thead>
         <tbody>
-          <tr><td class="grp" colspan="5">Interno · para que el talento formado se quede</td></tr>
-          <tr><td><b>Kit de bienvenida</b> y carta del fundador</td><td>Historia, EVP, ruta de carrera y reglas del juego</td><td>Por ingreso</td><td>RH</td><td>Onboarding al día 30</td></tr>
-          <tr><td><b>«Junta Ochoa»</b> (30 min)</td><td>Resultados de las 5 sucursales, plan de clima y reconocimientos</td><td>Mensual</td><td>Dir. General</td><td>Asistencia ≥90%</td></tr>
-          <tr><td><b>Boletín «Motor Ochoa»</b></td><td>Primeros cierres, promociones y logros por sucursal</td><td>Quincenal</td><td>Marketing + RH</td><td>Tasa de lectura</td></tr>
-          <tr><td><b>Vacantes internas primero</b></td><td>Toda vacante se publica dentro 5 días hábiles antes</td><td>Por vacante</td><td>RH</td><td>% cubiertas internamente</td></tr>
-          <tr><td class="grp" colspan="5">Externo · para atraer al gerente antes que Trefa y Credimotors</td></tr>
-          <tr><td><b>«Detrás de Ochoa»</b> en redes</td><td>1 de cada 10 videos diarios: equipo, fundador, promociones</td><td>~3 al mes</td><td>Contenido</td><td>Costo por calificado</td></tr>
-          <tr><td><b>Página de carrera</b></td><td>autosochoa.com: bandas, ruta a 24 meses y postulación por WhatsApp</td><td>Permanente</td><td>Marketing</td><td>Visita → postulación</td></tr>
-          <tr><td><b>Campaña por apertura</b></td><td>«Buscamos a quien dirija Ochoa Guadalupe»: EVP y banda</td><td>T-150</td><td>Marketing + RH</td><td>Calificados por vacante</td></tr>
-          <tr><td><b>LinkedIn, bolsas y ANCA/ARCA</b></td><td>Testimonios de gerentes; esquema 39-B en UANL, Tecmilenio y UdeM</td><td>Semanal</td><td>RH</td><td>Contrataciones por canal</td></tr>
+          <tr><td class="grp" colspan="5">Hacia dentro · para que el talento se quede</td></tr>
+          <tr><td><b>Bienvenida</b> con carta del fundador</td><td>Nuestra historia, lo que ofrecemos y las reglas</td><td>Al entrar</td><td>RH</td><td>Bienvenida en 30 días</td></tr>
+          <tr><td><b>«Junta Ochoa»</b> de 30 min</td><td>Cómo van las 5 sucursales y reconocimientos</td><td>Cada mes</td><td>Dir. General</td><td>Asistencia de 90%</td></tr>
+          <tr><td><b>Boletín «Motor Ochoa»</b></td><td>Primeras ventas, ascensos y logros</td><td>Cada 15 días</td><td>Marketing y RH</td><td>Cuántos lo leen</td></tr>
+          <tr><td><b>Vacantes primero para casa</b></td><td>Toda vacante se publica adentro 5 días antes</td><td>Cada vacante</td><td>RH</td><td>Puestos cubiertos de casa</td></tr>
+          <tr><td class="grp" colspan="5">Hacia fuera · para atraer al gerente antes que la competencia</td></tr>
+          <tr><td><b>Videos «Detrás de Ochoa»</b></td><td>El equipo, el fundador y los ascensos</td><td>3 al mes</td><td>Contenido</td><td>Costo por candidato</td></tr>
+          <tr><td><b>Página de empleos</b></td><td>Sueldos, carrera y postulación por WhatsApp</td><td>Siempre</td><td>Marketing</td><td>Visitas que se postulan</td></tr>
+          <tr><td><b>Campaña por apertura</b></td><td>«Buscamos a quien dirija Ochoa Guadalupe»</td><td>5 meses antes</td><td>Marketing y RH</td><td>Candidatos por vacante</td></tr>
+          <tr><td><b>LinkedIn y universidades</b></td><td>Testimonios y entrar sin experiencia en autos</td><td>Cada semana</td><td>RH</td><td>Contratos por canal</td></tr>
         </tbody>
       </table>
     </div>
     <div class="cols" style="grid-template-columns:1.08fr 1fr;gap:12px">
       <div>
-        <h3>Estrategias de fidelización</h3>
+        <h3>Para que la gente se quede</h3>
         <ul class="small">
-          <li><b>Entrevistas de permanencia</b> trimestrales con gerentes y Asesores Senior; plan individual en 15 días.</li>
-          <li><b>Alerta temprana de fuga</b> en el CRM: actividad −30%, pulso ≤2 o ausencias → 1:1 en 7 días.</li>
-          <li><b>Promoción interna primero</b>: 20% de las gerencias en el año 1 y 60% desde el año 2.</li>
-          <li><b>Patrimonio que crece</b>: fondo de ahorro, catálogo a costo y coinversión 50/50 desde el año 2.</li>
-          <li><b>«Club 10»</b>: tres meses en punto de equilibrio = viernes corto, publicación y cena con el fundador.</li>
-          <li><b>Referidos</b> (bono de $8,000 a 90 días) y red <b>«Alumni Ochoa»</b> para recontratar.</li>
+          <li><b>Plática cada 3 meses</b> con gerentes y asesores senior: ¿qué te haría quedarte? Respuesta en 15 días.</li>
+          <li><b>Aviso en el CRM</b> si alguien baja su actividad o su ánimo: su jefe lo busca en menos de 7 días.</li>
+          <li><b>Ascensos primero para la gente de casa:</b> 20% de las gerencias el primer año y 60% después.</li>
+          <li><b>Beneficios que crecen con los años:</b> fondo de ahorro, auto a precio de costo e inversión en unidades desde el año 2.</li>
+          <li><b>«Club 10»:</b> la sucursal que se mantiene en su meta 3 meses gana viernes corto y cena con el fundador.</li>
+          <li><b>$8,000 por recomendar</b> a alguien que se queda 90 días, y puertas abiertas para quien se fue bien.</li>
         </ul>
       </div>
       <div>
-        <h3>KPI de fidelización</h3>
+        <h3>Cómo sabremos que funciona</h3>
         <table class="t-tight">
-          <thead><tr><th>Indicador</th><th>Meta</th><th>Periodo</th></tr></thead>
+          <thead><tr><th style="width:54%">Qué medimos</th><th style="width:21%">Meta</th><th>Cada cuándo</th></tr></thead>
           <tbody>
-            <tr><td>Rotación no deseada del talento crítico</td><td class="num">≤10%</td><td>Anual</td></tr>
-            <tr><td>Retención a 12 meses de nuevos ingresos</td><td class="num">≥85%</td><td>Por cohorte</td></tr>
-            <tr><td>Contratación por canal propio y referidos</td><td class="num">≥40%</td><td>Anual</td></tr>
-            <tr><td>Aceptación de ofertas de gerente</td><td class="num">≥85%</td><td>Por vacante</td></tr>
-            <tr><td>Entrevistas de permanencia hechas</td><td class="num">100%</td><td>Trimestral</td></tr>
+            <tr><td>Gerentes que se van sin que queramos</td><td class="num">10% o menos</td><td>Cada año</td></tr>
+            <tr><td>Nuevos que siguen al año</td><td class="num">85% o más</td><td>Cada año</td></tr>
+            <tr><td>Contratados por recomendación</td><td class="num">40% o más</td><td>Cada año</td></tr>
+            <tr><td>Ofertas de gerente aceptadas</td><td class="num">85% o más</td><td>Por vacante</td></tr>
+            <tr><td>Pláticas de permanencia hechas</td><td class="num">100%</td><td>Trimestral</td></tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>Autos Trefa tiene más de 166 mil seguidores y más presupuesto. Autos Ochoa no gana con pauta sino con historia: 25 años, un fundador que empezó de cero y un motor de contenido ya pagado.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>Cada salida de gerente evitada protege ~$500,000; la meta ≤10% resguarda hasta $1,000,000 anuales (OE-3). Cubrir vacantes por canal propio acelera la cobertura anticipada (OE-1).</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>Autos Trefa tiene más de 166 mil seguidores y más presupuesto. No les ganamos con publicidad; les ganamos con nuestra historia y con cómo tratamos a la gente.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Cada gerente que no se va ahorra ~$500,000 (OE-3). Cubrir vacantes con recomendaciones y canales propios ayuda a tener al gerente listo antes de abrir (OE-1).</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>6</b></footer>
@@ -661,41 +676,41 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 7 · MÓDULO 4 (A) =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 4 · Gestión del Desempeño y Competencias</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 4 · Desempeño y Competencias</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">04</div><div><div class="eyebrow">Módulo 4 · Gestión del Desempeño y Competencias</div><h1>Modelo de competencias del Gerente de Sucursal</h1></div></div>
+    <div class="mod-head"><div class="mod-num">04</div><div><div class="eyebrow">Módulo 4 · Gestión del Desempeño y Competencias</div><h1>Qué esperamos de un gerente: seis competencias medibles</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">Modelo de 6 competencias y evaluación 360°</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente de Sucursal (360°); asesores con 180°</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">Quality of Hire ≥80% · día 120 de cada gerente</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Modelo de 6 competencias y evaluación 360°</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Gerentes (360°); asesores con una versión corta</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">4 de cada 5 gerentes en su meta a los 120 días</span></div>
     </div>
-    <p>El modelo traduce las cinco competencias del perfil de puesto de la Parte 1 —disciplina de proceso, liderazgo de equipo comercial, orientación al dato, cierre consultivo e integridad— en <strong>seis competencias observables</strong>: dos técnicas, dos de liderazgo y dos digitales/I4.0. Cada una tiene una conducta esperada y, sobre todo, una <strong>evidencia en datos</strong> que el CRM ya registra, para que la evaluación no dependa de la opinión.</p>
+    <p>Hoy no evaluamos formalmente a nadie. Proponemos <strong>seis competencias</strong>, tomadas del perfil del gerente de la Parte 1: <strong>dos técnicas, dos de liderazgo y dos digitales</strong>. Cada una dice qué esperamos ver en el día a día y <strong>con qué dato del CRM lo comprobamos</strong>, para que la evaluación no dependa de la simpatía.</p>
     <table>
-      <thead><tr><th style="width:11%">Tipo</th><th style="width:21%">Competencia y definición</th><th style="width:38%">Conductas observables en el nivel esperado (3)</th><th>Evidencia en datos · fuente</th></tr></thead>
+      <thead><tr><th style="width:11%">Tipo</th><th style="width:22%">Competencia</th><th style="width:37%">Qué esperamos ver</th><th>Con qué dato lo comprobamos</th></tr></thead>
       <tbody>
-        <tr><td rowspan="2"><b>Técnicas</b></td><td><b>T1 · Disciplina de embudo comercial</b><br><span class="small">Lleva cada prospecto de la sucursal a una decisión, con próxima acción fechada.</span></td><td><ul class="small"><li>Cierra el día con cero acciones vencidas en su sucursal.</li><li>Asegura primera respuesta en menos de 2 horas.</li><li>Recupera leads fríos con una cadencia definida.</li></ul></td><td class="small">Acciones vencidas (hoy 29); % de «Contactado» que avanza (hoy 3%); tiempo de primera respuesta · CRM</td></tr>
-        <tr><td><b>T2 · Cierre consultivo y estructuración de crédito</b><br><span class="small">Diagnostica necesidad y capacidad de pago y estructura la opción viable.</span></td><td><ul class="small"><li>Presenta al menos dos alternativas entre las 5 financieras y el crédito interno.</li><li>Integra el expediente completo al primer intento.</li><li>Defiende el margen sin descuentos no autorizados.</li></ul></td><td class="small">Tasa de cierre sobre calificados (≥18%); margen por unidad (meta $32,000); % de expedientes completos · CRM y ERP</td></tr>
-        <tr><td rowspan="2"><b>Liderazgo</b></td><td><b>L1 · Desarrollo del equipo comercial</b><br><span class="small">Forma y retiene a sus asesores para que la sucursal no dependa de él o ella.</span></td><td><ul class="small"><li>Sostiene un 1:1 semanal de 30 minutos con cada asesor.</li><li>Hace coaching sobre conversaciones reales del CRM.</li><li>Prepara al menos a un sucesor identificado en la 9-Box.</li></ul></td><td class="small">Rotación de su equipo; % de asesores con ≥4 u/mes; sucesor con plan de desarrollo · nómina y CRM</td></tr>
-        <tr><td><b>L2 · Liderazgo íntegro y cumplimiento</b><br><span class="small">Dirige con reglas iguales para todos y sin atajos legales ni comerciales.</span></td><td><ul class="small"><li>Publica el rol dominical con 30 días de anticipación.</li><li>No permite pagos fuera de nómina ni inicio de labores sin contrato.</li><li>Trata con equidad a familiares y no familiares.</li></ul></td><td class="small">Incidencias de cumplimiento (meta 0); dimensión «Equidad» del clima de su sucursal · auditoría y encuesta</td></tr>
-        <tr><td rowspan="2"><b>Digitales · I4.0</b></td><td><b>D1 · Decisiones basadas en datos</b><br><span class="small">Usa tableros para priorizar inventario, esfuerzo comercial y personas.</span></td><td><ul class="small"><li>Revisa el tablero de sucursal todos los días antes de abrir.</li><li>Decide el precio de unidades con más de 90 días con datos de rotación.</li><li>Detecta asesores en riesgo con indicadores adelantados.</li></ul></td><td class="small">Días promedio en inventario; % de unidades con más de 90 días (hoy 91%); uso del tablero · Looker Studio</td></tr>
-        <tr><td><b>D2 · Colaboración con IA y automatización</b><br><span class="small">Integra el asistente de IA, WhatsApp Business API y contenido digital al trabajo del equipo.</span></td><td><ul class="small"><li>Usa las sugerencias de IA y plantillas aprobadas en cada conversación.</li><li>Automatiza recordatorios y seguimientos del embudo.</li><li>Genera contenido de las unidades de su sucursal para redes.</li></ul></td><td class="small">% de conversaciones con asistencia de IA; leads digitales por sucursal; adopción del simulador · CRM</td></tr>
+        <tr><td rowspan="2"><b>Técnicas</b></td><td><b>T1 · Seguimiento a clientes</b><br><span class="small">Que cada cliente tenga una siguiente acción con fecha.</span></td><td><ul class="small"><li>Termina el día sin pendientes vencidos.</li><li>Responde en menos de 2 horas.</li><li>Recupera a los clientes que se enfriaron.</li></ul></td><td class="small">Pendientes vencidos (hoy 29) · clientes que avanzan (hoy 3%) · tiempo de respuesta</td></tr>
+        <tr><td><b>T2 · Cierre y crédito</b><br><span class="small">Entender lo que el cliente necesita y puede pagar.</span></td><td><ul class="small"><li>Ofrece al menos 2 opciones de crédito.</li><li>Arma el expediente completo a la primera.</li><li>No regala el margen con descuentos sin autorizar.</li></ul></td><td class="small">Ventas sobre clientes calificados (meta 18%) · margen por auto (meta $32,000) · expedientes completos</td></tr>
+        <tr><td rowspan="2"><b>Liderazgo</b></td><td><b>L1 · Formar al equipo</b><br><span class="small">Que la sucursal no dependa solo del gerente.</span></td><td><ul class="small"><li>Platica 30 minutos a la semana con cada asesor.</li><li>Lo acompaña en conversaciones reales.</li><li>Prepara a alguien que lo pueda reemplazar.</li></ul></td><td class="small">Asesores que se van · asesores que venden 4 autos o más · reemplazo identificado</td></tr>
+        <tr><td><b>L2 · Liderar con integridad</b><br><span class="small">Mismas reglas para todos y sin atajos con la ley.</span></td><td><ul class="small"><li>Publica el rol de domingos con un mes de anticipación.</li><li>No paga por fuera ni deja trabajar sin contrato.</li><li>Trata igual a familiares y no familiares.</li></ul></td><td class="small">Incidencias (meta 0) · calificación de «trato justo» en la encuesta de su sucursal</td></tr>
+        <tr><td rowspan="2"><b>Digitales</b></td><td><b>D1 · Decidir con datos</b><br><span class="small">Usar los tableros para saber dónde enfocarse.</span></td><td><ul class="small"><li>Revisa el tablero cada mañana.</li><li>Ajusta el precio de los autos con más de 90 días.</li><li>Detecta a tiempo a quien necesita apoyo.</li></ul></td><td class="small">Días promedio en inventario · autos con más de 90 días (hoy 91%) · uso del tablero</td></tr>
+        <tr><td><b>D2 · Trabajar con IA</b><br><span class="small">Aprovechar el asistente del CRM y WhatsApp.</span></td><td><ul class="small"><li>Usa las respuestas que sugiere la IA.</li><li>Programa recordatorios automáticos.</li><li>Publica en redes los autos de su sucursal.</li></ul></td><td class="small">Conversaciones con apoyo de IA · clientes que llegan por redes</td></tr>
       </tbody>
     </table>
     <div>
-      <h3>Escala de dominio · anclada en conductas (BARS)</h3>
+      <h3>Cómo calificamos cada competencia · escala de 1 a 5</h3>
       <div class="bars-scale">
-        <div><b>1 · No evidencia</b>No muestra la conducta aun con apoyo.</div>
-        <div><b>2 · En desarrollo</b>La muestra con apoyo del padrino o de forma irregular.</div>
-        <div class="exp"><b>3 · Competente</b>La muestra de forma consistente. Nivel esperado del puesto.</div>
-        <div><b>4 · Avanzado</b>La muestra en situaciones complejas y mejora el resultado.</div>
-        <div><b>5 · Referente</b>La enseña a otros y la convierte en práctica de la empresa.</div>
+        <div><b>1 · Todavía no</b>No lo hace, aun con ayuda.</div>
+        <div><b>2 · Con ayuda</b>Lo hace con su padrino o a veces.</div>
+        <div class="exp"><b>3 · Bien y siempre</b>Lo hace de forma constante. Es lo esperado.</div>
+        <div><b>4 · Avanzado</b>Lo hace bien incluso en situaciones difíciles.</div>
+        <div><b>5 · Ejemplo</b>Lo enseña a otros.</div>
       </div>
     </div>
     <div class="spacer"></div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>La Parte 1 fijó un KPI de calidad de contratación, pero hoy la empresa no ha evaluado formalmente a nadie. Sin un modelo de competencias, el día 120 se decide por simpatía, y el periodo de prueba de hasta 180 días (art. 39-A) exige demostrar la falta de competencia con evidencia.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>Las seis competencias son los comportamientos que anteceden a la venta: si cada gerente llega al nivel 3, la sucursal sostiene 10–12 unidades y el 18–20% de cierre que exige la meta consolidada de 60 unidades mensuales.</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>En la Parte 1 nos pusimos la meta de medir si contratamos bien, pero hoy no tenemos cómo. Además, el periodo de prueba de un gerente (hasta 180 días) solo se puede terminar con evidencia.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Estas seis conductas son las que vienen antes de la venta. Un gerente que las cumple sostiene 10 a 12 autos al mes en su sucursal (OE-2).</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>7</b></footer>
@@ -703,14 +718,14 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 8 · MÓDULO 4 (B) =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 4 · Proceso de evaluación por competencias</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 4 · Cómo evaluamos</b></header>
   <div class="content">
     <div>
-      <h2>Evaluación 360° para el Gerente de Sucursal</h2>
-      <p>Evalúan al gerente todos los que ven su trabajo desde un ángulo distinto; asesores y coordinadores usan un esquema <strong>180°</strong> (jefe directo y autoevaluación). Son 30 reactivos en línea —5 por competencia— con cálculo y reporte automáticos en Looker Studio.</p>
+      <h2>Cómo vamos a evaluar al gerente: evaluación 360°</h2>
+      <p>Al gerente lo evalúan las personas que ven su trabajo desde distintos ángulos. A los asesores y coordinadores los evalúan su jefe y ellos mismos (180°). Son 30 preguntas en línea, 5 por competencia, y los resultados salen solos en el tablero.</p>
     </div>
     <div>
-      <h3>Quién evalúa y con qué peso</h3>
+      <h3>Quién evalúa y cuánto pesa su opinión</h3>
       <div class="stack">
         <div style="flex:40;background:var(--s1);color:#fff">40%</div>
         <div style="flex:25;background:var(--s2);color:#fff">25%</div>
@@ -718,77 +733,77 @@ td b, td strong{font-weight:650}
         <div style="flex:10;background:var(--s4);color:var(--ink)">10%</div>
         <div style="flex:10;background:var(--s5);color:var(--ink)">10%</div>
       </div>
-      <div class="legend" style="margin-top:5px"><span><i style="background:var(--s1)"></i>Jefe directo</span><span><i style="background:var(--s2)"></i>Colaboradores directos</span><span><i style="background:var(--s3)"></i>Pares</span><span><i style="background:var(--s4)"></i>Clientes internos</span><span><i style="background:var(--s5)"></i>Autoevaluación</span></div>
+      <div class="legend" style="margin-top:5px"><span><i style="background:var(--s1)"></i>Su jefe</span><span><i style="background:var(--s2)"></i>Su equipo</span><span><i style="background:var(--s3)"></i>Otros gerentes</span><span><i style="background:var(--s4)"></i>Áreas internas</span><span><i style="background:var(--s5)"></i>Él mismo</span></div>
     </div>
     <table>
-      <thead><tr><th style="width:17%">Evaluador</th><th style="width:34%">Quiénes</th><th style="width:7%">Peso</th><th>Qué observa con mayor precisión</th></tr></thead>
+      <thead><tr><th style="width:17%">Quién evalúa</th><th style="width:34%">Quiénes son</th><th style="width:7%">Peso</th><th>En qué se fija más</th></tr></thead>
       <tbody>
-        <tr><td><b>Jefe directo</b></td><td>Dirección Comercial</td><td class="num">40%</td><td>Las seis competencias; valida la evidencia de datos de T1, T2 y D1</td></tr>
-        <tr><td><b>Colaboradores directos</b></td><td>3 asesores y 1 coordinador (anónimo, mínimo 3)</td><td class="num">25%</td><td>L1 Desarrollo del equipo y L2 Liderazgo íntegro</td></tr>
-        <tr><td><b>Pares</b></td><td>2 gerentes de otras sucursales, asignados por RH</td><td class="num">15%</td><td>Colaboración en el Consejo Comercial y D1</td></tr>
-        <tr><td><b>Clientes internos</b></td><td>Compras e Inventario, Finanzas y Marketing</td><td class="num">10%</td><td>T2 (expedientes y margen), L2 y D2</td></tr>
-        <tr><td><b>Autoevaluación</b></td><td>El propio gerente</td><td class="num">10%</td><td>Las seis; la brecha con los demás alimenta su PDI</td></tr>
+        <tr><td><b>Su jefe</b></td><td>Dirección Comercial</td><td class="num">40%</td><td>Las seis competencias y los datos del CRM</td></tr>
+        <tr><td><b>Su equipo</b></td><td>3 asesores y el coordinador (anónimo)</td><td class="num">25%</td><td>Si los forma y los trata con justicia</td></tr>
+        <tr><td><b>Otros gerentes</b></td><td>2 gerentes de otras sucursales</td><td class="num">15%</td><td>Si colabora y decide con datos</td></tr>
+        <tr><td><b>Áreas internas</b></td><td>Compras, Finanzas y Marketing</td><td class="num">10%</td><td>Expedientes, margen, cumplimiento y contenido</td></tr>
+        <tr><td><b>Él mismo</b></td><td>El propio gerente</td><td class="num">10%</td><td>La diferencia con los demás le muestra qué mejorar</td></tr>
       </tbody>
     </table>
     <div>
-      <h3>Calificación final: el «qué» y el «cómo» pesan lo mismo</h3>
+      <h3>La calificación final: lo que logró y cómo lo logró pesan igual</h3>
       <div class="formula">
-        <div class="box"><b>50%</b> Resultados (qué)<br><span class="small">unidades vs. meta · % de cierre · margen por unidad · acciones vencidas · rotación del equipo</span></div>
+        <div class="box"><b>50%</b> Resultados (lo que logró)<br><span class="small">autos vendidos · % de cierre · margen por auto · pendientes vencidos · rotación de su equipo</span></div>
         <b>+</b>
-        <div class="box"><b>50%</b> Competencias 360° (cómo)<br><span class="small">promedio ponderado de T1, T2, L1, L2, D1 y D2 en la escala 1–5</span></div>
+        <div class="box"><b>50%</b> Competencias (cómo lo logró)<br><span class="small">promedio de las seis competencias en la evaluación 360°</span></div>
         <b>=</b>
-        <div class="box" style="background:var(--navy);color:#fff;border-color:var(--navy)"><b>Puntaje 1–5</b><br><span style="font-size:7.2pt;color:#c9d4e6">eje de desempeño de la 9-Box (Módulo 6)</span></div>
+        <div class="box" style="background:var(--navy);color:#fff;border-color:var(--navy)"><b>Calificación 1 a 5</b><br><span style="font-size:7.2pt;color:#c9d4e6">se usa en el mapa de talento (Módulo 6)</span></div>
       </div>
     </div>
     <div>
-      <h3>Frecuencia · ciclo anual</h3>
+      <h3>Cada cuándo</h3>
       <div class="timeline">
-        <div><span>Continuo</span><b>1:1 mensual</b>30 minutos con la Dirección Comercial sobre el tablero.</div>
-        <div><span>Nuevos gerentes</span><b>Días 30 · 90 · 120</b>Evaluaciones formales dentro del periodo de prueba; el día 120 alimenta el KPI-2.</div>
-        <div><span>Febrero y agosto</span><b>360° semestral</b>Primer ciclo en febrero de 2027 (gerentes con 90+ días).</div>
-        <div><span>Marzo y septiembre</span><b>Comité de calibración</b>Direcciones y RH ubican a cada persona en la 9-Box.</div>
-        <div><span>Agosto</span><b>Cierre anual</b>Plan de desarrollo individual (PDI) y revisión de banda.</div>
+        <div><span>Cada mes</span><b>Plática 1 a 1</b>30 minutos con su jefe para revisar el tablero.</div>
+        <div><span>Gerente nuevo</span><b>Días 30, 90 y 120</b>El día 120 nos dice si contratamos bien.</div>
+        <div><span>Febrero y agosto</span><b>Evaluación 360°</b>La primera será en febrero de 2027.</div>
+        <div><span>Marzo y septiembre</span><b>Mapa de talento</b>Dirección y RH ubican a cada persona.</div>
+        <div><span>Agosto</span><b>Cierre del año</b>Plan de desarrollo personal y revisión de sueldo.</div>
       </div>
     </div>
     <div>
-      <h3>Criterios de calificación y consecuencia</h3>
+      <h3>Qué pasa con cada calificación</h3>
       <table class="t-tight">
-        <thead><tr><th style="width:15%">Puntaje final</th><th style="width:18%">Categoría</th><th>Consecuencia</th></tr></thead>
+        <thead><tr><th style="width:15%">Calificación</th><th style="width:18%">Nivel</th><th>Qué sigue</th></tr></thead>
         <tbody>
-          <tr><td class="num">4.5 – 5.0</td><td><b>Sobresaliente</b></td><td>Candidato a cajas altas de la 9-Box, ruta acelerada y bono trimestral de retención</td></tr>
-          <tr><td class="num">3.5 – 4.4</td><td><b>Supera</b></td><td>PDI de crecimiento: Nivel 3 de la Academia y proyecto de mejora</td></tr>
-          <tr><td class="num">2.8 – 3.4</td><td><b>Cumple</b></td><td>PDI de consolidación en las competencias con menor puntaje</td></tr>
-          <tr><td class="num">2.0 – 2.7</td><td><b>En desarrollo</b></td><td>Plan de mejora de 90 días con padrino y seguimiento quincenal</td></tr>
-          <tr><td class="num">&lt; 2.0</td><td><b>No cumple</b></td><td>Plan formal documentado; en periodo de prueba, dictamen previo de la Comisión Mixta</td></tr>
+          <tr><td class="num">4.5 – 5.0</td><td><b>Sobresaliente</b></td><td>Candidato a crecer y bono de permanencia</td></tr>
+          <tr><td class="num">3.5 – 4.4</td><td><b>Supera</b></td><td>Plan para crecer: Nivel 3 de la Academia y un proyecto de mejora</td></tr>
+          <tr><td class="num">2.8 – 3.4</td><td><b>Cumple</b></td><td>Plan para reforzar sus competencias más bajas</td></tr>
+          <tr><td class="num">2.0 – 2.7</td><td><b>En desarrollo</b></td><td>Plan de mejora de 90 días con su padrino</td></tr>
+          <tr><td class="num">&lt; 2.0</td><td><b>No cumple</b></td><td>Plan por escrito; en periodo de prueba se consulta a la Comisión Mixta antes de decidir</td></tr>
         </tbody>
       </table>
     </div>
     <div>
-      <h3>Ejemplo de reporte individual 360° · Colaborador B, Gerente de Guadalupe (simulado)</h3>
+      <h3>Ejemplo · reporte 360° del Colaborador B, gerente de Guadalupe (simulado)</h3>
       <div class="cols" style="grid-template-columns:1.7fr 1fr;gap:14px;align-items:center">
         <div>
-          <div class="legend" style="margin-bottom:4px"><span><i style="background:var(--s1);border-radius:50%"></i>Promedio de los demás evaluadores</span><span><i style="background:var(--s2);border-radius:50%"></i>Autoevaluación</span></div>
+          <div class="legend" style="margin-bottom:4px"><span><i style="background:var(--s1);border-radius:50%"></i>Lo que opinan los demás</span><span><i style="background:var(--s2);border-radius:50%"></i>Lo que opina él mismo</span></div>
           <div class="dots">
-<div class="lab">T1 · Disciplina de embudo</div><div class="tr"><span class="gap" style="left:72.5%;width:7.5%"></span><span class="d" style="left:72.5%;background:var(--s1)"></span><span class="d" style="left:80.0%;background:var(--s2)"></span></div><div class="v">3.9 · 4.2</div>
+<div class="lab">T1 · Seguimiento a clientes</div><div class="tr"><span class="gap" style="left:72.5%;width:7.5%"></span><span class="d" style="left:72.5%;background:var(--s1)"></span><span class="d" style="left:80.0%;background:var(--s2)"></span></div><div class="v">3.9 · 4.2</div>
 <div class="lab">T2 · Cierre y crédito</div><div class="tr"><span class="gap" style="left:82.5%;width:2.5%"></span><span class="d" style="left:82.5%;background:var(--s1)"></span><span class="d" style="left:85.0%;background:var(--s2)"></span></div><div class="v">4.3 · 4.4</div>
-<div class="lab hl">L1 · Desarrollo del equipo</div><div class="tr"><span class="gap" style="left:42.5%;width:27.5%"></span><span class="d" style="left:42.5%;background:var(--s1)"></span><span class="d" style="left:70.0%;background:var(--s2)"></span></div><div class="v hl">2.7 · 3.8</div>
-<div class="lab">L2 · Liderazgo íntegro</div><div class="tr"><span class="gap" style="left:65.0%;width:10.0%"></span><span class="d" style="left:65.0%;background:var(--s1)"></span><span class="d" style="left:75.0%;background:var(--s2)"></span></div><div class="v">3.6 · 4.0</div>
-<div class="lab">D1 · Decisiones con datos</div><div class="tr"><span class="gap" style="left:62.5%;width:7.5%"></span><span class="d" style="left:70.0%;background:var(--s1)"></span><span class="d" style="left:62.5%;background:var(--s2)"></span></div><div class="v">3.8 · 3.5</div>
-<div class="lab">D2 · IA y automatización</div><div class="tr"><span class="gap" style="left:60.0%;width:5.0%"></span><span class="d" style="left:60.0%;background:var(--s1)"></span><span class="d" style="left:65.0%;background:var(--s2)"></span></div><div class="v">3.4 · 3.6</div>
+<div class="lab hl">L1 · Formar al equipo</div><div class="tr"><span class="gap" style="left:42.5%;width:27.5%"></span><span class="d" style="left:42.5%;background:var(--s1)"></span><span class="d" style="left:70.0%;background:var(--s2)"></span></div><div class="v hl">2.7 · 3.8</div>
+<div class="lab">L2 · Liderar con integridad</div><div class="tr"><span class="gap" style="left:65.0%;width:10.0%"></span><span class="d" style="left:65.0%;background:var(--s1)"></span><span class="d" style="left:75.0%;background:var(--s2)"></span></div><div class="v">3.6 · 4.0</div>
+<div class="lab">D1 · Decidir con datos</div><div class="tr"><span class="gap" style="left:62.5%;width:7.5%"></span><span class="d" style="left:70.0%;background:var(--s1)"></span><span class="d" style="left:62.5%;background:var(--s2)"></span></div><div class="v">3.8 · 3.5</div>
+<div class="lab">D2 · Trabajar con IA</div><div class="tr"><span class="gap" style="left:60.0%;width:5.0%"></span><span class="d" style="left:60.0%;background:var(--s1)"></span><span class="d" style="left:65.0%;background:var(--s2)"></span></div><div class="v">3.4 · 3.6</div>
           </div>
-          <div class="dots-axis"><div></div><div class="t"><span style="left:0;transform:none">1</span><span style="left:25%">2</span><span style="left:50%">3 · esperado</span><span style="left:75%">4</span><span style="left:100%;transform:translateX(-100%)">5</span></div><div>otros · auto</div></div>
+          <div class="dots-axis"><div></div><div class="t"><span style="left:0;transform:none">1</span><span style="left:25%">2</span><span style="left:50%">3 · esperado</span><span style="left:75%">4</span><span style="left:100%;transform:translateX(-100%)">5</span></div><div>demás · él</div></div>
         </div>
-        <div class="callout" style="padding:7px 10px"><h4>Lectura del reporte</h4><p class="small" style="font-size:7.4pt">Mayor punto ciego en <b>L1 Desarrollo del equipo</b>: 2.7 frente a 3.8 autoevaluado, coherente con la salida de un asesor. Puntaje final = 50% × 4.6 (resultados) + 50% × 3.6 (competencias) = <b>4.1</b> → caja 6 de la 9-Box y PDI de coaching.</p></div>
+        <div class="callout" style="padding:7px 10px"><h4>Cómo se lee</h4><p class="small" style="font-size:7.4pt">Él se da 3.8 en <b>formar a su equipo</b>, pero los demás le dan 2.7; coincide con que un asesor se fue. Calificación final: 50% × 4.6 (resultados) + 50% × 3.6 (competencias) = <b>4.1</b>. Siguiente paso: coaching para formar a su equipo.</p></div>
       </div>
     </div>
     <div class="cols" style="gap:12px">
-      <div class="card soft"><h3>Reglas de calidad del proceso</h3><ul class="small"><li>Rúbricas acordadas antes del ciclo; 1 hora de capacitación a evaluadores contra sesgos de halo, indulgencia y recencia.</li><li>Anonimato: solo se reportan grupos con 3 o más respuestas.</li><li>Validez anual: puntaje de selección frente a desempeño real.</li></ul></div>
-      <div><h3>KPI de desempeño</h3>
-        <table class="t-tight"><thead><tr><th>Indicador</th><th>Meta</th><th>Periodo</th></tr></thead><tbody>
-          <tr><td>Quality of Hire (gerentes a 120 días)</td><td class="num">≥80%</td><td>Día 120</td></tr>
-          <tr><td>Evaluaciones completas en fecha</td><td class="num">100%</td><td>Cada ciclo</td></tr>
-          <tr><td>Gerentes en nivel ≥3 en las 6 competencias</td><td class="num">≥80%</td><td>Agosto 2027</td></tr>
-          <tr><td>PDI con avance ≥80%</td><td class="num">≥90%</td><td>Semestral</td></tr>
+      <div class="card soft"><h3>Reglas para que sea justa</h3><ul class="small"><li>Las reglas se acuerdan antes de evaluar y quien evalúa recibe 1 hora de capacitación para no calificar por simpatía.</li><li>Nadie ve quién dijo qué: solo se muestran grupos de 3 o más.</li><li>Cada año revisamos si las calificaciones de verdad predicen las ventas.</li></ul></div>
+      <div><h3>Cómo sabremos que funciona</h3>
+        <table class="t-tight"><thead><tr><th>Qué medimos</th><th>Meta</th><th>Cada cuándo</th></tr></thead><tbody>
+          <tr><td>Gerentes en su meta a los 120 días</td><td class="num">80% o más</td><td>Día 120</td></tr>
+          <tr><td>Evaluaciones hechas a tiempo</td><td class="num">100%</td><td>Cada ciclo</td></tr>
+          <tr><td>Gerentes con nivel 3 o más en las seis</td><td class="num">80% o más</td><td>Agosto 2027</td></tr>
+          <tr><td>Planes personales con 80% de avance</td><td class="num">90% o más</td><td>Cada 6 meses</td></tr>
         </tbody></table></div>
     </div>
   </div>
@@ -797,57 +812,57 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 9 · MÓDULO 5 =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 5 · Responsabilidad Social y Talento</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 5 · Responsabilidad Social</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">05</div><div><div class="eyebrow">Módulo 5 · Responsabilidad Social y Talento</div><h1>Políticas ASG de inclusión y equidad</h1></div></div>
+    <div class="mod-head"><div class="mod-num">05</div><div><div class="eyebrow">Módulo 5 · Responsabilidad Social y Talento</div><h1>Tres políticas para que todos tengan las mismas oportunidades</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">Tres políticas del pilar social (S) de ASG</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente como garante de su aplicación en sucursal</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">Brecha salarial ajustada por banda ≤5% · semestral</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Tres políticas de responsabilidad social (ASG)</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o3">OE-3</span><span class="oe o1">OE-1</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Toda la empresa; cada gerente las aplica en su sucursal</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">Diferencia de sueldo en el mismo puesto de 5% o menos</span></div>
     </div>
-    <p><strong>Relevancia para el giro.</strong> La compraventa de seminuevos es un giro históricamente masculinizado, con prácticas extendidas de comisiones fuera de nómina, jornadas de fin de semana y disponibilidad permanente por WhatsApp. Autos Ochoa suma un reto propio: la transición a segunda generación, donde la percepción de reglas distintas para la familia expulsa al talento profesional. Las tres políticas responden a esos riesgos concretos y se reportan con indicadores GRI.</p>
+    <p><strong>Por qué estas tres.</strong> En la venta de autos trabajan sobre todo hombres, es común pagar comisiones por fuera y trabajar fines de semana sin control. Además, somos una empresa familiar en su segunda generación, donde es fácil que parezca que hay reglas distintas para la familia. Estas políticas atacan justo eso y se reportan con indicadores internacionales (GRI).</p>
     <div class="cols3" style="flex:1;min-height:0">
       <div class="policy">
-        <div class="ph"><span class="tag">Política 1</span><b>Equidad salarial y de oportunidades</b><i>«Mismo puesto, misma banda»</i></div>
+        <div class="ph"><span class="tag">Política 1 · Equidad salarial y de oportunidades</span><b>Mismo puesto, mismo sueldo</b></div>
         <div class="pb">
-          <h3>Objetivo</h3><p>Que el ingreso y las promociones dependan solo del puesto y del desempeño, nunca del apellido, el género o la negociación individual.</p>
-          <h3>Lineamientos</h3>
-          <ul><li>Tabulador público de 6 bandas (B0–B5); nadie fuera de banda, incluidos los familiares.</li><li>Comisiones y bonos con el mismo tabulador por puesto, 100% timbrados en CFDI.</li><li>Auditoría semestral de brecha salarial por género y por condición familiar dentro de cada banda; toda brecha &gt;5% se corrige en el siguiente ciclo.</li><li>Promociones solo con evaluación 360° y 9-Box, decididas por un comité con al menos un integrante no familiar.</li></ul>
-          <h3>KPI</h3>
-          <table><tbody><tr><td>Brecha salarial ajustada por banda ≤5%</td><td>Semestral</td></tr><tr><td>Personal dentro de su banda 100%</td><td>Semestral</td></tr><tr><td>Promociones con proceso documentado 100%</td><td>Por evento</td></tr></tbody></table>
-          <h3>Responsable</h3><p>Dirección General y Coordinación de RH</p>
+          <h3>Para qué</h3><p>Que lo que ganas y tus ascensos dependan de tu puesto y tu desempeño, no de tu apellido, tu género o de cuánto negociaste.</p>
+          <h3>Qué vamos a hacer</h3>
+          <ul><li>Publicar 6 bandas de sueldo; nadie queda fuera de su banda, tampoco los familiares.</li><li>Comisiones con la misma tabla para todos y pagadas completas en nómina.</li><li>Cada 6 meses revisar diferencias de sueldo entre hombres y mujeres y entre familiares y no familiares; si pasan de 5%, se corrigen.</li><li>Ascensos decididos con la evaluación y un comité que incluye a alguien que no es de la familia.</li></ul>
+          <h3>Cómo sabremos que funciona</h3>
+          <table><tbody><tr><td>Diferencia de sueldo de 5% o menos</td><td>Cada 6 meses</td></tr><tr><td>Todos dentro de su banda</td><td>Cada 6 meses</td></tr><tr><td>Ascensos documentados 100%</td><td>Cada ascenso</td></tr></tbody></table>
+          <h3>Responsable</h3><p>Dirección General y RH</p>
         </div>
-        <div class="pk">Marco: LFT arts. 86 y 133 · NMX-R-025-SCFI-2015 · GRI 405-2 · ODS 5, 8 y 10</div>
+        <div class="pk">Base: LFT arts. 86 y 133 · NMX-R-025 · GRI 405 · ODS 5, 8 y 10</div>
       </div>
       <div class="policy">
-        <div class="ph"><span class="tag">Política 2</span><b>Inclusión en el proceso de selección</b><i>«Talento por evidencia»</i></div>
+        <div class="ph"><span class="tag">Política 2 · Inclusión en la selección</span><b>Contratamos por lo que sabes hacer</b></div>
         <div class="pb">
-          <h3>Objetivo</h3><p>Ampliar el universo de candidatos para cubrir 26 posiciones a tiempo, eliminando filtros que no predicen desempeño.</p>
-          <h3>Lineamientos</h3>
-          <ul><li>Vacantes sin requisitos de edad, sexo, estado civil, apariencia ni fotografía; lenguaje incluyente revisado por RH.</li><li>Primer filtro ciego: el ATS oculta nombre, edad y género; la decisión se basa en el Reto de Embudo Real y el scorecard.</li><li>Ternas finales con al menos una mujer para Gerente y Asesor, y panel de entrevista mixto.</li><li>El esquema 39-B abre la entrada a perfiles sin experiencia automotriz (mujeres, jóvenes universitarios, personas de 45+ que cambian de giro) con ajustes razonables para personas con discapacidad.</li></ul>
-          <h3>KPI</h3>
-          <table><tbody><tr><td>Vacantes sin requisitos discriminatorios 100%</td><td>Mensual</td></tr><tr><td>Ternas con al menos una mujer ≥80%</td><td>Trimestral</td></tr><tr><td>Mujeres en contrataciones comerciales ≥30%</td><td>Anual</td></tr></tbody></table>
-          <h3>Responsable</h3><p>Coordinación de RH y comité de selección</p>
+          <h3>Para qué</h3><p>Tener más candidatos para cubrir 26 puestos a tiempo, quitando filtros que no dicen nada de cómo trabaja una persona.</p>
+          <h3>Qué vamos a hacer</h3>
+          <ul><li>Vacantes sin límite de edad y sin pedir foto, estado civil ni «buena presentación».</li><li>El primer filtro no muestra nombre, edad ni género; decidimos con la prueba práctica y la entrevista.</li><li>Entre los finalistas para gerente y asesor habrá al menos una mujer.</li><li>Abrimos la puerta a gente sin experiencia en autos (universitarios, mujeres, personas de más de 45 años) con 3 meses de capacitación pagada, y hacemos ajustes para personas con discapacidad.</li></ul>
+          <h3>Cómo sabremos que funciona</h3>
+          <table><tbody><tr><td>Vacantes sin requisitos que discriminen 100%</td><td>Cada mes</td></tr><tr><td>Finalistas con al menos una mujer 80%</td><td>Cada 3 meses</td></tr><tr><td>Mujeres contratadas en ventas 30%</td><td>Cada año</td></tr></tbody></table>
+          <h3>Responsable</h3><p>RH y comité de selección</p>
         </div>
-        <div class="pk">Marco: LFT arts. 2, 3 y 133 · Ley Federal para Prevenir y Eliminar la Discriminación · GRI 405-1 y 406 · ODS 5 y 10</div>
+        <div class="pk">Base: LFT arts. 2, 3 y 133 · Ley Federal para Prevenir y Eliminar la Discriminación · GRI 405 y 406 · ODS 5 y 10</div>
       </div>
       <div class="policy">
-        <div class="ph"><span class="tag">Política 3</span><b>Balance vida-trabajo y flexibilidad</b><i>«Tiempo Ochoa»</i></div>
+        <div class="ph"><span class="tag">Política 3 · Balance vida-trabajo</span><b>Tiempo para tu vida</b></div>
         <div class="pb">
-          <h3>Objetivo</h3><p>Operar un negocio que abre sábados y domingos sin que eso cueste la vida personal del equipo ni genere contingencias de jornada.</p>
-          <h3>Lineamientos</h3>
-          <ul><li>Rol dominical rotativo publicado con 30 días: nadie trabaja más de 2 domingos al mes; prima dominical del 25%.</li><li>Derecho a la desconexión: fuera de la guardia pagada, el asistente de IA responde y agenda; nadie está obligado a contestar.</li><li>Jornada de 46 horas desde el 1 de enero de 2027, sin reducir percepciones, con horarios escalonados por sucursal.</li><li>Corporativo: 1 día remoto por semana (menos del 40% de la jornada, sin configurar teletrabajo); 5 días de paternidad adicionales a la ley, día libre de cumpleaños y lactario en la matriz.</li></ul>
-          <h3>KPI</h3>
-          <table><tbody><tr><td>Dimensión «Carga y desconexión» ≥60%</td><td>Semestral</td></tr><tr><td>Horas extra ≤4 h/semana (nunca &gt;9)</td><td>Mensual</td></tr><tr><td>Personas con ≤2 domingos al mes 100%</td><td>Mensual</td></tr></tbody></table>
-          <h3>Responsable</h3><p>Gerentes de Sucursal y Coordinación de RH</p>
+          <h3>Para qué</h3><p>Abrir sábados y domingos sin que eso cueste la vida personal del equipo ni nos meta en problemas legales.</p>
+          <h3>Qué vamos a hacer</h3>
+          <ul><li>Nadie trabaja más de 2 domingos al mes; el rol se publica con un mes de anticipación y el domingo se paga con 25% extra.</li><li>Derecho a desconectarse: fuera de la guardia pagada, el asistente de IA contesta; nadie está obligado a responder.</li><li>Jornada de 46 horas desde el 1 de enero de 2027, sin bajar sueldos.</li><li>Oficinas: 1 día en casa por semana. Para todos: 5 días de paternidad extra, día libre en tu cumpleaños y sala de lactancia.</li></ul>
+          <h3>Cómo sabremos que funciona</h3>
+          <table><tbody><tr><td>Encuesta «carga y descanso» 60% o más</td><td>Cada 6 meses</td></tr><tr><td>Horas extra 4 o menos por semana</td><td>Cada mes</td></tr><tr><td>Nadie con más de 2 domingos</td><td>Cada mes</td></tr></tbody></table>
+          <h3>Responsable</h3><p>Gerentes y RH</p>
         </div>
-        <div class="pk">Marco: LFT arts. 59, 66–71, 132 fr. XXXIV, 170 y 330-A · NOM-035-STPS-2018 · GRI 401-3 · ODS 3 y 8</div>
+        <div class="pk">Base: LFT arts. 59, 66–71, 132 fr. XXXIV, 170 y 330-A · NOM-035 · GRI 401 · ODS 3 y 8</div>
       </div>
     </div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>Pasar de 8 a 34 personas multiplica por cuatro la exposición legal, y las prácticas del giro que la LFT sanciona son las mismas que generan inequidad. Escribirlas como política desde la Fase 0 evita replicarlas en cinco sucursales.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>La inclusión amplía el mercado de talento para cubrir vacantes a tiempo (OE-1); la equidad y el balance reducen la rotación y las contingencias (OE-3). Además, preparan la certificación NMX-R-025 propuesta en el Módulo 8.</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>Al pasar de 8 a 34 personas, cualquier mala costumbre se multiplica por cinco. Escribir estas reglas desde el principio evita repetir en cada sucursal lo que la ley sanciona.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Más candidatos para cubrir vacantes a tiempo (OE-1), menos rotación y menos riesgo de demandas (OE-3). Además nos prepara para la certificación de igualdad del Módulo 8.</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>9</b></footer>
@@ -855,67 +870,65 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 10 · MÓDULO 6 =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 6 · Sucesión y Talento Clave</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 6 · Sucesión y Talento Clave</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">06</div><div><div class="eyebrow">Módulo 6 · Sucesión y Talento Clave</div><h1>Metodología de las 9 cajas (9-Box Grid)</h1></div></div>
+    <div class="mod-head"><div class="mod-num">06</div><div><div class="eyebrow">Módulo 6 · Sucesión y Talento Clave</div><h1>Mapa de talento (9-Box): quién está listo para crecer</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">9-Box calibrada y mapa de sucesión</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o1">OE-1</span><span class="oe o3">OE-3</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente de Sucursal y su futuro rol: Gerente Regional</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">≥60% de puestos críticos con sucesor listo · semestral</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Mapa de talento de 9 cuadros y plan de sucesión</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o1">OE-1</span><span class="oe o3">OE-3</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Gerentes y quienes podrían llegar a serlo</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">6 de cada 10 puestos clave con reemplazo listo</span></div>
     </div>
-    <p><strong>Cómo se construyen los ejes.</strong> El <strong>desempeño</strong> (eje horizontal) es el puntaje final del Módulo 4: 50% resultados y 50% competencias 360° (bajo &lt;2.8 · medio 2.8–3.9 · alto ≥4.0). El <strong>potencial</strong> (eje vertical) combina velocidad de aprendizaje en la Academia, las competencias L1 y D1, la aspiración declarada en la entrevista de permanencia y la psicometría de liderazgo. El comité de calibración ubica a cada persona en marzo y septiembre. <span class="muted">Ejercicio simulado al corte de marzo de 2027.</span></p>
+    <p><strong>Cómo funciona.</strong> El mapa cruza dos preguntas: <strong>¿qué tan bien hace hoy su trabajo?</strong> (desempeño: la calificación del Módulo 4) y <strong>¿qué tanto puede crecer?</strong> (potencial: qué tan rápido aprende en la Academia, cómo lidera, si quiere crecer y una prueba psicométrica). Dirección y RH lo revisan en marzo y septiembre. <span class="muted">Ejemplo simulado a marzo de 2027.</span></p>
     <div style="display:grid;grid-template-columns:3.25in 1fr;gap:14px;align-items:start">
       <div>
         <div class="ninebox">
           <div class="nb-y">Potencial →</div>
           <div class="nb-grid">
-            <div class="nb-cell l2"><span class="n">7</span><b>Diamante en bruto</b><small>Acelerar desempeño</small><span class="who">C</span></div>
-            <div class="nb-cell l3"><span class="n">8</span><b>Futuro líder</b><small>Desarrollar para ascender</small></div>
-            <div class="nb-cell l4"><span class="n">9</span><b>Estrella</b><small>Sucesor listo · retener</small><span class="who">A</span></div>
-            <div class="nb-cell l1"><span class="n">4</span><b>Inconsistente</b><small>Diagnosticar causa</small></div>
-            <div class="nb-cell l2"><span class="n">5</span><b>Núcleo clave</b><small>Consolidar</small></div>
-            <div class="nb-cell l3"><span class="n">6</span><b>Alto desempeño</b><small>Retener en el puesto</small><span class="who">B</span></div>
-            <div class="nb-cell l0"><span class="n">1</span><b>Bajo rendimiento</b><small>Plan de mejora 90 días</small></div>
-            <div class="nb-cell l1"><span class="n">2</span><b>Efectivo</b><small>Mantener y motivar</small></div>
-            <div class="nb-cell l2"><span class="n">3</span><b>Experto confiable</b><small>Reconocer · mentor</small></div>
+            <div class="nb-cell l2"><span class="n">7</span><b>Diamante en bruto</b><small>Acelerar su aprendizaje</small><span class="who">C</span></div>
+            <div class="nb-cell l3"><span class="n">8</span><b>Futuro líder</b><small>Prepararlo para crecer</small></div>
+            <div class="nb-cell l4"><span class="n">9</span><b>Estrella</b><small>Listo; cuidarlo</small><span class="who">A</span></div>
+            <div class="nb-cell l1"><span class="n">4</span><b>Irregular</b><small>Entender qué pasa</small></div>
+            <div class="nb-cell l2"><span class="n">5</span><b>Pilar del equipo</b><small>Consolidar</small></div>
+            <div class="nb-cell l3"><span class="n">6</span><b>Alto desempeño</b><small>Mantenerlo en su puesto</small><span class="who">B</span></div>
+            <div class="nb-cell l0"><span class="n">1</span><b>Bajo desempeño</b><small>Plan de 90 días</small></div>
+            <div class="nb-cell l1"><span class="n">2</span><b>Cumple</b><small>Motivar</small></div>
+            <div class="nb-cell l2"><span class="n">3</span><b>Experto confiable</b><small>Reconocer; que enseñe</small></div>
           </div>
           <div></div>
           <div><div class="nb-ticks"><span>Bajo</span><span>Medio</span><span>Alto</span></div><div class="nb-x">Desempeño →</div></div>
         </div>
         <div style="margin-top:12px">
-          <h3>KPI de sucesión</h3>
-          <table class="t-tight"><thead><tr><th>Indicador</th><th>Meta</th><th>Periodo</th></tr></thead><tbody>
-            <tr><td>Puestos críticos con sucesor listo</td><td class="num">≥60%</td><td>Semestral</td></tr>
-            <tr><td>Gerencias cubiertas internamente</td><td class="num">20% → 60%</td><td>Año 1 → 2</td></tr>
-            <tr><td>Retención de cajas 7–9</td><td class="num">100%</td><td>Anual</td></tr>
-            <tr><td>Cajas 7–9 con PDI activo</td><td class="num">100%</td><td>Semestral</td></tr>
+          <h3>Cómo sabremos que funciona</h3>
+          <table class="t-tight"><thead><tr><th>Qué medimos</th><th>Meta</th><th>Cada cuándo</th></tr></thead><tbody>
+            <tr><td>Puestos clave con reemplazo listo</td><td class="num">60%</td><td>Cada 6 meses</td></tr>
+            <tr><td>Gerencias cubiertas por gente de casa</td><td class="num">20% → 60%</td><td>Año 1 → año 2</td></tr>
+            <tr><td>Talento de los cuadros 7 a 9 que se queda</td><td class="num">100%</td><td>Cada año</td></tr>
+            <tr><td>Cuadros 7 a 9 con plan personal</td><td class="num">100%</td><td>Cada 6 meses</td></tr>
           </tbody></table>
         </div>
       </div>
       <div style="display:grid;gap:6px">
-        <div class="person"><div class="ph"><span class="who">A</span><b>Colaborador A · Asesor Comercial Digital Senior<small>Matriz · 3 años de antigüedad</small></b></div>
-          <dl><dt>Desempeño</dt><dd><b>Alto (4.4)</b>: 5.6 u/mes, 22% de cierre, cero acciones vencidas en 11 de 12 semanas.</dd><dt>Potencial</dt><dd><b>Alto</b>: Niveles 1 y 2 en tiempo récord; L1 = 4.2 (ya entrena a 2 asesores); aspira a gerencia.</dd><dt>Caja</dt><dd class="box">9 · Estrella — sucesor listo ahora</dd><dt>Acción</dt><dd>Gerente de la sucursal Apodaca (apertura de mayo) tras 30 días de <em>shadowing</em>; Nivel 3; bono de retención. Riesgo de fuga alto: entrevista de permanencia mensual.</dd></dl></div>
-        <div class="person"><div class="ph"><span class="who">B</span><b>Colaborador B · Gerente de Sucursal Guadalupe<small>Contratación externa · día 120</small></b></div>
-          <dl><dt>Desempeño</dt><dd><b>Alto (4.1)</b>: 11 u/mes, cruzó el punto de equilibrio en su 2.º mes; margen de $31,500; cierre de 17%.</dd><dt>Potencial</dt><dd><b>Medio</b>: L1 Desarrollo del equipo = 2.7 (un asesor salió en 3 meses); D1 = 3.8.</dd><dt>Caja</dt><dd class="box">6 · Alto desempeño — retener en el puesto</dd><dt>Acción</dt><dd>PDI en coaching de equipo con padrino; re-evaluar potencial en septiembre. Aún no es candidato a Gerente Regional (2+ años).</dd></dl></div>
-        <div class="person"><div class="ph"><span class="who">C</span><b>Colaborador C · Asesor Comercial Digital (contrato 39-B)<small>Egresado de Tecmilenio · 4 meses</small></b></div>
-          <dl><dt>Desempeño</dt><dd><b>Bajo (2.5)</b>: 2.3 u/mes frente a la meta de 4; todavía en curva de aprendizaje.</dd><dt>Potencial</dt><dd><b>Alto</b>: mejor puntaje de su generación en la Academia (96/100); D2 = 4.6; cero acciones vencidas desde el mes 2.</dd><dt>Caja</dt><dd class="box">7 · Diamante en bruto — acelerar</dd><dt>Acción</dt><dd>Plan acelerado de 90 días con A como padrino: 20 conversaciones acompañadas y meta de 4 u/mes al mes 7. Banca para Asesor Senior (1–2 años).</dd></dl></div>
+        <div class="person"><div class="ph"><span class="who">A</span><b>Colaborador A · Asesor senior en la matriz<small>3 años en la empresa</small></b></div>
+          <dl><dt>Desempeño</dt><dd><b>Alto (4.4):</b> vende 5.6 autos al mes, cierra el 22% y casi nunca deja clientes sin seguimiento.</dd><dt>Potencial</dt><dd><b>Alto:</b> aprobó los niveles 1 y 2 muy rápido, ya enseña a 2 asesores y quiere ser gerente.</dd><dt>Cuadro</dt><dd class="box">9 · Estrella — listo ahora</dd><dt>Qué haremos</dt><dd>Será gerente de Apodaca (abre en mayo). Antes: 30 días acompañando a un gerente, Nivel 3 y bono de permanencia. Como otras agencias lo pueden buscar, platicamos con él cada mes.</dd></dl></div>
+        <div class="person"><div class="ph"><span class="who">B</span><b>Colaborador B · Gerente de Guadalupe<small>Contratado de fuera · 120 días</small></b></div>
+          <dl><dt>Desempeño</dt><dd><b>Alto (4.1):</b> 11 autos al mes; llegó a su meta en el segundo mes.</dd><dt>Potencial</dt><dd><b>Medio:</b> le cuesta formar a su equipo (2.7 en esa competencia) y un asesor ya se fue.</dd><dt>Cuadro</dt><dd class="box">6 · Alto desempeño — mantenerlo en su puesto</dd><dt>Qué haremos</dt><dd>Coaching para formar a su equipo, con un padrino. Volvemos a revisar en septiembre. Todavía no es candidato a gerente regional.</dd></dl></div>
+        <div class="person"><div class="ph"><span class="who">C</span><b>Colaborador C · Asesor nuevo<small>Entró sin experiencia en autos · 4 meses</small></b></div>
+          <dl><dt>Desempeño</dt><dd><b>Bajo (2.5):</b> vende 2.3 autos al mes; la meta es 4. Sigue aprendiendo.</dd><dt>Potencial</dt><dd><b>Alto:</b> la mejor calificación de su generación en la Academia (96 de 100) y muy bueno con la IA.</dd><dt>Cuadro</dt><dd class="box">7 · Diamante en bruto — acelerar</dd><dt>Qué haremos</dt><dd>Plan de 90 días con el Colaborador A como padrino: 20 conversaciones acompañadas y meta de 4 autos al mes en el mes 7.</dd></dl></div>
       </div>
     </div>
     <div>
-      <div>
-        <h3>Mapa de sucesión resultante</h3>
-        <table class="t-tight"><thead><tr><th style="width:25%">Puesto crítico</th><th style="width:13%">Titular</th><th style="width:19%">Sucesor</th><th style="width:11%">Preparación</th><th>Siguiente paso</th></tr></thead><tbody>
-          <tr><td>Gerente · Apodaca (Fase 2)</td><td>Vacante</td><td>Colaborador A</td><td><b>Listo ahora</b></td><td>Promoción en marzo; ya certificado en Niveles 1 y 2</td></tr>
-          <tr><td>Gerente · Guadalupe</td><td>Colaborador B</td><td>Asesor Senior por definir</td><td>1–2 años</td><td>Identificarlo en el 360° de agosto</td></tr>
-          <tr><td>Asesor Senior · Matriz</td><td>Colaborador A</td><td>Colaborador C</td><td>1–2 años</td><td>Plan acelerado de 90 días</td></tr>
-          <tr><td>Gerente Regional (año 2)</td><td>Puesto nuevo</td><td>Gerente mejor calibrado</td><td>2+ años</td><td>Nivel 3 y calibración de septiembre</td></tr>
-        </tbody></table>
-      </div>
+      <h3>Plan de sucesión que resulta</h3>
+      <table class="t-tight"><thead><tr><th style="width:25%">Puesto</th><th style="width:14%">Hoy lo ocupa</th><th style="width:20%">Quién lo podría ocupar</th><th style="width:11%">¿Cuándo?</th><th>Siguiente paso</th></tr></thead><tbody>
+        <tr><td>Gerente · Apodaca (Fase 2)</td><td>Vacante</td><td>Colaborador A</td><td><b>Ya</b></td><td>Ascenso en marzo; ya tiene los niveles 1 y 2</td></tr>
+        <tr><td>Gerente · Guadalupe</td><td>Colaborador B</td><td>Un asesor senior por definir</td><td>1 a 2 años</td><td>Identificarlo en la evaluación de agosto</td></tr>
+        <tr><td>Asesor senior · Matriz</td><td>Colaborador A</td><td>Colaborador C</td><td>1 a 2 años</td><td>Plan de 90 días</td></tr>
+        <tr><td>Gerente regional (año 2)</td><td>Puesto nuevo</td><td>El gerente mejor evaluado</td><td>2 años o más</td><td>Nivel 3 y revisión de septiembre</td></tr>
+      </tbody></table>
     </div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>Hoy toda gerencia se cubre desde fuera y todo el conocimiento depende del fundador. Una sola salida sin sucesor deja una sucursal sin líder durante 45 días de vacante y 120 de curva.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>Un sucesor interno «listo ahora» elimina el time-to-hire y llega a la apertura ya certificado: es la forma más barata de cumplir el 100% de cobertura anticipada (OE-1) y de retener a quien tiene más ofertas (OE-3).</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>Hoy todos los gerentes vienen de fuera y casi todo el conocimiento está en el fundador. Si un gerente se va sin reemplazo, la sucursal queda sin líder 45 días, más 120 de aprendizaje del nuevo.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Un reemplazo de casa ya conoce la empresa y ya está certificado: es la forma más barata de tener al gerente listo antes de abrir (OE-1) y de cuidar a quien más ofertas recibe (OE-3).</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>10</b></footer>
@@ -923,72 +936,72 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 11 · MÓDULO 7 =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 7 · Digitalización y Metodologías Ágiles</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 7 · Digitalización y Agilidad</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">07</div><div><div class="eyebrow">Módulo 7 · Digitalización y Metodologías Ágiles</div><h1>Propuesta digital y ágil para RH</h1></div></div>
+    <div class="mod-head"><div class="mod-num">07</div><div><div class="eyebrow">Módulo 7 · Digitalización y Metodologías Ágiles</div><h1>Herramientas que ya tenemos y trabajo en ciclos cortos</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">4 herramientas HR Tech + Scrum/Kanban de RH</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente como usuario diario de los tableros</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">Time-to-hire ≤45 días · por vacante</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">4 herramientas digitales y trabajo en ciclos de 2 semanas (Scrum)</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o1">OE-1</span><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">RH y gerentes, que usarán los tableros a diario</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">Vacante de gerente cubierta en 45 días o menos</span></div>
     </div>
     <div>
-      <h3>Herramientas HR Tech · proceso, implementación y módulos que apoyan</h3>
+      <h3>Herramientas digitales · para qué sirven y cómo las ponemos en marcha</h3>
       <table>
-        <thead><tr><th style="width:21%">Herramienta</th><th style="width:21%">Proceso de RH</th><th style="width:36%">Cómo se implementa</th><th style="width:10%">Módulos</th><th style="width:12%">Costo</th></tr></thead>
+        <thead><tr><th style="width:21%">Herramienta</th><th style="width:21%">Para qué la usamos en RH</th><th style="width:36%">Cómo la ponemos en marcha</th><th style="width:10%">Apoya a</th><th style="width:12%">Costo</th></tr></thead>
         <tbody>
-          <tr><td><b>1 · CRM Ochoa con IA como plataforma de talento</b> <span class="small muted">(núcleo)</span></td><td>Reclutamiento (ATS), onboarding, evaluación 360°, sucesión y alerta de fuga</td><td>El Especialista de Sistemas habilita tres módulos en sprints: tablero kanban de candidatos, formulario 360° con cálculo automático y modelo de alerta de fuga con 5 señales. La IA califica el Reto de Embudo Real con la misma rúbrica para todos.</td><td>1 · 2 · 4 · 6 · 8</td><td>$0 en licencias; ~60 h de desarrollo interno</td></tr>
-          <tr><td><b>2 · Google Classroom + Looker Studio</b> <span class="small muted">(núcleo)</span></td><td>Capacitación, certificación y tablero de KPIs de RH</td><td>Un aula por nivel de la Academia; tablero de Looker conectado a Sheets, CRM y nómina con los KPIs de este informe y acceso por rol (gerente ve su sucursal; dirección ve las cinco).</td><td>1 · 2 · 3 · 4</td><td>$0</td></tr>
-          <tr><td><b>3 · Nómina en la nube con registro electrónico de asistencia</b></td><td>Nómina con variable en CFDI, jornada, vacaciones y autoservicio</td><td>Evaluar opciones del mercado mexicano (p. ej., Runa, Worky o Buk) en octubre; piloto en la matriz y despliegue en todas las sedes antes de diciembre de 2026 (art. 132 fr. XXXIV).</td><td>2 · 5</td><td>~$60 por persona al mes (Parte 1)</td></tr>
-          <tr><td><b>4 · WhatsApp Business API</b></td><td>Postulación, pulso de clima, píldoras de aprendizaje y desconexión</td><td>Flujos automáticos: postulación en 3 preguntas, encuesta pulso mensual, píldora diaria y respuesta del asistente fuera de guardia.</td><td>1 · 2 · 3 · 5</td><td>Ya en uso</td></tr>
+          <tr><td><b>1 · CRM de Autos Ochoa con IA</b> <span class="small muted">(ya lo tenemos)</span></td><td>Reclutar, evaluar (360°), plan de sucesión y avisar si alguien se quiere ir</td><td>El especialista de sistemas le agrega tres funciones: tablero de candidatos, formulario 360° y aviso de salida. La IA califica la prueba práctica igual para todos.</td><td>Módulos 1 · 2 · 4 · 6 · 8</td><td>$0 en licencias; ~60 h de trabajo interno</td></tr>
+          <tr><td><b>2 · Google Classroom y Looker Studio</b> <span class="small muted">(gratuitos)</span></td><td>Cursos de la Academia y tablero de indicadores</td><td>Un salón en línea por nivel; un tablero que junta CRM, nómina y encuesta. Cada gerente ve su sucursal y Dirección ve todo.</td><td>Módulos 1 · 2 · 3 · 4</td><td>$0</td></tr>
+          <tr><td><b>3 · Nómina en la nube con checador</b></td><td>Pagar comisiones en el recibo, registrar horarios y pedir vacaciones desde el celular</td><td>Elegir proveedor en octubre (por ejemplo Runa, Worky o Buk), probar en la matriz y tenerlo en todas las sedes antes de diciembre de 2026, como pide la ley.</td><td>Módulos 2 · 5</td><td>~$60 por persona al mes (Parte 1)</td></tr>
+          <tr><td><b>4 · WhatsApp Business</b></td><td>Postularse, contestar encuestas, pregunta diaria y respuestas fuera de horario</td><td>Mensajes automáticos: postulación en 3 preguntas, encuesta mensual, pregunta del día y respuesta del asistente fuera de la guardia.</td><td>Módulos 1 · 2 · 3 · 5</td><td>Ya lo usamos</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="chips"><span class="chip"><b>Prácticas I4.0:</b></span><span class="chip">IA que evalúa y sugiere</span><span class="chip">Analítica predictiva de rotación</span><span class="chip">Nube y autoservicio móvil</span><span class="chip">Automatización de flujos</span><span class="chip">Gamificación del aprendizaje</span><span class="chip">Decisiones con datos en tiempo real</span></div>
+    <div class="chips"><span class="chip"><b>Industria 4.0, en simple:</b></span><span class="chip">IA que sugiere y califica</span><span class="chip">Aviso anticipado de salidas</span><span class="chip">Todo en la nube y en el celular</span><span class="chip">Mensajes automáticos</span><span class="chip">Aprender jugando</span><span class="chip">Decidir con datos al día</span></div>
     <div>
-      <h3>Metodología ágil · Scrum de RH con tablero Kanban</h3>
+      <h3>Metodología ágil · trabajar en ciclos de dos semanas (Scrum) con un tablero de tareas (Kanban)</h3>
       <div class="cols" style="grid-template-columns:1fr 1.05fr;gap:12px">
         <dl class="roles">
-          <dt>Product Owner</dt><dd>Coordinación de RH y Nómina: prioriza el backlog según OE-1, OE-2 y OE-3.</dd>
-          <dt>Scrum Master</dt><dd>Especialista de Sistemas y CRM: facilita y elimina bloqueos; ya opera el kanban comercial.</dd>
-          <dt>Equipo</dt><dd>RH, Sistemas, Marketing/Contenido, Finanzas y un gerente invitado por sprint.</dd>
-          <dt>Interesados</dt><dd>Dirección General y Dirección Comercial en cada revisión de sprint.</dd>
-          <dt>Ceremonias</dt><dd>Sprints de 2 semanas · planeación de 1 h · daily de 15 min · revisión con demostración · retrospectiva de 30 min.</dd>
-          <dt>Artefactos</dt><dd>Backlog con los entregables de los 8 módulos; tablero Por hacer → En curso (máx. 3 por persona) → En revisión → Hecho. <b>Terminado</b> = publicado, medido en Looker y comunicado.</dd>
+          <dt>Quién decide qué va primero</dt><dd>Coordinación de RH, según los 3 objetivos.</dd>
+          <dt>Quién facilita</dt><dd>El especialista de sistemas, que ya usa tableros en ventas.</dd>
+          <dt>Quién trabaja</dt><dd>RH, sistemas, marketing, finanzas y un gerente invitado.</dd>
+          <dt>Quién revisa</dt><dd>Dirección General y Comercial al final de cada ciclo.</dd>
+          <dt>Reuniones</dt><dd>Planeación de 1 hora · 15 minutos diarios · revisión con Dirección · 30 minutos para ver qué mejorar.</dd>
+          <dt>Tablero</dt><dd>Por hacer → Haciendo (máximo 3 por persona) → En revisión → Listo. «Listo» = publicado, medido y comunicado.</dd>
         </dl>
         <div>
-          <table class="t-tight"><thead><tr><th style="width:14%">Sprint</th><th>Entregable (oct–dic 2026)</th></tr></thead><tbody>
-            <tr><td>S1</td><td>Tablero de KPIs de RH y ATS kanban en el CRM</td></tr>
-            <tr><td>S2</td><td>Academia Nivel 1 en Classroom y políticas ASG publicadas</td></tr>
-            <tr><td>S3</td><td>Nómina en la nube, checador piloto, EVP y página de carrera</td></tr>
-            <tr><td>S4</td><td>Checador en todas las sedes y encuesta «Pulso Ochoa»</td></tr>
-            <tr><td>S5</td><td>Plan de mejora de clima y simulador de comisiones</td></tr>
-            <tr><td>S6</td><td>Formulario 360° y modelo de competencias en el CRM</td></tr>
+          <table class="t-tight"><thead><tr><th style="width:18%">Ciclo</th><th>Qué entregamos (octubre a diciembre 2026)</th></tr></thead><tbody>
+            <tr><td>1</td><td>Tablero de indicadores y tablero de candidatos en el CRM</td></tr>
+            <tr><td>2</td><td>Academia Nivel 1 en Classroom y las 3 políticas publicadas</td></tr>
+            <tr><td>3</td><td>Nómina y checador en la matriz; página de empleos</td></tr>
+            <tr><td>4</td><td>Checador en todas las sedes y encuesta «Pulso Ochoa»</td></tr>
+            <tr><td>5</td><td>Plan de mejora del clima y calculadora de comisiones</td></tr>
+            <tr><td>6</td><td>Formulario 360° y competencias en el CRM</td></tr>
           </tbody></table>
-          <p class="small" style="margin-top:4px"><b>Historia de usuario tipo:</b> «Como Gerente nuevo, quiero mi ruta del Nivel 1 en Classroom para certificarme antes de T-60». Criterio de aceptación: 24 h de contenido y evaluación con constancia.</p>
+          <p class="small" style="margin-top:4px"><b>Ejemplo de tarea:</b> «Como gerente nuevo, quiero mi curso del Nivel 1 en Classroom para certificarme 60 días antes de abrir».</p>
         </div>
       </div>
     </div>
     <div>
-      <h3>Kanban de apertura · cada sucursal es una épica con hitos fechados</h3>
+      <h3>Cada apertura es un tablero con fechas fijas</h3>
       <div class="flow">
-        <div><b>T-150</b>Requisición firmada</div>
-        <div><b>T-120</b>Atracción y campaña</div>
-        <div><b>T-90</b>Reto, panel y oferta</div>
-        <div class="hit"><b>T-60</b>Gerente certificado N1</div>
-        <div><b>T-30</b>3 asesores listos</div>
-        <div><b>T-0</b>Apertura</div>
-        <div class="hit"><b>T+120</b>≥10 u/mes</div>
+        <div><b>150 días antes</b>Se aprueba la vacante</div>
+        <div><b>120 días</b>Se publica</div>
+        <div><b>90 días</b>Prueba y oferta</div>
+        <div class="hit"><b>60 días</b>Gerente certificado</div>
+        <div><b>30 días</b>3 asesores listos</div>
+        <div><b>Día 0</b>Apertura</div>
+        <div class="hit"><b>Día 120</b>10 autos al mes</div>
       </div>
     </div>
     <div class="cols" style="grid-template-columns:1fr 1fr;gap:12px">
-      <table class="t-tight"><thead><tr><th>KPI digital y ágil</th><th>Meta</th><th>Periodo</th></tr></thead><tbody>
-        <tr><td>Time-to-hire del perfil crítico</td><td class="num">≤45 días</td><td>Por vacante</td></tr>
-        <tr><td>Historias comprometidas terminadas</td><td class="num">≥80%</td><td>Por sprint</td></tr>
-        <tr><td>Hitos T-60 cumplidos</td><td class="num">100%</td><td>Por apertura</td></tr>
-        <tr><td>Adopción del tablero por gerentes</td><td class="num">5 de 5, diario</td><td>Mensual</td></tr>
+      <table class="t-tight"><thead><tr><th>Cómo sabremos que funciona</th><th>Meta</th><th>Cada cuándo</th></tr></thead><tbody>
+        <tr><td>Días para cubrir una vacante de gerente</td><td class="num">45 o menos</td><td>Cada vacante</td></tr>
+        <tr><td>Tareas del ciclo terminadas</td><td class="num">80% o más</td><td>Cada 2 semanas</td></tr>
+        <tr><td>Gerentes certificados 60 días antes</td><td class="num">100%</td><td>Cada apertura</td></tr>
+        <tr><td>Gerentes que usan el tablero a diario</td><td class="num">5 de 5</td><td>Cada mes</td></tr>
       </tbody></table>
-      <div class="why" style="grid-template-columns:1fr"><div><h4>Por qué se incluye y cómo contribuye</h4><p>Una sola Coordinación de RH debe ejecutar 26 contrataciones y 4 aperturas en un año. Sin tableros y sin sprints, RH se vuelve el cuello de botella de la expansión. Con ellos, cada apertura avanza con hitos visibles para la Dirección y el time-to-hire de 45 días se vuelve gestionable.</p></div></div>
+      <div class="why" style="grid-template-columns:1fr"><div><h4>Por qué lo hacemos y qué gana la empresa</h4><p>Una sola persona de RH tiene que cubrir 26 contrataciones y 4 aperturas en un año. Sin tableros ni ciclos cortos, RH se vuelve el cuello de botella. Con ellos, Dirección ve el avance cada dos semanas y ninguna sucursal abre sin gerente.</p></div></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>11</b></footer>
@@ -996,192 +1009,228 @@ td b, td strong{font-weight:650}
 
 <!-- =============================== 12 · MÓDULO 8 =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Módulo 8 · Innovación Organizacional y Excelencia</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Módulo 8 · Innovación y Excelencia</b></header>
   <div class="content">
-    <div class="mod-head"><div class="mod-num">08</div><div><div class="eyebrow">Módulo 8 · Innovación Organizacional y Excelencia</div><h1>Propuesta de mejora continua y certificación</h1></div></div>
+    <div class="mod-head"><div class="mod-num">08</div><div><div class="eyebrow">Módulo 8 · Innovación Organizacional y Excelencia</div><h1>Lo que sabe el fundador, al alcance de cada gerente</h1></div></div>
     <div class="ficha">
-      <div><span class="k">Producto</span><span class="v">Copiloto IA, círculos Kaizen y certificación</span></div>
-      <div><span class="k">Objetivos de RH</span><span class="v"><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></span></div>
-      <div><span class="k">Perfil crítico</span><span class="v">Gerente de Sucursal como usuario y contribuyente</span></div>
-      <div><span class="k">KPI líder · periodo</span><span class="v">Time-to-productivity ≤90 días en la 2.ª cohorte</span></div>
+      <div><span class="k">Qué entregamos</span><span class="v">Asistente con las prácticas del fundador, mejora continua y certificación</span></div>
+      <div><span class="k">Objetivo al que apoya</span><span class="v"><span class="oe o2">OE-2</span><span class="oe o3">OE-3</span></span></div>
+      <div><span class="k">A quién va dirigido</span><span class="v">Gerentes, que lo usan y lo alimentan</span></div>
+      <div><span class="k">Cómo sabremos que funciona</span><span class="v">Gerente nuevo en su meta en 90 días (antes 120)</span></div>
     </div>
     <div>
       <h2>Iniciativa de innovación: «Copiloto Modelo Ochoa»</h2>
-      <p><strong>El problema.</strong> El activo más difícil de replicar de Autos Ochoa son 25 años de relaciones y criterio acumulados en una sola persona. Con cinco sucursales, el fundador no puede estar en todas: cada duda sobre cómo valuar una unidad, negociar una toma a cuenta o qué financiera aprueba un perfil termina en una llamada. <strong>La solución</strong> convierte ese conocimiento en un sistema que cualquier gerente consulta desde el CRM y que mejora cada quincena.</p>
+      <p>Lo más valioso de Autos Ochoa son <strong>25 años de experiencia del fundador</strong>: cómo valuar un auto, cómo negociar cuando el cliente deja el suyo a cuenta, qué financiera aprueba a qué cliente. Con cinco sucursales, él no puede estar en todas. La idea es <strong>poner ese conocimiento dentro del CRM</strong> para que cualquier gerente lo consulte, y mejorarlo cada dos semanas con lo que aprendan las sucursales.</p>
     </div>
     <div class="steps">
-      <div class="step"><span class="sn">1</span><b>Capturar</b>12 sesiones de mentoría con el fundador, grabadas con consentimiento, y el histórico anonimizado del CRM (700 unidades, 1,426 leads perdidos).</div>
-      <div class="step"><span class="sn">2</span><b>Codificar</b>Un «playbook vivo» de ~60 prácticas —valuación, toma a cuenta, crédito, inspección— cargado como base de conocimiento del asistente de IA del CRM.</div>
-      <div class="step"><span class="sn">3</span><b>Mejorar</b>Círculos Kaizen quincenales de 30 min por sucursal con ciclo PDCA: cada idea probada se incorpora al playbook y la mejor del mes se reconoce.</div>
-      <div class="step"><span class="sn">4</span><b>Escalar</b>Piloto de 90 días en la matriz y Guadalupe (febrero–abril 2027); despliegue en las 5 sucursales en la Fase 3.</div>
+      <div class="step"><span class="sn">1</span><b>Grabar</b>12 charlas con el fundador (con su permiso) y el historial del CRM sin nombres de clientes.</div>
+      <div class="step"><span class="sn">2</span><b>Ordenar</b>Unas 60 prácticas —valuar, tomar autos a cuenta, crédito, revisión— cargadas en el asistente de IA del CRM.</div>
+      <div class="step"><span class="sn">3</span><b>Mejorar</b>Reuniones de 30 minutos cada dos semanas en cada sucursal (Kaizen): cada idea que funciona se suma al asistente.</div>
+      <div class="step"><span class="sn">4</span><b>Llevar a todos</b>Prueba de 90 días en la matriz y Guadalupe (febrero–abril 2027) y después en las 5 sucursales.</div>
     </div>
     <div class="cols" style="grid-template-columns:1fr 1.1fr;gap:12px">
       <div class="card soft">
-        <h3>Gobierno y uso responsable</h3>
-        <ul class="small"><li><b>Comité de innovación mensual</b>: Dirección General, Sistemas, RH y un gerente rotativo.</li><li>Datos de clientes anonimizados y aviso de privacidad actualizado conforme a la LFPDPPP.</li><li>La IA sugiere, el gerente decide: toda recomendación de precio o crédito tiene revisión humana.</li><li>Costo: ~$24,000 anuales de uso de la API de IA; desarrollo con el Especialista de Sistemas.</li></ul>
+        <h3>Reglas de uso</h3>
+        <ul class="small"><li><b>Un comité al mes:</b> Dirección, sistemas, RH y un gerente.</li><li>Los datos de clientes se usan sin nombres y con el aviso de privacidad al día.</li><li>La IA sugiere, el gerente decide: en precios y créditos siempre revisa una persona.</li><li>Costo: ~$24,000 al año por el uso de la IA.</li></ul>
       </div>
       <div>
-        <h3>KPI de innovación</h3>
-        <table class="t-tight"><thead><tr><th>Indicador</th><th>Meta</th><th>Periodo</th></tr></thead><tbody>
-          <tr><td>Time-to-productivity (2.ª cohorte)</td><td class="num">≤90 días</td><td>Por cohorte</td></tr>
-          <tr><td>Consultas resueltas sin escalar</td><td class="num">≥70%</td><td>Mensual</td></tr>
-          <tr><td>Ideas Kaizen implementadas / sucursal</td><td class="num">≥2</td><td>Trimestral</td></tr>
-          <tr><td>Escalamientos operativos al fundador</td><td class="num">−50%</td><td>Trimestral</td></tr>
+        <h3>Cómo sabremos que funciona</h3>
+        <table class="t-tight"><thead><tr><th>Qué medimos</th><th>Meta</th><th>Cada cuándo</th></tr></thead><tbody>
+          <tr><td>Días para que un gerente nuevo llegue a su meta</td><td class="num">90 o menos</td><td>Cada generación</td></tr>
+          <tr><td>Dudas que el asistente resuelve solo</td><td class="num">70% o más</td><td>Cada mes</td></tr>
+          <tr><td>Ideas de mejora puestas en práctica</td><td class="num">2 por sucursal</td><td>Cada 3 meses</td></tr>
+          <tr><td>Llamadas al fundador por dudas del día a día</td><td class="num">−50%</td><td>Cada 3 meses</td></tr>
         </tbody></table>
       </div>
     </div>
     <div>
       <h2>Certificación recomendada</h2>
       <table class="rec">
-        <thead><tr><th style="width:23%">Certificación</th><th style="width:25%">Qué acredita</th><th style="width:9%">Módulos</th><th style="width:16%">Plazo · costo</th><th>Relevancia para Autos Ochoa</th></tr></thead>
+        <thead><tr><th style="width:23%">Certificación</th><th style="width:25%">Qué reconoce</th><th style="width:9%">Módulos</th><th style="width:16%">Tiempo · costo</th><th>Por qué nos sirve</th></tr></thead>
         <tbody>
-          <tr><td><b>Great Place to Work® Certification</b><span class="star">Año 1</span></td><td>Confianza y experiencia del colaborador (Trust Index©)</td><td>2 · 3 · 5</td><td>8–10 semanas · ~$45,000 estimado</td><td>Sello para candidatos frente a Trefa y Credimotors; mide lo que mejora el Módulo 2 (OE-3)</td></tr>
-          <tr><td><b>NMX-R-025-SCFI-2015</b> Igualdad Laboral y No Discriminación<span class="star">Año 2</span></td><td>Igualdad, no discriminación y corresponsabilidad, con auditoría externa</td><td>5 · 3</td><td>6–9 meses · auditoría externa</td><td>Las 3 políticas del Módulo 5 están diseñadas con sus requisitos; blindaje legal (OE-3)</td></tr>
-          <tr><td><b>ISO 9001:2015</b> Gestión de la calidad<span class="star" style="background:var(--muted)">Opcional</span></td><td>Procesos documentados, controlados y mejorados</td><td>7 · 8</td><td>9–12 meses · consultoría</td><td>Estandariza el Modelo Ochoa si se superan 5 sucursales; hoy es prematura</td></tr>
+          <tr><td><b>Great Place to Work®</b><span class="star">Año 1</span></td><td>Que el equipo confía y está a gusto (encuesta Trust Index©)</td><td>2 · 3 · 5</td><td>8–10 semanas · ~$45,000 estimado</td><td>Es un sello que ven los candidatos y mide lo que mejora el Módulo 2 (OE-3)</td></tr>
+          <tr><td><b>NMX-R-025</b> Igualdad Laboral y No Discriminación<span class="star">Año 2</span></td><td>Igualdad y no discriminación, con auditoría externa</td><td>5 · 3</td><td>6–9 meses · auditoría</td><td>Las 3 políticas del Módulo 5 ya siguen sus requisitos (OE-3)</td></tr>
+          <tr><td><b>ISO 9001</b> Calidad<span class="star" style="background:var(--muted)">Después</span></td><td>Procesos ordenados y medidos</td><td>7 · 8</td><td>9–12 meses · consultoría</td><td>Útil si pasamos de 5 sucursales; hoy sería adelantarnos</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="callout"><h4>Recomendación</h4><p><strong>Great Place to Work® Certification en agosto de 2027</strong>, al cierre del año de expansión. Es alcanzable para 34 personas, usa la misma disciplina de encuesta que el «Pulso Ochoa» (umbral de referencia ~65% de experiencia positiva en el Trust Index©, a confirmar al registrarse; la meta interna del Módulo 2 es 70%) y convierte el clima en un sello para candidatos, como Autos Esquivel usa ANCA/ARCA ante clientes. Ruta: re-medición en mayo, registro en julio, encuesta en agosto y resultado en septiembre.</p></div>
+    <div class="callout"><h4>Nuestra recomendación</h4><p><strong>Certificarnos como Great Place to Work® en agosto de 2027</strong>, al cerrar el año de expansión. Es posible para una empresa de 34 personas y usa el mismo tipo de encuesta que ya haremos. El umbral de referencia es de alrededor de 65% de experiencias positivas (lo confirmaremos al inscribirnos); nuestra meta interna es 70%. Pasos: medir en mayo, inscribirnos en julio, encuesta en agosto y resultado en septiembre.</p></div>
     <div class="why">
-      <div><h4>Por qué se incluye</h4><p>Sin un mecanismo de aprendizaje, cinco sucursales producen cinco versiones del Modelo Ochoa; la excelencia exige un estándar externo que lo valide.</p></div>
-      <div><h4>Contribución al objetivo de negocio</h4><p>Bajar la curva de 120 a 90 días adelanta ~$200,000 de margen por sucursal desde la 2.ª cohorte (OE-2); la certificación sostiene atracción y retención (OE-3).</p></div>
+      <div><h4>Por qué lo hacemos</h4><p>Sin una forma de aprender entre todos, cinco sucursales terminan trabajando de cinco maneras distintas. Un sello externo confirma que lo que decimos es cierto.</p></div>
+      <div><h4>Qué gana la empresa</h4><p>Si un gerente llega a su meta en 90 días en lugar de 120, cada sucursal gana ~$200,000 antes (OE-2). El sello ayuda a atraer y retener (OE-3).</p></div>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>12</b></footer>
 </section>
 
-<!-- =============================== 13 · TABLERO Y RUTA =============================== -->
+<!-- =============================== 13 · TABLERO Y CALENDARIO =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Tablero integral de KPIs y hoja de ruta</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Cómo mediremos y cuándo</b></header>
   <div class="content">
-    <h1>Tablero integral de KPIs</h1>
-    <p>Todos los indicadores se calculan con datos que el CRM, la nómina, Classroom y la encuesta ya generan, y se consolidan en un solo tablero de Looker Studio revisado cada mes en el comité de dirección.</p>
+    <h1>Cómo vamos a medir el avance</h1>
+    <p>Todos los números salen de lo que ya registramos (CRM, nómina, Classroom y la encuesta) y se juntan en un solo tablero que Dirección revisa cada mes.</p>
     <table class="t-tight">
-      <thead><tr><th style="width:11%">Área</th><th style="width:31%">KPI · qué mide</th><th style="width:10%">Línea base</th><th style="width:10%">Meta</th><th style="width:16%">Periodo</th><th style="width:9%">Objetivo</th><th>Dueño</th></tr></thead>
+      <thead><tr><th style="width:11%">Área</th><th style="width:31%">Qué medimos</th><th style="width:10%">Hoy</th><th style="width:10%">Meta</th><th style="width:16%">Cada cuándo</th><th style="width:9%">Objetivo</th><th>Responsable</th></tr></thead>
       <tbody>
-        <tr><td rowspan="3"><b>Capacitación</b></td><td>Gerentes certificados Nivel 1 a T-60</td><td class="num">0%</td><td class="num">100%</td><td>Por apertura</td><td><span class="oe o1">OE-1</span></td><td>RH</td></tr>
-        <tr><td>Time-to-productivity del gerente</td><td>No medido</td><td class="num">≤120 días</td><td>Día 120</td><td><span class="oe o2">OE-2</span></td><td>Dir. Comercial</td></tr>
-        <tr><td>Horas de formación por colaborador</td><td class="num">0 h</td><td class="num">≥40 h</td><td>Anual</td><td><span class="oe o2">OE-2</span></td><td>RH</td></tr>
-        <tr><td rowspan="3"><b>Clima</b></td><td>Índice global de clima (% favorable)</td><td class="num">54%*</td><td class="num">≥70%</td><td>Semestral · mayo 2027</td><td><span class="oe o3">OE-3</span></td><td>RH</td></tr>
-        <tr><td>eNPS</td><td class="num">+19*</td><td class="num">≥+30</td><td>Semestral</td><td><span class="oe o3">OE-3</span></td><td>RH</td></tr>
-        <tr><td>Ausentismo no programado</td><td>No medido</td><td class="num">≤2%</td><td>Mensual</td><td><span class="oe o3">OE-3</span></td><td>Gerentes</td></tr>
-        <tr><td rowspan="3"><b>Desempeño</b></td><td>Quality of Hire del perfil crítico</td><td>No medido</td><td class="num">≥80%</td><td>Día 120</td><td><span class="oe o2">OE-2</span></td><td>Dir. Comercial</td></tr>
-        <tr><td>Evaluaciones completas en fecha</td><td class="num">0%</td><td class="num">100%</td><td>Cada ciclo semestral</td><td><span class="oe o2">OE-2</span></td><td>RH</td></tr>
-        <tr><td>Gerentes con nivel ≥3 en 6 competencias</td><td>No medido</td><td class="num">≥80%</td><td>Agosto 2027</td><td><span class="oe o2">OE-2</span></td><td>Dir. Comercial</td></tr>
-        <tr><td rowspan="3"><b>Fidelización</b></td><td>Rotación no deseada del perfil crítico</td><td>No medido</td><td class="num">≤10%</td><td>Anual · corte trimestral</td><td><span class="oe o3">OE-3</span></td><td>Dir. General</td></tr>
-        <tr><td>Retención a 12 meses de nuevos ingresos</td><td>No medido</td><td class="num">≥85%</td><td>Por cohorte</td><td><span class="oe o3">OE-3</span></td><td>RH</td></tr>
-        <tr><td>Contratación por canal propio y referidos</td><td class="num">0%</td><td class="num">≥40%</td><td>Anual</td><td><span class="oe o1">OE-1</span></td><td>RH + Marketing</td></tr>
-        <tr><td><b>Sucesión</b></td><td>Puestos críticos con sucesor listo</td><td class="num">0%</td><td class="num">≥60%</td><td>Semestral</td><td><span class="oe o1">OE-1</span></td><td>Comité</td></tr>
-        <tr><td><b>Inclusión</b></td><td>Brecha salarial ajustada por banda</td><td>No medido</td><td class="num">≤5%</td><td>Semestral</td><td><span class="oe o3">OE-3</span></td><td>Dir. General</td></tr>
-        <tr><td><b>Ágil</b></td><td>Time-to-hire del perfil crítico</td><td>No medido</td><td class="num">≤45 días</td><td>Por vacante</td><td><span class="oe o1">OE-1</span></td><td>RH</td></tr>
-        <tr><td><b>Innovación</b></td><td>Consultas resueltas por el copiloto</td><td>—</td><td class="num">≥70%</td><td>Mensual</td><td><span class="oe o2">OE-2</span></td><td>Sistemas</td></tr>
+        <tr><td rowspan="3"><b>Capacitación</b></td><td>Gerentes certificados 60 días antes de abrir</td><td class="num">0%</td><td class="num">100%</td><td>Cada apertura</td><td><span class="oe o1">OE-1</span></td><td>RH</td></tr>
+        <tr><td>Días para que la sucursal venda 10 autos al mes</td><td>No se mide</td><td class="num">120 o menos</td><td>Día 120</td><td><span class="oe o2">OE-2</span></td><td>Dir. Comercial</td></tr>
+        <tr><td>Horas de formación por persona</td><td class="num">0</td><td class="num">40 al año</td><td>Cada año</td><td><span class="oe o2">OE-2</span></td><td>RH</td></tr>
+        <tr><td rowspan="3"><b>Clima</b></td><td>Clima favorable</td><td class="num">54%*</td><td class="num">70% o más</td><td>Cada 6 meses</td><td><span class="oe o3">OE-3</span></td><td>RH</td></tr>
+        <tr><td>¿Recomendarías trabajar aquí? (eNPS)</td><td class="num">+19*</td><td class="num">+30 o más</td><td>Cada 6 meses</td><td><span class="oe o3">OE-3</span></td><td>RH</td></tr>
+        <tr><td>Faltas no programadas</td><td>No se mide</td><td class="num">2% o menos</td><td>Cada mes</td><td><span class="oe o3">OE-3</span></td><td>Gerentes</td></tr>
+        <tr><td rowspan="3"><b>Desempeño</b></td><td>Gerentes en su meta a los 120 días</td><td>No se mide</td><td class="num">80% o más</td><td>Día 120</td><td><span class="oe o2">OE-2</span></td><td>Dir. Comercial</td></tr>
+        <tr><td>Evaluaciones hechas a tiempo</td><td class="num">0%</td><td class="num">100%</td><td>Cada 6 meses</td><td><span class="oe o2">OE-2</span></td><td>RH</td></tr>
+        <tr><td>Gerentes con nivel 3 o más en las 6 competencias</td><td>No se mide</td><td class="num">80% o más</td><td>Agosto 2027</td><td><span class="oe o2">OE-2</span></td><td>Dir. Comercial</td></tr>
+        <tr><td rowspan="3"><b>Permanencia</b></td><td>Gerentes que se van sin que queramos</td><td>No se mide</td><td class="num">10% o menos</td><td>Cada año</td><td><span class="oe o3">OE-3</span></td><td>Dir. General</td></tr>
+        <tr><td>Nuevos que siguen al año</td><td>No se mide</td><td class="num">85% o más</td><td>Por generación</td><td><span class="oe o3">OE-3</span></td><td>RH</td></tr>
+        <tr><td>Contratados por recomendación o canales propios</td><td class="num">0%</td><td class="num">40% o más</td><td>Cada año</td><td><span class="oe o1">OE-1</span></td><td>RH y Marketing</td></tr>
+        <tr><td><b>Sucesión</b></td><td>Puestos clave con reemplazo listo</td><td class="num">0%</td><td class="num">60%</td><td>Cada 6 meses</td><td><span class="oe o1">OE-1</span></td><td>Dirección y RH</td></tr>
+        <tr><td><b>Inclusión</b></td><td>Diferencia de sueldo en el mismo puesto</td><td>No se mide</td><td class="num">5% o menos</td><td>Cada 6 meses</td><td><span class="oe o3">OE-3</span></td><td>Dir. General</td></tr>
+        <tr><td><b>Agilidad</b></td><td>Días para cubrir una vacante de gerente</td><td>No se mide</td><td class="num">45 o menos</td><td>Cada vacante</td><td><span class="oe o1">OE-1</span></td><td>RH</td></tr>
+        <tr><td><b>Innovación</b></td><td>Dudas que el asistente resuelve solo</td><td>—</td><td class="num">70% o más</td><td>Cada mes</td><td><span class="oe o2">OE-2</span></td><td>Sistemas</td></tr>
       </tbody>
     </table>
-    <p class="small" style="margin-top:3px">* Valores del diagnóstico simulado de noviembre de 2026 (Módulo 2).</p>
+    <p class="small" style="margin-top:3px">* Valores de la encuesta simulada de noviembre de 2026 (Módulo 2).</p>
     <div>
-      <h2>Hoja de ruta a 12 meses · integrada con las fases de la Parte 1</h2>
+      <h2>Calendario de 12 meses · con las mismas fases de la Parte 1</h2>
       <div class="gantt">
-        <div></div><div class="fase" style="grid-column:span 2">Fase 0 · Cimientos</div><div class="fase" style="grid-column:span 3">Fase 1 · Primera réplica</div><div class="fase" style="grid-column:span 4">Fase 2 · Escala</div><div class="fase" style="grid-column:span 3">Fase 3 · Consolidación</div>
+        <div></div><div class="fase" style="grid-column:span 2">Fase 0 · Base</div><div class="fase" style="grid-column:span 3">Fase 1 · Primera apertura</div><div class="fase" style="grid-column:span 4">Fase 2 · Crecer</div><div class="fase" style="grid-column:span 3">Fase 3 · Consolidar</div>
         <div class="gh" style="text-align:left">2026 → 2027</div><div class="gh">Sep</div><div class="gh">Oct</div><div class="gh">Nov</div><div class="gh">Dic</div><div class="gh">Ene</div><div class="gh">Feb</div><div class="gh">Mar</div><div class="gh">Abr</div><div class="gh">May</div><div class="gh">Jun</div><div class="gh">Jul</div><div class="gh">Ago</div>
 
-        <div class="rl">Aperturas<small>fechas indicativas</small></div>
+        <div class="rl">Aperturas<small>fechas aproximadas</small></div>
         <div style="grid-column:2 / span 4"></div><div class="ms" style="grid-column:6"><i></i>Guadalupe</div><div></div><div class="ms" style="grid-column:8"><i></i>San Nicolás</div><div></div><div class="ms" style="grid-column:10"><i></i>Apodaca</div><div></div><div class="ms" style="grid-column:12"><i></i>Saltillo</div><div></div>
 
-        <div class="rl">1 · Academia Ochoa</div>
-        <div class="gb l" style="grid-column:2 / span 2">Diseño y Nivel 1</div><div class="gb" style="grid-column:4 / span 3">Niveles 1–2 · cohorte 1</div><div class="gb" style="grid-column:7 / span 7">Niveles 1–3 · cohortes 2 a 4 y banca de sucesión</div>
+        <div class="rl">1 · Academia</div>
+        <div class="gb l" style="grid-column:2 / span 2">Diseño y Nivel 1</div><div class="gb" style="grid-column:4 / span 3">Niveles 1 y 2 · grupo 1</div><div class="gb" style="grid-column:7 / span 7">Niveles 1 a 3 · grupos 2 a 4 y futuros gerentes</div>
 
-        <div class="rl">2 · Clima y experiencia</div>
-        <div style="grid-column:2 / span 2"></div><div class="gb a" style="grid-column:4">Pulso</div><div class="gb" style="grid-column:5 / span 5">Plan de mejora a 6 meses</div><div class="gb a" style="grid-column:10">Medición</div><div class="gb l" style="grid-column:11 / span 3">Pulso mensual</div>
+        <div class="rl">2 · Clima</div>
+        <div style="grid-column:2 / span 2"></div><div class="gb a" style="grid-column:4">Encuesta</div><div class="gb" style="grid-column:5 / span 5">Plan de mejora de 6 meses</div><div class="gb a" style="grid-column:10">Medir</div><div class="gb l" style="grid-column:11 / span 3">Encuesta mensual</div>
 
-        <div class="rl">3 · Branding y fidelización</div>
-        <div style="grid-column:2"></div><div class="gb l" style="grid-column:3 / span 2">EVP y página</div><div class="gb" style="grid-column:5 / span 9">Campañas por apertura · «Club 10» · entrevistas de permanencia</div>
+        <div class="rl">3 · Marca empleadora</div>
+        <div style="grid-column:2"></div><div class="gb l" style="grid-column:3 / span 2">Propuesta y página</div><div class="gb" style="grid-column:5 / span 9">Campañas por apertura · «Club 10» · pláticas de permanencia</div>
 
-        <div class="rl">4 · Desempeño y 360°</div>
-        <div style="grid-column:2"></div><div class="gb l" style="grid-column:3 / span 3">Modelo y formulario</div><div class="gb" style="grid-column:6">30-90</div><div class="gb a" style="grid-column:7">360° #1</div><div class="gb" style="grid-column:8 / span 5">Check-ins mensuales · días 30-90-120</div><div class="gb a" style="grid-column:13">360° #2</div>
+        <div class="rl">4 · Desempeño</div>
+        <div style="grid-column:2"></div><div class="gb l" style="grid-column:3 / span 3">Competencias y 360°</div><div class="gb" style="grid-column:6">30-90</div><div class="gb a" style="grid-column:7">360°</div><div class="gb" style="grid-column:8 / span 5">Plática mensual · días 30, 90 y 120</div><div class="gb a" style="grid-column:13">360°</div>
 
-        <div class="rl">5 · Políticas ASG</div>
-        <div style="grid-column:2"></div><div class="gb a" style="grid-column:3">Políticas</div><div class="gb" style="grid-column:4 / span 4">Selección incluyente</div><div class="gb a" style="grid-column:8">Brecha</div><div class="gb" style="grid-column:9 / span 4">Seguimiento</div><div class="gb a" style="grid-column:13">Brecha</div>
+        <div class="rl">5 · Políticas</div>
+        <div style="grid-column:2"></div><div class="gb a" style="grid-column:3">Publicar</div><div class="gb" style="grid-column:4 / span 4">Selección incluyente</div><div class="gb a" style="grid-column:8">Sueldos</div><div class="gb" style="grid-column:9 / span 4">Seguimiento</div><div class="gb a" style="grid-column:13">Sueldos</div>
 
-        <div class="rl">6 · Sucesión 9-Box</div>
-        <div style="grid-column:2 / span 7"></div><div class="gb a" style="grid-column:9">9-Box</div><div class="gb" style="grid-column:10 / span 4">PDI de cajas 7–9 · promoción interna</div>
+        <div class="rl">6 · Sucesión</div>
+        <div style="grid-column:2 / span 7"></div><div class="gb a" style="grid-column:9">9-Box</div><div class="gb" style="grid-column:10 / span 4">Planes personales · ascensos de casa</div>
 
         <div class="rl">7 · Digital y ágil</div>
-        <div style="grid-column:2"></div><div class="gb" style="grid-column:3 / span 3">Sprints 1–6: HR Tech</div><div class="gb l" style="grid-column:6 / span 8">Sprints quincenales · Kanban de aperturas</div>
+        <div style="grid-column:2"></div><div class="gb" style="grid-column:3 / span 3">Ciclos 1 a 6</div><div class="gb l" style="grid-column:6 / span 8">Ciclos de 2 semanas · tablero de aperturas</div>
 
-        <div class="rl">8 · Innovación y certificación</div>
-        <div style="grid-column:2 / span 2"></div><div class="gb l" style="grid-column:4 / span 3">Captura del conocimiento</div><div class="gb" style="grid-column:7 / span 3">Piloto copiloto + Kaizen</div><div class="gb" style="grid-column:10 / span 2">Escala</div><div class="gb a" style="grid-column:12 / span 2">GPTW</div>
+        <div class="rl">8 · Innovación</div>
+        <div style="grid-column:2 / span 2"></div><div class="gb l" style="grid-column:4 / span 3">Charlas con el fundador</div><div class="gb" style="grid-column:7 / span 3">Prueba del asistente</div><div class="gb" style="grid-column:10 / span 2">A todas</div><div class="gb a" style="grid-column:12 / span 2">GPTW</div>
       </div>
-      <p class="small" style="margin-top:6px"><span class="zone"><i style="background:#dbe5f3"></i>Diseño y preparación</span> &nbsp; <span class="zone"><i style="background:var(--navy)"></i>Ejecución</span> &nbsp; <span class="zone"><i style="background:var(--accent)"></i>Hito de medición o publicación</span> <br>«Brecha» = auditoría semestral de brecha salarial · «30-90» = evaluaciones de nuevos gerentes a los días 30 y 90</p>
+      <p class="small" style="margin-top:6px"><span class="zone"><i style="background:#dbe5f3"></i>Preparación</span> &nbsp; <span class="zone"><i style="background:var(--navy)"></i>Trabajo</span> &nbsp; <span class="zone"><i style="background:var(--accent)"></i>Fecha clave</span> &nbsp; «Sueldos» = revisión semestral de diferencias de sueldo · «30-90» = evaluaciones de los gerentes nuevos</p>
     </div>
   </div>
   <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>13</b></footer>
 </section>
 
-<!-- =============================== 14 · CONCLUSIONES =============================== -->
+<!-- =============================== 14 · QUÉ CAMBIA PARA CADA QUIEN =============================== -->
 <section class="page">
-  <header class="run"><span>Autos Ochoa · Desarrollo organizacional e innovación en talento</span><b>Conclusiones y fuentes</b></header>
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Qué cambia para cada quien</b></header>
+  <div class="content">
+    <h1>Qué cambia para cada quien</h1>
+    <p class="lead">Este plan no es solo para Recursos Humanos. Esto es lo que cada persona va a notar en su día a día a partir de octubre.</p>
+    <div class="people">
+      <div class="pcard"><h3>Si eres gerente de sucursal</h3><ul><li>Tendrás un padrino y la Academia desde antes de abrir tu sucursal.</li><li>Verás tus números todos los días en un tablero.</li><li>Sabrás cómo te evaluamos: a los 30, 90 y 120 días, y luego cada 6 meses.</li><li>Tendrás una ruta escrita para llegar a gerente regional.</li><li>Opinarás en precios y campañas en el consejo mensual de gerentes.</li></ul></div>
+      <div class="pcard"><h3>Si eres asesor comercial</h3><ul><li>Sabrás exactamente qué clientes te tocan y cuáles son tus metas.</li><li>Trabajarás máximo 2 domingos al mes, con el rol publicado un mes antes.</li><li>Nadie te pedirá contestar fuera de tu guardia: la IA atiende y agenda.</li><li>Tu comisión aparecerá completa en tu recibo de nómina.</li><li>Puedes llegar a gerente en 24 meses; las vacantes se publican primero para ti.</li></ul></div>
+      <div class="pcard"><h3>Si eres coordinador o trabajas en oficinas</h3><ul><li>Recibirás capacitación en expedientes y crédito.</li><li>Tendrás un día de trabajo en casa a la semana (oficinas).</li><li>Tu sueldo estará en la misma tabla de bandas que el de todos.</li><li>Tu área opinará en la evaluación de los gerentes.</li></ul></div>
+      <div class="pcard"><h3>Si eres de la familia Ochoa</h3><ul><li>Tu puesto estará en la banda de sueldo que le corresponde, como el de cualquiera.</li><li>Los ascensos pasarán por el mismo comité, con alguien que no es de la familia.</li><li>La experiencia del fundador se volverá escuela para todos con las charlas grabadas.</li></ul></div>
+    </div>
+    <div>
+      <h2>Próximos 90 días</h2>
+      <div class="next">
+        <div><span>Octubre 2026</span><b>Poner la base</b><ul><li>Publicar bandas de sueldo y las 3 políticas</li><li>Arrancar los ciclos de 2 semanas</li><li>Elegir el sistema de nómina con checador</li></ul></div>
+        <div><span>Noviembre 2026</span><b>Escuchar y preparar</b><ul><li>Aplicar la encuesta «Pulso Ochoa»</li><li>Checador en todas las sedes</li><li>Abrir el Nivel 1 de la Academia</li></ul></div>
+        <div><span>Diciembre 2026</span><b>Empezar a mejorar</b><ul><li>Arranca el plan de mejora del clima</li><li>Formulario de evaluación 360° listo</li><li>Primeras charlas grabadas con el fundador</li></ul></div>
+      </div>
+    </div>
+    <div>
+      <h2>Preguntas que seguramente vas a tener</h2>
+      <div class="faq">
+        <div><b>¿La evaluación es para correr gente?</b><p>No. Es para saber en qué apoyar a cada quien. Si alguien no llega, primero tiene un plan de mejora de 90 días con su padrino.</p></div>
+        <div><b>¿Alguien va a ver lo que conteste en la encuesta?</b><p>No. Es anónima y solo mostramos grupos de 3 personas o más.</p></div>
+        <div><b>¿Me van a bajar el sueldo con la jornada de 46 horas?</b><p>No. La ley lo prohíbe y nosotros tampoco lo haríamos.</p></div>
+        <div><b>¿Los familiares van a tener privilegios?</b><p>No. Todos estamos en la misma tabla de sueldos y los ascensos pasan por el mismo comité.</p></div>
+        <div><b>No tengo experiencia en autos, ¿puedo entrar o crecer?</b><p>Sí. Hay 3 meses de capacitación pagada y las vacantes se publican primero para el equipo.</p></div>
+        <div><b>¿La inteligencia artificial me va a reemplazar?</b><p>No. Te ayuda a responder y a no olvidar clientes; las decisiones las tomas tú.</p></div>
+      </div>
+    </div>
+    <div class="callout"><h4>Lo que necesitamos de Dirección</h4><p>(1) Aprobar los $241,000 para el año de expansión; (2) publicar en octubre las bandas de sueldo y las tres políticas, antes de la siguiente contratación; (3) nombrar a la Coordinación de RH responsable del plan; (4) agendar entre noviembre y enero las 12 charlas grabadas con el fundador.</p></div>
+  </div>
+  <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>14</b></footer>
+</section>
+
+<!-- =============================== 15 · CONCLUSIONES =============================== -->
+<section class="page">
+  <header class="run"><span>Autos Ochoa · Plan de talento 2026–2027</span><b>Conclusiones y fuentes</b></header>
   <div class="content">
     <h1>Conclusiones</h1>
     <div class="concl">
-      <p><strong>Primera. El Gerente de Sucursal sigue siendo el eje.</strong> Los ocho módulos convergen en los tres objetivos de la Parte 1: formarlo antes de abrir (OE-1), hacerlo productivo en 120 días —90 desde la segunda cohorte— (OE-2) y retenerlo (OE-3). Ninguna herramienta existe sin una restricción de negocio que la justifique.</p>
-      <p><strong>Segunda. El clima es una variable operativa.</strong> La dimensión más baja del diagnóstico —claridad de rol, 31%— es la misma falla que explica que el 97% de los prospectos «Contactado» no avance: mejorar el clima y mejorar el embudo son la misma tarea.</p>
-      <p><strong>Tercera. La Industria 4.0 no exige comprar plataformas.</strong> El CRM con IA, Classroom, Looker Studio y WhatsApp Business API convierten activos existentes en un sistema de talento, y Scrum permite que una sola Coordinación de RH ejecute 26 contrataciones y 4 aperturas.</p>
-      <p><strong>Cuarta. La equidad es la ventaja de una empresa familiar que se profesionaliza.</strong> Bandas iguales para todos, selección por evidencia y tiempo para la familia atacan la principal causa de fuga del talento profesional y preparan la NMX-R-025.</p>
-      <p><strong>Quinta. De la memoria del fundador a la organización.</strong> El Copiloto Modelo Ochoa y la certificación Great Place to Work® convierten 25 años de conocimiento en un estándar que se consulta, se mejora y se audita, por menos de la mitad de lo que cuesta perder a un solo gerente.</p>
+      <p><strong>1. Todo gira alrededor del Gerente de Sucursal.</strong> Cada acción sirve para una de tres cosas: tenerlo listo antes de abrir (OE-1), que su sucursal sea rentable en 4 meses (OE-2) y que se quede (OE-3). Ninguna acción está aquí por moda.</p>
+      <p><strong>2. Mejorar el clima es mejorar las ventas.</strong> Lo más bajo de la encuesta —no saber quién atiende a cada cliente— es la misma falla que hoy deja caer al 97% de los prospectos.</p>
+      <p><strong>3. La tecnología ya la tenemos.</strong> El CRM con inteligencia artificial, Classroom, Looker Studio y WhatsApp bastan. Trabajar en ciclos de dos semanas permite que una sola persona de RH saque adelante 26 contrataciones y 4 aperturas.</p>
+      <p><strong>4. Las mismas reglas para todos.</strong> Sueldos claros, contratar por lo que sabes hacer y tiempo para la familia son la mejor forma de atraer y retener talento en una empresa familiar que crece.</p>
+      <p><strong>5. Lo que sabe el fundador, para todos.</strong> El asistente con sus prácticas y la certificación Great Place to Work® convierten 25 años de experiencia en algo que cualquiera puede consultar, por menos de la mitad de lo que cuesta perder a un solo gerente.</p>
     </div>
     <div>
-      <h2>Riesgos de implementación y mitigación</h2>
+      <h2>Qué podría salir mal y cómo lo evitamos</h2>
       <table class="t-tight">
-        <thead><tr><th style="width:31%">Riesgo</th><th style="width:10%">Prob.</th><th>Mitigación</th><th style="width:8%">Módulos</th></tr></thead>
+        <thead><tr><th style="width:31%">Riesgo</th><th style="width:10%">Probabilidad</th><th>Qué haremos</th><th style="width:9%">Módulos</th></tr></thead>
         <tbody>
-          <tr><td>Sobrecarga de la única Coordinación de RH</td><td>Alta</td><td>Backlog priorizado por OE en sprints; Sistemas y Marketing en el equipo; despliegue por cohorte de apertura</td><td>7</td></tr>
-          <tr><td>Resistencia a publicar bandas y aplicar reglas iguales a la familia</td><td>Media</td><td>Decisión explícita de la Dirección General en la Fase 0; el fundador la comunica en la «Junta Ochoa»</td><td>2 · 5</td></tr>
-          <tr><td>Respuestas sesgadas por miedo en encuestas y 360°</td><td>Media</td><td>Anonimato con mínimo de 3 respuestas; resultados y plan compartidos en 30 días</td><td>2 · 4</td></tr>
-          <tr><td>Errores del copiloto de IA o mal uso de datos de clientes</td><td>Media</td><td>Piloto de 90 días; revisión humana en precio y crédito; datos anonimizados</td><td>8</td></tr>
-          <tr><td>Menor margen que reduzca el plan a 3 sucursales</td><td>Media</td><td>Presupuesto por cohorte y KPI por sucursal abierta: el diseño escala sin cambios</td><td>Todos</td></tr>
+          <tr><td>Que RH no alcance con todo el trabajo</td><td>Alta</td><td>Priorizar por objetivo en ciclos de 2 semanas; sistemas y marketing ayudan; se avanza por apertura</td><td>7</td></tr>
+          <tr><td>Resistencia a publicar sueldos y aplicar las mismas reglas a la familia</td><td>Media</td><td>Decisión de Dirección desde octubre; el fundador lo explica en la «Junta Ochoa»</td><td>2 · 5</td></tr>
+          <tr><td>Que la gente no conteste con sinceridad por miedo</td><td>Media</td><td>Anonimato real (grupos de 3 o más) y resultados compartidos en 30 días</td><td>2 · 4</td></tr>
+          <tr><td>Que el asistente de IA se equivoque o se usen mal datos de clientes</td><td>Media</td><td>Prueba de 90 días, revisión humana en precios y créditos, datos sin nombres</td><td>8</td></tr>
+          <tr><td>Que se gane menos por auto y solo se abran 3 sucursales</td><td>Media</td><td>El presupuesto se ajusta por apertura; las acciones sirven igual con menos sucursales</td><td>Todos</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="callout"><h4>Decisiones que se solicitan a la Dirección General</h4><p>(1) Aprobar el presupuesto incremental de $241,000; (2) publicar en octubre de 2026 el tabulador de bandas y las tres políticas ASG, antes de la siguiente contratación; (3) designar a la Coordinación de RH como Product Owner del backlog de talento; (4) calendarizar entre noviembre y enero las 12 sesiones de mentoría grabadas con el fundador.</p></div>
+    <div class="spacer"></div>
     <div>
       <h2>Fuentes y referencias</h2>
       <div class="cols refs" style="gap:16px">
         <div>
-          <h3>Fuentes internas de Autos Ochoa</h3>
+          <h3>De Autos Ochoa</h3>
           <ul class="small">
             <li>Manual de Operaciones de RH y presentación del Sistema Integral de Gestión de Talento (SIGT), Parte 1, agosto de 2026.</li>
             <li>Diagnóstico Estratégico y Cuestionario de Diagnóstico (ERP, CRM, ventas 2020–2026), agosto de 2026.</li>
             <li>Plan de Crecimiento a 6 Meses, septiembre 2026 – febrero 2027.</li>
           </ul>
-          <h3 style="margin-top:8px">Fuentes normativas</h3>
+          <h3 style="margin-top:8px">Leyes y normas</h3>
           <ul class="small">
-            <li>Ley Federal del Trabajo: arts. 2, 3, 39-A a 39-D, 59, 66 a 71, 86, 132 fr. XXXIV, 133, 153-A y siguientes (capacitación y constancias DC-3), 170 y 330-A (teletrabajo).</li>
+            <li>Ley Federal del Trabajo: arts. 2, 3, 39-A a 39-D, 59, 66 a 71, 86, 132 fr. XXXIV, 133, 153-A y siguientes (capacitación y DC-3), 170 y 330-A.</li>
             <li>Decreto de reducción de la jornada laboral, DOF 1 de mayo de 2026.</li>
-            <li>NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo (Guía de Referencia II).</li>
+            <li>NOM-035-STPS-2018, factores de riesgo psicosocial (Guía de Referencia II).</li>
             <li>NMX-R-025-SCFI-2015, Igualdad Laboral y No Discriminación.</li>
             <li>Ley Federal para Prevenir y Eliminar la Discriminación; Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</li>
           </ul>
         </div>
         <div>
-          <h3>Referencias metodológicas</h3>
+          <h3>Métodos</h3>
           <ul class="small">
             <li>Kirkpatrick, D. y Kirkpatrick, J. (2006). <em>Evaluating Training Programs: The Four Levels</em> (3.ª ed.). Berrett-Koehler.</li>
             <li>Lombardo, M. y Eichinger, R. (1996). <em>The Career Architect Development Planner</em> (modelo 70-20-10). Lominger.</li>
             <li>Reichheld, F. (2003). The One Number You Need to Grow. <em>Harvard Business Review</em> (base del eNPS).</li>
             <li>Schwaber, K. y Sutherland, J. (2020). <em>La Guía de Scrum</em>. Scrum.org.</li>
-            <li>Anderson, D. (2010). <em>Kanban: Successful Evolutionary Change for Your Technology Business</em>. Blue Hole Press.</li>
-            <li>Matriz de desempeño-potencial (9-Box), derivada de la matriz GE-McKinsey de planeación de portafolio.</li>
-            <li>Global Reporting Initiative: estándares GRI 401 (Empleo), 404 (Formación), 405 (Diversidad e igualdad de oportunidades) y 406 (No discriminación).</li>
-            <li>ISO 30414, Gestión de recursos humanos: directrices para el reporte de capital humano; ISO 9001:2015.</li>
-            <li>Great Place to Work® — metodología Trust Index©. Naciones Unidas — Agenda 2030, ODS 3, 5, 8 y 10.</li>
-            <li>Deming, W. E. — ciclo de mejora continua PDCA; Imai, M. (1986). <em>Kaizen</em>. McGraw-Hill.</li>
+            <li>Anderson, D. (2010). <em>Kanban</em>. Blue Hole Press.</li>
+            <li>Matriz de desempeño y potencial (9-Box), derivada de la matriz GE-McKinsey.</li>
+            <li>Global Reporting Initiative: GRI 401, 404, 405 y 406.</li>
+            <li>Great Place to Work® — Trust Index©. Naciones Unidas — Agenda 2030, ODS 3, 5, 8 y 10.</li>
+            <li>Deming, W. E. — ciclo PDCA; Imai, M. (1986). <em>Kaizen</em>. McGraw-Hill.</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>14</b></footer>
+  <footer class="foot"><span>Reto Final · Administración del Talento Humano · Septiembre 2026</span><b>15</b></footer>
 </section>
 
 </body>
+
 </html>
