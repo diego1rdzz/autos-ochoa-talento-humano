@@ -5,9 +5,11 @@
   "description": "Reto Final de Administración del Talento Humano: herramientas de desarrollo organizacional e innovación en talento para Autos Ochoa.",
   "type": "module",
   "scripts": {
-    "build": "node informe/build.mjs"
+    "build": "node informe/build.mjs",
+    "build:docx": "node informe/build-docx.mjs"
   },
   "devDependencies": {
+    "docx": "^9.7.2",
     "playwright": "1.56.1"
   }
 }

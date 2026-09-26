@@ -7,7 +7,10 @@ expansión «Ochoa 5» de Autos Ochoa (Monterrey, N.L.): de 1 a 5 sucursales, de
 Todo se ancla al perfil crítico (**Gerente de Sucursal**) y a los tres objetivos de la Parte 1:
 OE-1 gerente listo antes de abrir, OE-2 sucursal rentable en 4 meses y OE-3 que el talento se quede.
 
-**Entregable:** [`entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.pdf`](entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.pdf)
+**Entregables** (mismo contenido, 15 páginas):
+
+- Word: [`entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.docx`](entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.docx)
+- PDF: [`entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.pdf`](entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.pdf)
 
 ## Contenido del documento
 
@@ -27,14 +30,20 @@ OE-1 gerente listo antes de abrir, OE-2 sucursal rentable en 4 meses y OE-3 que 
 | 14 | Qué cambia para cada quien | Qué cambia para gerentes, asesores, oficinas y familia; próximos 90 días y preguntas frecuentes |
 | 15 | Conclusiones | Conclusiones, riesgos y fuentes |
 
-## Regenerar el PDF
+## Regenerar los entregables
 
 El informe se escribe en `informe/informe.html` y se imprime a PDF tamaño carta con Chromium (Playwright).
+La versión en Word se arma con `informe/build-docx.mjs` (librería `docx`) con el mismo texto; las tres
+gráficas (clima, reporte 360° y calendario) se toman del HTML como imágenes y el resto son tablas editables.
 
 ```bash
 npm install
 npm run build        # genera entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.pdf
+npm run build:docx   # genera entregables/Autos_Ochoa_Reto_Final_Desarrollo_Organizacional.docx
 ```
+
+Si cambias el texto, cámbialo en los dos archivos (`informe.html` y `build-docx.mjs`).
+El Word usa Calibri y Georgia, que vienen con Office.
 
 El script falla si el contenido de alguna página desborda su área útil. Variables opcionales:
 `PREVIEW_DIR=/ruta` guarda un PNG por página y `CHROMIUM_PATH=/ruta/a/chromium` usa un Chromium ya instalado.
