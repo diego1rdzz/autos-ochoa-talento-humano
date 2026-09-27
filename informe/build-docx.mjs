@@ -62,7 +62,7 @@ const tiny = () => new Paragraph({ spacing: { before: 0, after: 0, lineRule: Lin
 const gap = () => new Paragraph({ spacing: { before: 0, after: 0, lineRule: LineRuleType.EXACT, line: 110 }, run: { size: 2 }, children: [] });
 
 const h1 = (text, o = {}) => new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { before: 0, after: o.after ?? 120 }, children: [new TextRun({ text })] });
-const h2 = (text, o = {}) => new Paragraph({ heading: HeadingLevel.HEADING_2, spacing: { before: o.before ?? 140, after: 60 }, children: [new TextRun({ text })] });
+const h2 = (text, o = {}) => new Paragraph({ heading: HeadingLevel.HEADING_2, pageBreakBefore: o.pageBreak, spacing: { before: o.before ?? 140, after: 60 }, children: [new TextRun({ text })] });
 const h3 = (text, o = {}) => new Paragraph({ heading: HeadingLevel.HEADING_3, spacing: { before: o.before ?? 120, after: 50 }, children: [new TextRun({ text })] });
 
 function moduleHead(num, eyebrow, title) {
@@ -165,18 +165,8 @@ function dataTable(weights, header, rows, o = {}) {
   return tbl(widths, out);
 }
 
-// Columnas sin bordes para acomodar bloques lado a lado. cols: [[ancho, hijos]]
-function layout(cols, { gap = GAP, vAlign } = {}) {
-  const widths = [], cells = [];
-  cols.forEach(([w, kids], i) => {
-    if (i > 0) { widths.push(gap); cells.push(spacerCell(gap)); }
-    widths.push(w);
-    cells.push(cell(w, kids, { vAlign, margins: { top: 0, bottom: 0, left: 0, right: 0 } }));
-  });
-  return tbl(widths, [new TableRow({ cantSplit: true, children: cells })]);
-}
-
-// Tarjetas con borde lado a lado. cols: [{ kids, fill, borders, w }]
+// Tarjetas con borde lado a lado (una sola fila, sin tablas anidadas). cols: [{ kids, fill, borders, w }]
+// split: true deja que la fila se parta entre páginas en lugar de recortarse.
 function cards(cols, o = {}) {
   const gap = o.gap ?? 120;
   const ws = o.widths ?? splitW(cols.map(c => c.w ?? 1), gap, o.width ?? CW);
@@ -189,7 +179,7 @@ function cards(cols, o = {}) {
       margins: o.margins ?? { top: 80, bottom: 80, left: 110, right: 110 },
     }));
   });
-  return tbl(widths, [new TableRow({ cantSplit: true, children: cells })]);
+  return tbl(widths, [new TableRow({ cantSplit: !o.split, children: cells })]);
 }
 
 function ficha(items) {
@@ -303,11 +293,26 @@ const section = (name, children) => ({
 });
 
 // ---------- Portada ----------
+// Sin tablas anidadas ni altura fija: una franja azul, los datos clave y la lista de módulos.
 function cover() {
-  const W = PAGE.w - 2 * 720;
+  const W = CW;
   const onDark = (text, o = {}) => p(text, { color: o.color ?? 'D4DCEA', size: o.size ?? 20, after: o.after ?? 0, before: o.before ?? 0, bold: o.bold, font: o.font, line: o.line ?? 260, caps: o.caps, spacing: o.spacing });
-  const inner = W - 2 * 620;
-  const sw = colWidths([1, 1, 1, 1], inner);
+  const pad = 520;
+  const band = tbl([W], [new TableRow({
+    children: [cell(W, [
+      new Paragraph({
+        tabStops: [{ type: TabStopType.RIGHT, position: W - 2 * pad }], spacing: { after: 0 },
+        children: [
+          new TextRun({ text: 'Autos Ochoa — Grupo Ochoa', allCaps: true, size: 14, color: 'AEBBD0', characterSpacing: 30, bold: true }),
+          new TextRun({ children: [new Tab(), 'Monterrey, Nuevo León'], allCaps: true, size: 14, color: 'AEBBD0', characterSpacing: 30, bold: true }),
+        ],
+      }),
+      onDark('Plan de talento · Parte 2', { before: 1500, after: 160, size: 17, bold: true, color: 'F3B27F', caps: true, spacing: 28 }),
+      new Paragraph({ spacing: { after: 0, lineRule: LineRuleType.AUTO, line: 240 }, children: [new TextRun({ text: 'Cómo vamos a formar, cuidar y hacer crecer a nuestra gente', font: SERIF, size: 64, color: C.white })] }),
+      onDark('Ocho acciones de Recursos Humanos para abrir cuatro sucursales nuevas sin perder lo que nos hace Autos Ochoa. Septiembre 2026 – agosto 2027.', { before: 300, size: 21, line: 300 }),
+    ], { fill: C.deep, margins: { top: pad, bottom: 620, left: pad, right: pad } })],
+  })]);
+  const sw = colWidths([1, 1, 1, 1], W);
   const stats = [
     ['1 → 5', 'sucursales en 12 meses', 'Guadalupe · San Nicolás · Apodaca · Saltillo'],
     ['8 → 34', 'personas en el equipo', '26 puestos nuevos'],
@@ -315,13 +320,13 @@ function cover() {
     ['4.5 → 49', 'autos al mes para no perder', '(punto de equilibrio)'],
   ];
   const statsTbl = tbl(sw, [new TableRow({
-    children: stats.map(([v, a, b], i) => cell(sw[i], [
+    children: stats.map(([v, a, b2], i) => cell(sw[i], [
       onDark(v, { size: 36, bold: true, color: C.white, after: 40 }),
-      onDark(a, { size: 15, color: 'AEBBD0', line: 230 }),
-      onDark(b, { size: 15, color: 'AEBBD0', line: 230 }),
+      onDark(a, { size: 15, color: 'C3CFE2', line: 230 }),
+      onDark(b2, { size: 15, color: 'C3CFE2', line: 230 }),
     ], {
-      borders: { top: ln('33496B', 6), bottom: ln('33496B', 6), left: i ? ln('33496B', 6) : NONE, right: NONE },
-      margins: { top: 140, bottom: 140, left: i ? 160 : 0, right: 100 },
+      fill: C.navy, borders: { ...noCell, left: i ? ln('33496B', 6) : NONE },
+      margins: { top: 200, bottom: 200, left: i ? 200 : pad, right: 100 },
     })),
   })]);
   const mods = [
@@ -334,50 +339,32 @@ function cover() {
     ['4', 'Desempeño y Competencias', 'Seis competencias y evaluación 360°'],
     ['8', 'Innovación y Excelencia', 'Las prácticas del fundador en el CRM y certificación'],
   ];
-  const mw = colWidths([1, 1], inner - 400);
-  const mwAll = [mw[0], 400, mw[1]];
+  const mw = colWidths([1, 1], W - 400);
   const modCell = ([n, t, d], w) => cell(w, [new Paragraph({
     spacing: { after: 0, lineRule: LineRuleType.AUTO, line: 240 },
     children: [
-      new TextRun({ text: `${n}   `, font: SERIF, bold: true, size: 22, color: 'F3B27F' }),
-      new TextRun({ text: t, size: 17, color: 'E4E9F2' }),
+      new TextRun({ text: `${n}   `, font: SERIF, bold: true, size: 24, color: C.accent }),
+      new TextRun({ text: t, size: 19, bold: true, color: C.ink }),
     ],
-  }), onDark(d, { size: 14, color: '98A8C0', line: 230 })], { borders: { ...noCell, bottom: ln('27405F', 4) }, margins: { top: 80, bottom: 80, left: 0, right: 0 } });
+  }), p(d, { size: 16, color: C.muted, after: 0, line: 240, indent: { left: 300 } })], { borders: { ...noCell, bottom: ln(C.line, 4) }, margins: { top: 110, bottom: 110, left: 0, right: 0 } });
   const modRows = [];
-  for (let i = 0; i < mods.length; i += 2) modRows.push(new TableRow({ children: [modCell(mods[i], mwAll[0]), spacerCell(400), modCell(mods[i + 1], mwAll[2])] }));
-  const modsTbl = tbl(mwAll, modRows);
-
-  const top = new Paragraph({
-    tabStops: [{ type: TabStopType.RIGHT, position: inner }], spacing: { after: 0 },
-    children: [
-      new TextRun({ text: 'Autos Ochoa — Grupo Ochoa', allCaps: true, size: 14, color: 'AEBBD0', characterSpacing: 30, bold: true }),
-      new TextRun({ children: [new Tab(), 'Monterrey, Nuevo León'], allCaps: true, size: 14, color: 'AEBBD0', characterSpacing: 30, bold: true }),
-    ],
-  });
-  const foot = new Paragraph({
-    tabStops: [{ type: TabStopType.RIGHT, position: inner }], spacing: { before: 700, after: 0 },
-    border: { top: { style: BorderStyle.SINGLE, size: 6, color: '33496B', space: 8 } },
-    children: [
-      new TextRun({ text: 'Administración del Talento Humano · Reto Final', size: 15, color: 'AEBBD0' }),
-      new TextRun({ children: [new Tab(), 'Septiembre 2026'], size: 15, color: 'AEBBD0' }),
-    ],
-  });
-  const body = [
-    top,
-    onDark('Plan de talento · Parte 2', { before: 1900, after: 160, size: 17, bold: true, color: 'F3B27F', caps: true, spacing: 28 }),
-    new Paragraph({ spacing: { after: 0, lineRule: LineRuleType.AUTO, line: 240 }, children: [new TextRun({ text: 'Cómo vamos a formar, cuidar y hacer crecer a nuestra gente', font: SERIF, size: 64, color: C.white })] }),
-    onDark('Ocho acciones de Recursos Humanos para abrir cuatro sucursales nuevas sin perder lo que nos hace Autos Ochoa. Septiembre 2026 – agosto 2027.', { before: 300, after: 700, size: 21, line: 300 }),
-    statsTbl,
-    new Paragraph({ spacing: { before: 0, after: 380 }, children: [] }),
-    modsTbl,
-    foot,
-  ];
+  for (let i = 0; i < mods.length; i += 2) modRows.push(new TableRow({ cantSplit: true, children: [modCell(mods[i], mw[0]), spacerCell(400), modCell(mods[i + 1], mw[1])] }));
   return {
-    properties: { page: { size: { width: PAGE.w, height: PAGE.h }, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 0, footer: 0 } } },
-    children: [tbl([W], [new TableRow({
-      height: { value: 13900, rule: HeightRule.ATLEAST }, cantSplit: true,
-      children: [cell(W, body, { fill: C.deep, margins: { top: 620, bottom: 560, left: 620, right: 620 } })],
-    })])],
+    properties: pageProps,
+    children: [
+      band,
+      statsTbl,
+      label('Las ocho acciones de este plan', C.accent, { size: 15, before: 520, after: 60 }),
+      tbl([mw[0], 400, mw[1]], modRows),
+      new Paragraph({
+        tabStops: tabRight, spacing: { before: 700, after: 0 },
+        border: { top: { style: BorderStyle.SINGLE, size: 6, color: C.line, space: 8 } },
+        children: [
+          new TextRun({ text: 'Administración del Talento Humano · Reto Final', size: 16, color: C.muted }),
+          new TextRun({ children: [new Tab(), 'Septiembre 2026'], size: 16, color: C.muted }),
+        ],
+      }),
+    ],
   };
 }
 
@@ -422,7 +409,6 @@ function resumen() {
 }
 
 function modulo1() {
-  const [wl, wr] = splitW([0.92, 1.08], 260);
   const levels = [
     ['Nivel 1 · Lo básico de Autos Ochoa', 'Primeros 30 días · 24 horas', ['Lo que prometemos al cliente: auto revisado, con garantía y papeles en orden', 'Usar el CRM y responder en menos de 2 horas', 'El crédito con las 5 financieras y el crédito propio', 'Lo que la ley pide al líder: horarios, domingos y registro de asistencia']],
     ['Nivel 2 · Dirigir la sucursal', 'Días 31 a 120 · 32 horas', ['Que ningún cliente se quede sin seguimiento', 'Cerrar la venta entendiendo lo que el cliente necesita', 'Mover los autos que llevan más de 90 días', 'Entender los números: margen por auto y punto de equilibrio']],
@@ -449,16 +435,16 @@ function modulo1() {
   return [
     ...moduleHead('01', 'Módulo 1 · Capacitación y Desarrollo', 'Academia Ochoa: preparar a cada gerente antes de abrir'),
     ficha([['Qué entregamos', 'Plan de formación mixto: presencial y en línea'], ['Objetivo al que apoya', '{OE-1}{OE-2}'], ['A quién va dirigido', 'Gerentes y asesores que pueden llegar a gerente'], ['Cómo sabremos que funciona', '100% de gerentes certificados 60 días antes de abrir']]),
-    layout([
-      [wl, [h3('Objetivo del programa'), p('Que cada gerente conozca y domine la forma de trabajar de Autos Ochoa **antes de abrir su sucursal**, y que en máximo **120 días** su sucursal venda al menos **10 autos al mes** con un cierre de 18% o más. Al mismo tiempo, preparar a 4 asesores senior para que puedan ser los próximos gerentes.', { after: 0 })]],
-      [wr, [h3('A quién va dirigido'), dataTable([38, 18, 27, 17], ['Quién', 'Personas', 'Qué cursa', { c: 'Horas/año', align: AlignmentType.RIGHT }], [
-        ['**Gerentes de Sucursal**', '5', 'Niveles 1, 2 y 3', { c: '80', align: AlignmentType.RIGHT }],
-        ['Asesores comerciales', '15', 'Nivel 1', { c: '48', align: AlignmentType.RIGHT }],
-        ['Asesores senior con potencial', '4', 'Además, Nivel 3', { c: '+40', align: AlignmentType.RIGHT }],
-        ['Coordinadores de expedientes', '5', 'Parte del Nivel 1', { c: '32', align: AlignmentType.RIGHT }],
-        ['Padrinos y Dir. Comercial', '2–5', 'Cómo enseñar', { c: '12', align: AlignmentType.RIGHT }],
-      ], { width: wr, pad: 24 })]],
-    ], { gap: 260 }),
+    h3('Objetivo del programa'),
+    p('Que cada gerente conozca y domine la forma de trabajar de Autos Ochoa **antes de abrir su sucursal**, y que en máximo **120 días** su sucursal venda al menos **10 autos al mes** con un cierre de 18% o más. Al mismo tiempo, preparar a 4 asesores senior para que puedan ser los próximos gerentes.', { after: 0 }),
+    h3('A quién va dirigido'),
+    dataTable([34, 12, 40, 14], ['Quién', 'Personas', 'Qué cursa', { c: 'Horas al año', align: AlignmentType.RIGHT }], [
+      ['**Gerentes de Sucursal**', '5', 'Niveles 1, 2 y 3', { c: '80', align: AlignmentType.RIGHT }],
+      ['Asesores comerciales', '15', 'Nivel 1', { c: '48', align: AlignmentType.RIGHT }],
+      ['Asesores senior con potencial', '4', 'Además, Nivel 3', { c: '+40', align: AlignmentType.RIGHT }],
+      ['Coordinadores de expedientes', '5', 'Parte del Nivel 1', { c: '32', align: AlignmentType.RIGHT }],
+      ['Padrinos y Dir. Comercial', '2–5', 'Cómo enseñar', { c: '12', align: AlignmentType.RIGHT }],
+    ], { pad: 20 }),
     h3('Temas clave · tres niveles'),
     tbl(lwAll, [new TableRow({ cantSplit: true, children: lvHead }), new TableRow({ cantSplit: true, children: lvBody })]),
     h3('Cómo se enseña · aprender haciendo (modelo 70-20-10)'),
@@ -503,10 +489,9 @@ function modulo2(charts) {
   for (let i = 0; i < dims.length; i += 2) {
     qRows.push(new TableRow({ cantSplit: true, children: [qHead(dims[i], qw[0]), spacerCell(200), qHead(dims[i + 1], qw[1])] }));
     qRows.push(new TableRow({ cantSplit: true, children: [qBody(dims[i], qw[0]), spacerCell(200), qBody(dims[i + 1], qw[1])] }));
-    if (i < dims.length - 2) qRows.push(new TableRow({ height: { value: 80, rule: HeightRule.EXACT }, children: [spacerCell(qw[0]), spacerCell(200), spacerCell(qw[1])] }));
+    if (i < dims.length - 2) qRows.push(new TableRow({ height: { value: 80, rule: HeightRule.ATLEAST }, children: [spacerCell(qw[0]), spacerCell(200), spacerCell(qw[1])] }));
   }
-  const [sl, sr] = splitW([1.1, 1], 260);
-  const scw = colWidths([1, 1, 1, 1, 1], sl);
+  const scw = colWidths([1, 1, 1, 1, 1], CW);
   const scale = [['1', 'Totalmente en desacuerdo'], ['2', 'En desacuerdo'], ['3', 'Ni de acuerdo ni en desacuerdo'], ['4', 'De acuerdo'], ['5', 'Totalmente de acuerdo']];
   const scaleTbl = tbl(scw, [new TableRow({
     cantSplit: true,
@@ -540,16 +525,19 @@ function modulo2(charts) {
     p('**Cómo es la encuesta.** Son 27 preguntas: 24 se contestan del 1 al 5, una pregunta si recomendarías Autos Ochoa como lugar para trabajar y dos son abiertas. Es **anónima**, toma unos 8 minutos y se contesta desde el celular con un enlace de WhatsApp. Solo mostramos resultados de grupos de 3 personas o más, para que nadie pueda ser identificado. Complementa la encuesta que pide la ley (NOM-035, Guía de Referencia II).'),
     h3('Las 24 preguntas, en 8 temas', { before: 60 }),
     tbl(qwAll, qRows),
-    layout([
-      [sl, [h3('Cómo se contesta · preguntas 1 a 24'), scaleTbl, small('**Favorable** = respuestas 4 y 5. Tema **fuerte**: 75% o más · **a vigilar**: 60–74% · **urgente**: menos de 60%.', { before: 50, after: 0 })]],
-      [sr, [h3('Tres preguntas más'), small('**25.** Del 0 al 10, ¿qué tanto recomendarías Autos Ochoa como lugar para trabajar? (eNPS: los que ponen 9–10 menos los que ponen 0–6)', { after: 30 }), small('**26.** ¿Qué es lo que más te hace querer quedarte?', { after: 30 }), small('**27.** Si pudieras cambiar una sola cosa de tu trabajo, ¿cuál sería?', { after: 0 })]],
-    ], { gap: 260 }),
+    h3('Cómo se contesta · preguntas 1 a 24'),
+    scaleTbl,
+    small('**Favorable** = respuestas 4 y 5. Tema **fuerte**: 75% o más · **a vigilar**: 60–74% · **urgente**: menos de 60%.', { before: 50, after: 0 }),
+    h3('Tres preguntas más'),
+    small('**25.** Del 0 al 10, ¿qué tanto recomendarías Autos Ochoa como lugar para trabajar? (eNPS: los que ponen 9–10 menos los que ponen 0–6)', { after: 20 }),
+    small('**26.** ¿Qué es lo que más te hace querer quedarte?', { after: 20 }),
+    small('**27.** Si pudieras cambiar una sola cosa de tu trabajo, ¿cuál sería?', { after: 0 }),
     h3('La experiencia del colaborador · seis momentos que vamos a cuidar'),
     cards(journey.map(([t, d], i) => ({ kids: [p(`${i + 1}`, { font: SERIF, bold: true, size: 22, color: C.accent, after: 0 }), p(t, { bold: true, size: SZ.small, after: 10 }), small(d, { size: 15, after: 0, line: 230 })], borders: { ...noCell, top: ln(C.navy, 18) } })), { gap: 100, margins: { top: 50, bottom: 20, left: 0, right: 40 } }),
     gap(),
     why('Con 8 personas el ambiente se nota en el pasillo; con 34 en cinco lugares, ya no. Además, la ley (NOM-035) nos pide revisar el estrés y la carga de trabajo.', 'Un equipo que no sabe quién atiende a cada cliente pierde ventas. Si mejora el clima, mejora el seguimiento y se va menos gente (OE-2 y OE-3).'),
 
-    h2('Resultados simulados · noviembre de 2026', { before: 240 }),
+    h2('Resultados simulados · noviembre de 2026', { before: 0, pageBreak: true }),
     small('Así podrían verse los resultados. Los armamos con lo que ya sabemos de la empresa por el diagnóstico interno y la Parte 1; la encuesta real se aplicará en noviembre.'),
     cards(tiles.map(([v, l]) => ({ kids: [p(v, { size: 30, bold: true, after: 10 }), small(l, { size: 15, after: 0, line: 230 })] })), { gap: 120 }),
     h3('% de respuestas favorables por tema · de mayor a menor'),
@@ -577,7 +565,6 @@ function modulo3() {
   const [ew1, ew2] = colWidths([4, 1], CW);
   const pillars = [['1 · Decides', 'Diriges tu sucursal y opinas en precios y campañas cada mes.', 'Prueba: consejo de gerentes'], ['2 · Creces', 'De asesor a gerente regional en 24 meses, con reglas claras.', 'Prueba: ascensos publicados'], ['3 · Ganas claro', 'Tu comisión sale del margen real y se paga completa en nómina.', 'Prueba: sueldos publicados'], ['4 · Herramientas', 'CRM con IA, Academia Ochoa y constancias oficiales.', 'Prueba: simulador'], ['5 · Mismas reglas', 'Una familia de 25 años con las mismas reglas para todos.', 'Prueba: Módulo 5']];
   const grp = text => ({ c: [label(text, C.navy, { size: 13, after: 0 })], span: 5, fill: C.soft });
-  const [rl, rr] = splitW([1.08, 1], 240);
   return [
     ...moduleHead('03', 'Módulo 3 · Employee Branding y Fidelización', 'Por qué trabajar aquí y cómo cuidamos al equipo'),
     ficha([['Qué entregamos', 'Propuesta de valor, plan de comunicación y acciones para retener'], ['Objetivo al que apoya', '{OE-3}{OE-1}'], ['A quién va dirigido', 'Gerentes y asesores senior, y quienes queremos atraer'], ['Cómo sabremos que funciona', 'Menos del 10% de gerentes se va al año']]),
@@ -604,23 +591,23 @@ function modulo3() {
       ['**Campaña por apertura**', '«Buscamos a quien dirija Ochoa Guadalupe»', '5 meses antes', 'Marketing y RH', 'Candidatos por vacante'],
       ['**LinkedIn y universidades**', 'Testimonios y entrar sin experiencia en autos', 'Cada semana', 'RH', 'Contratos por canal'],
     ], { pad: 22 }),
-    layout([
-      [rl, [h3('Para que la gente se quede'), ...bullets([
+    h3('Para que la gente se quede'),
+    ...bullets([
         '**Plática cada 3 meses** con gerentes y asesores senior: ¿qué te haría quedarte? Respuesta en 15 días.',
         '**Aviso en el CRM** si alguien baja su actividad o su ánimo: su jefe lo busca en menos de 7 días.',
         '**Ascensos primero para la gente de casa:** 20% de las gerencias el primer año y 60% después.',
         '**Beneficios que crecen con los años:** fondo de ahorro, auto a precio de costo e inversión en unidades desde el año 2.',
         '**«Club 10»:** la sucursal que se mantiene en su meta 3 meses gana viernes corto y cena con el fundador.',
         '**$8,000 por recomendar** a alguien que se queda 90 días, y puertas abiertas para quien se fue bien.',
-      ], { size: SZ.small, after: 20 })]],
-      [rr, [h3('Cómo sabremos que funciona'), dataTable([54, 22, 24], ['Qué medimos', 'Meta', 'Cada cuándo'], [
-        ['Gerentes que se van sin que queramos', '10% o menos', 'Cada año'],
-        ['Nuevos que siguen al año', '85% o más', 'Cada año'],
-        ['Contratados por recomendación', '40% o más', 'Cada año'],
-        ['Ofertas de gerente aceptadas', '85% o más', 'Por vacante'],
-        ['Pláticas de permanencia hechas', '100%', 'Trimestral'],
-      ], { width: rr, pad: 22 })]],
-    ], { gap: 240 }),
+    ], { size: SZ.small, after: 20 }),
+    h3('Cómo sabremos que funciona'),
+    dataTable([50, 25, 25], ['Qué medimos', 'Meta', 'Cada cuándo'], [
+      ['Gerentes que se van sin que queramos', '10% o menos', 'Cada año'],
+      ['Nuevos que siguen al año', '85% o más', 'Cada año'],
+      ['Contratados por recomendación', '40% o más', 'Cada año'],
+      ['Ofertas de gerente aceptadas', '85% o más', 'Por vacante'],
+      ['Pláticas de permanencia hechas', '100%', 'Trimestral'],
+    ], { pad: 18 }),
     gap(),
     why('Autos Trefa tiene más de 166 mil seguidores y más presupuesto. No les ganamos con publicidad; les ganamos con nuestra historia y con cómo tratamos a la gente.', 'Cada gerente que no se va ahorra ~$500,000 (OE-3). Cubrir vacantes con recomendaciones y canales propios ayuda a tener al gerente listo antes de abrir (OE-1).'),
   ];
@@ -637,8 +624,6 @@ function modulo4(charts) {
   const fbox = (w, kids, fill = C.soft, border = C.line) => cell(w, kids, { fill, borders: box(border), margins: { top: 60, bottom: 60, left: 110, right: 90 }, vAlign: VerticalAlign.CENTER });
   const sym = (w, s) => cell(w, [p(s, { size: 26, bold: true, align: AlignmentType.CENTER, after: 0 })], { vAlign: VerticalAlign.CENTER, margins: { top: 0, bottom: 0, left: 0, right: 0 } });
   const timeline = [['Cada mes', 'Plática 1 a 1', '30 minutos con su jefe para revisar el tablero.'], ['Gerente nuevo', 'Días 30, 90 y 120', 'El día 120 nos dice si contratamos bien.'], ['Febrero y agosto', 'Evaluación 360°', 'La primera será en febrero de 2027.'], ['Marzo y septiembre', 'Mapa de talento', 'Dirección y RH ubican a cada persona.'], ['Agosto', 'Cierre del año', 'Plan de desarrollo personal y revisión de sueldo.']];
-  const dotsW = Math.round(charts.dots.w * PX);
-  const [rl, rr] = splitW([1, 1], 240);
   return [
     ...moduleHead('04', 'Módulo 4 · Gestión del Desempeño y Competencias', 'Qué esperamos de un gerente: seis competencias medibles'),
     ficha([['Qué entregamos', 'Modelo de 6 competencias y evaluación 360°'], ['Objetivo al que apoya', '{OE-2}{OE-3}'], ['A quién va dirigido', 'Gerentes (360°); asesores con una versión corta'], ['Cómo sabremos que funciona', '4 de cada 5 gerentes en su meta a los 120 días']]),
@@ -691,19 +676,17 @@ function modulo4(charts) {
       ['< 2.0', '**No cumple**', 'Plan por escrito; en periodo de prueba se consulta a la Comisión Mixta antes de decidir'],
     ], { pad: 22 }),
     h3('Ejemplo · reporte 360° del Colaborador B, gerente de Guadalupe (simulado)'),
-    layout([
-      [dotsW, [img(charts.dots, charts.dots.w)]],
-      [CW - dotsW - 240, [callout('Cómo se lee', 'Él se da 3.8 en **formar a su equipo**, pero los demás le dan 2.7; coincide con que un asesor se fue. Calificación final: 50% × 4.6 (resultados) + 50% × 3.6 (competencias) = **4.1**. Siguiente paso: coaching para formar a su equipo.', { width: CW - dotsW - 240, size: SZ.small })]],
-    ], { gap: 240, vAlign: VerticalAlign.CENTER }),
-    layout([
-      [rl, [callout('Reglas para que sea justa', bullets(['Las reglas se acuerdan antes de evaluar y quien evalúa recibe 1 hora de capacitación para no calificar por simpatía.', 'Nadie ve quién dijo qué: solo se muestran grupos de 3 o más.', 'Cada año revisamos si las calificaciones de verdad predicen las ventas.'], { size: SZ.small, after: 20 }), { width: rl })]],
-      [rr, [dataTable([52, 22, 26], ['Cómo sabremos que funciona', 'Meta', 'Cada cuándo'], [
-        ['Gerentes en su meta a los 120 días', '80% o más', 'Día 120'],
-        ['Evaluaciones hechas a tiempo', '100%', 'Cada ciclo'],
-        ['Gerentes con nivel 3 o más en las seis', '80% o más', 'Agosto 2027'],
-        ['Planes personales con 80% de avance', '90% o más', 'Cada 6 meses'],
-      ], { width: rr, pad: 22 })]],
-    ], { gap: 240 }),
+    img(charts.dots, charts.dots.w),
+    callout('Cómo se lee', 'Él se da 3.8 en **formar a su equipo**, pero los demás le dan 2.7; coincide con que un asesor se fue. Calificación final: 50% × 4.6 (resultados) + 50% × 3.6 (competencias) = **4.1**. Siguiente paso: coaching para formar a su equipo.', { size: SZ.small }),
+    gap(),
+    callout('Reglas para que sea justa', bullets(['Las reglas se acuerdan antes de evaluar y quien evalúa recibe 1 hora de capacitación para no calificar por simpatía.', 'Nadie ve quién dijo qué: solo se muestran grupos de 3 o más.', 'Cada año revisamos si las calificaciones de verdad predicen las ventas.'], { size: SZ.small, after: 20 })),
+    h3('Cómo sabremos que funciona'),
+    dataTable([50, 25, 25], ['Qué medimos', 'Meta', 'Cada cuándo'], [
+      ['Gerentes en su meta a los 120 días', '80% o más', 'Día 120'],
+      ['Evaluaciones hechas a tiempo', '100%', 'Cada ciclo'],
+      ['Gerentes con nivel 3 o más en las seis', '80% o más', 'Agosto 2027'],
+      ['Planes personales con 80% de avance', '90% o más', 'Cada 6 meses'],
+    ], { pad: 18 }),
   ];
 }
 
@@ -737,16 +720,15 @@ function modulo5() {
         ['Nadie trabaja más de 2 domingos al mes; el rol se publica con un mes de anticipación y el domingo se paga con 25% extra.', 'Derecho a desconectarse: fuera de la guardia pagada, el asistente de IA contesta; nadie está obligado a responder.', 'Jornada de 46 horas desde el 1 de enero de 2027, sin bajar sueldos.', 'Oficinas: 1 día en casa por semana. Para todos: 5 días de paternidad extra, día libre en tu cumpleaños y sala de lactancia.'],
         [['Encuesta «carga y descanso» 60% o más', 'cada 6 meses'], ['Horas extra 4 o menos por semana', 'cada mes'], ['Nadie con más de 2 domingos', 'cada mes']],
         'Gerentes y RH', 'Base: LFT arts. 59, 66–71, 132 fr. XXXIV, 170 y 330-A · NOM-035 · GRI 401 · ODS 3 y 8'),
-    ], { gap: 120, margins: { top: 90, bottom: 90, left: 110, right: 100 } }),
+    ], { gap: 120, split: true, margins: { top: 90, bottom: 90, left: 110, right: 100 } }),
     gap(),
     why('Al pasar de 8 a 34 personas, cualquier mala costumbre se multiplica por cinco. Escribir estas reglas desde el principio evita repetir en cada sucursal lo que la ley sanciona.', 'Más candidatos para cubrir vacantes a tiempo (OE-1), menos rotación y menos riesgo de demandas (OE-3). Además nos prepara para la certificación de igualdad del Módulo 8.'),
   ];
 }
 
 function modulo6() {
-  const [wl, wr] = splitW([1, 1.12], 240);
-  const axisW = 760;
-  const cw3 = colWidths([1, 1, 1], wl - axisW);
+  const axisW = 900;
+  const cw3 = colWidths([1, 1, 1], CW - axisW);
   const fills = { l0: 'F3F4F6', l1: 'E8EEF7', l2: 'D9E6F7', l3: 'C3D8F4', l4: 'A9C8F0' };
   const nb = [
     ['Potencial alto', [['7', 'Diamante en bruto', 'Acelerar su aprendizaje', 'l2', 'C'], ['8', 'Futuro líder', 'Prepararlo para crecer', 'l3'], ['9', 'Estrella', 'Listo; cuidarlo', 'l4', 'A']]],
@@ -760,7 +742,7 @@ function modulo6() {
     ...(who ? [new Paragraph({ spacing: { after: 0 }, children: [badge(who)] })] : []),
   ], { fill: fills[l], borders: { top: ln(C.white, 16), bottom: ln(C.white, 16), left: ln(C.white, 16), right: ln(C.white, 16) }, margins: { top: 50, bottom: 50, left: 70, right: 50 } });
   const nbRows = nb.map(([pot, cells]) => new TableRow({
-    height: { value: 1050, rule: HeightRule.ATLEAST }, cantSplit: true,
+    height: { value: 820, rule: HeightRule.ATLEAST }, cantSplit: true,
     children: [cell(axisW, pot.split(' ').map(t => p(t, { size: 14, color: C.muted, bold: true, after: 0, line: 220 })), { vAlign: VerticalAlign.CENTER, margins: { top: 0, bottom: 0, left: 0, right: 60 } }), ...cells.map((c, i) => nbCell(c, cw3[i]))],
   }));
   nbRows.push(new TableRow({ children: [cell(axisW, [tiny()]), ...['Desempeño bajo', 'Desempeño medio', 'Desempeño alto'].map((t, i) => cell(cw3[i], [p(t, { size: 14, color: C.muted, bold: true, align: AlignmentType.CENTER, after: 0 })], { margins: { top: 30, bottom: 0, left: 0, right: 0 } }))] }));
@@ -777,24 +759,21 @@ function modulo6() {
     person('B', 'Colaborador B · Gerente de Guadalupe', 'Contratado de fuera · 120 días', [['Desempeño', '**Alto (4.1):** 11 autos al mes; llegó a su meta en el segundo mes.'], ['Potencial', '**Medio:** le cuesta formar a su equipo (2.7 en esa competencia) y un asesor ya se fue.'], ['Cuadro', '6 · Alto desempeño — mantenerlo en su puesto', true], ['Qué haremos', 'Coaching para formar a su equipo, con un padrino. Volvemos a revisar en septiembre. Todavía no es candidato a gerente regional.']]),
     person('C', 'Colaborador C · Asesor nuevo', 'Entró sin experiencia en autos · 4 meses', [['Desempeño', '**Bajo (2.5):** vende 2.3 autos al mes; la meta es 4. Sigue aprendiendo.'], ['Potencial', '**Alto:** la mejor calificación de su generación en la Academia (96 de 100) y muy bueno con la IA.'], ['Cuadro', '7 · Diamante en bruto — acelerar', true], ['Qué haremos', 'Plan de 90 días con el Colaborador A como padrino: 20 conversaciones acompañadas y meta de 4 autos al mes en el mes 7.']]),
   ];
-  const personTbl = tbl([wr], persons.flatMap((ps, i) => [
-    ...(i ? [new TableRow({ height: { value: 90, rule: HeightRule.EXACT }, children: [spacerCell(wr)] })] : []),
-    new TableRow({ cantSplit: true, children: [cell(wr, ps.kids, { borders: box(), margins: { top: 60, bottom: 60, left: 100, right: 90 } })] }),
-  ]));
   return [
     ...moduleHead('06', 'Módulo 6 · Sucesión y Talento Clave', 'Mapa de talento (9-Box): quién está listo para crecer'),
     ficha([['Qué entregamos', 'Mapa de talento de 9 cuadros y plan de sucesión'], ['Objetivo al que apoya', '{OE-1}{OE-3}'], ['A quién va dirigido', 'Gerentes y quienes podrían llegar a serlo'], ['Cómo sabremos que funciona', '6 de cada 10 puestos clave con reemplazo listo']]),
     gap(),
     p('**Cómo funciona.** El mapa cruza dos preguntas: **¿qué tan bien hace hoy su trabajo?** (desempeño: la calificación del Módulo 4) y **¿qué tanto puede crecer?** (potencial: qué tan rápido aprende en la Academia, cómo lidera, si quiere crecer y una prueba psicométrica). Dirección y RH lo revisan en marzo y septiembre. Ejemplo simulado a marzo de 2027.', { after: 100 }),
-    layout([
-      [wl, [nineBox, h3('Cómo sabremos que funciona'), dataTable([50, 22, 28], ['Qué medimos', 'Meta', 'Cada cuándo'], [
-        ['Puestos clave con reemplazo listo', '60%', 'Cada 6 meses'],
-        ['Gerencias cubiertas por gente de casa', '20% → 60%', 'Año 1 → año 2'],
-        ['Talento de los cuadros 7 a 9 que se queda', '100%', 'Cada año'],
-        ['Cuadros 7 a 9 con plan personal', '100%', 'Cada 6 meses'],
-      ], { width: wl, pad: 22 })]],
-      [wr, [personTbl]],
-    ], { gap: 240 }),
+    nineBox,
+    h3('Los tres colaboradores del ejemplo'),
+    cards(persons, { gap: 120, split: true, margins: { top: 70, bottom: 70, left: 100, right: 90 } }),
+    h3('Cómo sabremos que funciona'),
+    dataTable([50, 25, 25], ['Qué medimos', 'Meta', 'Cada cuándo'], [
+      ['Puestos clave con reemplazo listo', '60%', 'Cada 6 meses'],
+      ['Gerencias cubiertas por gente de casa', '20% → 60%', 'Año 1 → año 2'],
+      ['Talento de los cuadros 7 a 9 que se queda', '100%', 'Cada año'],
+      ['Cuadros 7 a 9 con plan personal', '100%', 'Cada 6 meses'],
+    ], { pad: 16 }),
     h3('Plan de sucesión que resulta'),
     dataTable([25, 14, 20, 11, 30], ['Puesto', 'Hoy lo ocupa', 'Quién lo podría ocupar', '¿Cuándo?', 'Siguiente paso'], [
       ['Gerente · Apodaca (Fase 2)', 'Vacante', 'Colaborador A', '**Ya**', 'Ascenso en marzo; ya tiene los niveles 1 y 2'],
@@ -808,12 +787,10 @@ function modulo6() {
 }
 
 function modulo7() {
-  const [wl, wr] = splitW([1, 1.05], 240);
   const flow = [['150 días antes', 'Se aprueba la vacante'], ['120 días', 'Se publica'], ['90 días', 'Prueba y oferta'], ['60 días', 'Gerente certificado', true], ['30 días', '3 asesores listos'], ['Día 0', 'Apertura'], ['Día 120', '10 autos al mes', true]];
   const fw = colWidths(flow.map(() => 1), CW);
-  const roleW = colWidths([0.95, 2], wl);
+  const roleW = colWidths([0.9, 3.1], CW);
   const roles = [['Quién decide qué va primero', 'Coordinación de RH, según los 3 objetivos.'], ['Quién facilita', 'El especialista de sistemas, que ya usa tableros en ventas.'], ['Quién trabaja', 'RH, sistemas, marketing, finanzas y un gerente invitado.'], ['Quién revisa', 'Dirección General y Comercial al final de cada ciclo.'], ['Reuniones', 'Planeación de 1 hora · 15 minutos diarios · revisión con Dirección · 30 minutos para ver qué mejorar.'], ['Tablero', 'Por hacer → Haciendo (máximo 3 por persona) → En revisión → Listo. «Listo» = publicado, medido y comunicado.']];
-  const [kl, kr] = splitW([1, 1], 240);
   return [
     ...moduleHead('07', 'Módulo 7 · Digitalización y Metodologías Ágiles', 'Herramientas que ya tenemos y trabajo en ciclos cortos'),
     ficha([['Qué entregamos', '4 herramientas digitales y trabajo en ciclos de 2 semanas (Scrum)'], ['Objetivo al que apoya', '{OE-1}{OE-2}{OE-3}'], ['A quién va dirigido', 'RH y gerentes, que usarán los tableros a diario'], ['Cómo sabremos que funciona', 'Vacante de gerente cubierta en 45 días o menos']]),
@@ -826,35 +803,34 @@ function modulo7() {
     ], { pad: 26 }),
     small('**Industria 4.0, en simple:** IA que sugiere y califica · aviso anticipado de salidas · todo en la nube y en el celular · mensajes automáticos · aprender jugando · decidir con datos al día.', { before: 60, after: 0 }),
     h3('Metodología ágil · trabajar en ciclos de dos semanas (Scrum) con un tablero de tareas (Kanban)'),
-    layout([
-      [wl, [tbl(roleW, roles.map(([k, v]) => new TableRow({ cantSplit: true, children: [cell(roleW[0], [p(k, { size: 15, bold: true, color: C.navy, after: 0, line: 230 })], { margins: { top: 20, bottom: 20, left: 0, right: 80 } }), cell(roleW[1], [p(v, { size: 15, after: 0, line: 230 })], { margins: { top: 20, bottom: 20, left: 0, right: 0 } })] })))]],
-      [wr, [dataTable([16, 84], ['Ciclo', 'Qué entregamos (octubre a diciembre 2026)'], [
-        ['1', 'Tablero de indicadores y tablero de candidatos en el CRM'],
-        ['2', 'Academia Nivel 1 en Classroom y las 3 políticas publicadas'],
-        ['3', 'Nómina y checador en la matriz; página de empleos'],
-        ['4', 'Checador en todas las sedes y encuesta «Pulso Ochoa»'],
-        ['5', 'Plan de mejora del clima y calculadora de comisiones'],
-        ['6', 'Formulario 360° y competencias en el CRM'],
-      ], { width: wr, pad: 20, size: 15 }), small('**Ejemplo de tarea:** «Como gerente nuevo, quiero mi curso del Nivel 1 en Classroom para certificarme 60 días antes de abrir».', { size: 15, before: 50, after: 0 })]],
-    ], { gap: 240 }),
+    tbl(roleW, roles.map(([k, v]) => new TableRow({ cantSplit: true, children: [cell(roleW[0], [p(k, { size: SZ.small, bold: true, color: C.navy, after: 0, line: 230 })], { borders: { ...noCell, bottom: ln(C.line2, 4) }, margins: { top: 30, bottom: 30, left: 0, right: 100 } }), cell(roleW[1], [p(v, { size: SZ.small, after: 0, line: 230 })], { borders: { ...noCell, bottom: ln(C.line2, 4) }, margins: { top: 30, bottom: 30, left: 0, right: 0 } })] }))),
+    h3('Primeros seis ciclos · octubre a diciembre 2026'),
+    dataTable([10, 90], ['Ciclo', 'Qué entregamos'], [
+      ['1', 'Tablero de indicadores y tablero de candidatos en el CRM'],
+      ['2', 'Academia Nivel 1 en Classroom y las 3 políticas publicadas'],
+      ['3', 'Nómina y checador en la matriz; página de empleos'],
+      ['4', 'Checador en todas las sedes y encuesta «Pulso Ochoa»'],
+      ['5', 'Plan de mejora del clima y calculadora de comisiones'],
+      ['6', 'Formulario 360° y competencias en el CRM'],
+    ], { pad: 14 }),
+    small('**Ejemplo de tarea:** «Como gerente nuevo, quiero mi curso del Nivel 1 en Classroom para certificarme 60 días antes de abrir».', { before: 50, after: 0 }),
     h3('Cada apertura es un tablero con fechas fijas'),
     tbl(fw, [new TableRow({ cantSplit: true, children: flow.map(([b, t, hit], i) => cell(fw[i], [p(b, { bold: true, size: 15, color: hit ? C.white : C.navy, after: 0 }), p(t, { size: 14, color: hit ? C.white : C.ink, after: 0, line: 220 })], { fill: hit ? C.navy : C.soft, borders: { ...noCell, right: i < flow.length - 1 ? ln(C.white, 16) : NONE }, margins: { top: 50, bottom: 50, left: 80, right: 50 } })) })]),
     gap(),
-    layout([
-      [kl, [dataTable([52, 22, 26], ['Cómo sabremos que funciona', 'Meta', 'Cada cuándo'], [
-        ['Días para cubrir una vacante de gerente', '45 o menos', 'Cada vacante'],
-        ['Tareas del ciclo terminadas', '80% o más', 'Cada 2 semanas'],
-        ['Gerentes certificados 60 días antes', '100%', 'Cada apertura'],
-        ['Gerentes que usan el tablero a diario', '5 de 5', 'Cada mes'],
-      ], { width: kl, pad: 22 })]],
-      [kr, [tbl([kr], [new TableRow({ cantSplit: true, children: [cell(kr, [label('Por qué lo hacemos y qué gana la empresa'), p('Una sola persona de RH tiene que cubrir 26 contrataciones y 4 aperturas en un año. Sin tableros ni ciclos cortos, RH se vuelve el cuello de botella. Con ellos, Dirección ve el avance cada dos semanas y ninguna sucursal abre sin gerente.', { size: SZ.small, after: 0, line: 240 })], { fill: C.accentSoft, borders: box(C.accentLine), margins: { top: 70, bottom: 70, left: 120, right: 120 } })] })])]],
-    ], { gap: 240 }),
+    h3('Cómo sabremos que funciona'),
+    dataTable([50, 25, 25], ['Qué medimos', 'Meta', 'Cada cuándo'], [
+      ['Días para cubrir una vacante de gerente', '45 o menos', 'Cada vacante'],
+      ['Tareas del ciclo terminadas', '80% o más', 'Cada 2 semanas'],
+      ['Gerentes certificados 60 días antes', '100%', 'Cada apertura'],
+      ['Gerentes que usan el tablero a diario', '5 de 5', 'Cada mes'],
+    ], { pad: 16 }),
+    gap(),
+    why('Una sola persona de RH tiene que cubrir 26 contrataciones y 4 aperturas en un año. Sin tableros ni ciclos cortos, RH se vuelve el cuello de botella. Con ellos, Dirección ve el avance cada dos semanas y ninguna sucursal abre sin gerente.'),
   ];
 }
 
 function modulo8() {
   const steps = [['1', 'Grabar', '12 charlas con el fundador (con su permiso) y el historial del CRM sin nombres de clientes.'], ['2', 'Ordenar', 'Unas 60 prácticas —valuar, tomar autos a cuenta, crédito, revisión— cargadas en el asistente de IA del CRM.'], ['3', 'Mejorar', 'Reuniones de 30 minutos cada dos semanas en cada sucursal (Kaizen): cada idea que funciona se suma al asistente.'], ['4', 'Llevar a todos', 'Prueba de 90 días en la matriz y Guadalupe (febrero–abril 2027) y después en las 5 sucursales.']];
-  const [wl, wr] = splitW([1, 1.1], 240);
   const tag = (text, fill = C.accent) => new TextRun({ text: ` ${text} `, bold: true, allCaps: true, size: 12, color: C.white, shading: { type: ShadingType.CLEAR, fill, color: 'auto' } });
   const certName = (name, sub, t, fill) => [new Paragraph({ spacing: { after: 10, lineRule: LineRuleType.AUTO, line: 230 }, children: [new TextRun({ text: name + ' ', bold: true, size: SZ.small }), tag(t, fill)] }), ...(sub ? [small(sub, { size: 15, after: 0, line: 230 })] : [])];
   return [
@@ -864,15 +840,14 @@ function modulo8() {
     p('Lo más valioso de Autos Ochoa son **25 años de experiencia del fundador**: cómo valuar un auto, cómo negociar cuando el cliente deja el suyo a cuenta, qué financiera aprueba a qué cliente. Con cinco sucursales, él no puede estar en todas. La idea es **poner ese conocimiento dentro del CRM** para que cualquier gerente lo consulte, y mejorarlo cada dos semanas con lo que aprendan las sucursales.'),
     cards(steps.map(([n, t, d]) => ({ kids: [p(n, { font: SERIF, bold: true, size: 28, color: C.accent, after: 0 }), p(t, { bold: true, size: SZ.small, after: 10 }), small(d, { size: 15, after: 0, line: 230 })] })), { gap: 100, margins: { top: 60, bottom: 60, left: 100, right: 80 } }),
     gap(),
-    layout([
-      [wl, [callout('Reglas de uso', bullets(['**Un comité al mes:** Dirección, sistemas, RH y un gerente.', 'Los datos de clientes se usan sin nombres y con el aviso de privacidad al día.', 'La IA sugiere, el gerente decide: en precios y créditos siempre revisa una persona.', 'Costo: ~$24,000 al año por el uso de la IA.'], { size: SZ.small, after: 20 }), { width: wl })]],
-      [wr, [dataTable([52, 22, 26], ['Cómo sabremos que funciona', 'Meta', 'Cada cuándo'], [
-        ['Días para que un gerente nuevo llegue a su meta', '90 o menos', 'Cada generación'],
-        ['Dudas que el asistente resuelve solo', '70% o más', 'Cada mes'],
-        ['Ideas de mejora puestas en práctica', '2 por sucursal', 'Cada 3 meses'],
-        ['Llamadas al fundador por dudas del día a día', '−50%', 'Cada 3 meses'],
-      ], { width: wr, pad: 22 })]],
-    ], { gap: 240 }),
+    callout('Reglas de uso', bullets(['**Un comité al mes:** Dirección, sistemas, RH y un gerente.', 'Los datos de clientes se usan sin nombres y con el aviso de privacidad al día.', 'La IA sugiere, el gerente decide: en precios y créditos siempre revisa una persona.', 'Costo: ~$24,000 al año por el uso de la IA.'], { size: SZ.small, after: 20 })),
+    h3('Cómo sabremos que funciona'),
+    dataTable([50, 25, 25], ['Qué medimos', 'Meta', 'Cada cuándo'], [
+      ['Días para que un gerente nuevo llegue a su meta', '90 o menos', 'Cada generación'],
+      ['Dudas que el asistente resuelve solo', '70% o más', 'Cada mes'],
+      ['Ideas de mejora puestas en práctica', '2 por sucursal', 'Cada 3 meses'],
+      ['Llamadas al fundador por dudas del día a día', '−50%', 'Cada 3 meses'],
+    ], { pad: 16 }),
     h2('Certificación recomendada'),
     dataTable([24, 24, 9, 16, 27], ['Certificación', 'Qué reconoce', 'Módulos', 'Tiempo · costo', 'Por qué nos sirve'], [
       [{ c: certName('Great Place to Work®', '', 'Año 1') }, 'Que el equipo confía y está a gusto (encuesta Trust Index©)', '2 · 3 · 5', '8–10 semanas · ~$45,000 estimado', 'Es un sello que ven los candidatos y mide lo que mejora el Módulo 2 (OE-3)'],
@@ -930,15 +905,15 @@ function cambios() {
   const faqCell = ([q, a], w) => cell(w, [p(q, { bold: true, after: 10 }), p(a, { color: C.ink2, after: 0, line: 245 })], { borders: { ...noCell, left: ln(C.navy, 18) }, margins: { top: 20, bottom: 20, left: 150, right: 60 } });
   const faqRows = [];
   for (let i = 0; i < faq.length; i += 2) {
-    if (i) faqRows.push(new TableRow({ height: { value: 110, rule: HeightRule.EXACT }, children: [spacerCell(fl), spacerCell(300), spacerCell(fr)] }));
+    if (i) faqRows.push(new TableRow({ height: { value: 110, rule: HeightRule.ATLEAST }, children: [spacerCell(fl), spacerCell(300), spacerCell(fr)] }));
     faqRows.push(new TableRow({ cantSplit: true, children: [faqCell(faq[i], fl), spacerCell(300), faqCell(faq[i + 1], fr)] }));
   }
   return [
     h1('Qué cambia para cada quien'),
     p('Este plan no es solo para Recursos Humanos. Esto es lo que cada persona va a notar en su día a día a partir de octubre.', { size: 20, color: C.ink2, after: 120 }),
-    cards([pc(people[0]), pc(people[1])], { gap: 160, margins: { top: 100, bottom: 100, left: 140, right: 120 } }),
+    cards([pc(people[0]), pc(people[1])], { gap: 160, split: true, margins: { top: 100, bottom: 100, left: 140, right: 120 } }),
     gap(),
-    cards([pc(people[2]), pc(people[3])], { gap: 160, margins: { top: 100, bottom: 100, left: 140, right: 120 } }),
+    cards([pc(people[2]), pc(people[3])], { gap: 160, split: true, margins: { top: 100, bottom: 100, left: 140, right: 120 } }),
     h2('Próximos 90 días'),
     cards(next.map(([s, b, items]) => ({ kids: [p(s, { size: 13, caps: true, bold: true, color: C.muted, spacing: 8, after: 10 }), p(b, { bold: true, after: 30 }), ...bullets(items, { size: SZ.small, after: 20 })], borders: { ...noCell, top: ln(C.accent, 18) } })), { gap: 160, margins: { top: 60, bottom: 20, left: 0, right: 60 } }),
     h2('Preguntas que seguramente vas a tener'),
@@ -949,7 +924,6 @@ function cambios() {
 }
 
 function conclusiones() {
-  const [wl, wr] = splitW([1, 1], 300);
   const ref = items => bullets(items, { size: 15, after: 15 });
   return [
     h1('Conclusiones'),
@@ -969,15 +943,9 @@ function conclusiones() {
       ['Que se gane menos por auto y solo se abran 3 sucursales', 'Media', 'El presupuesto se ajusta por apertura; las acciones sirven igual con menos sucursales', 'Todos'],
     ], { pad: 26 }),
     h2('Fuentes y referencias', { before: 200 }),
-    layout([
-      [wl, [
-        h3('De Autos Ochoa', { before: 0 }), ...ref(['Manual de Operaciones de RH y presentación del Sistema Integral de Gestión de Talento (SIGT), Parte 1, agosto de 2026.', 'Diagnóstico Estratégico y Cuestionario de Diagnóstico (ERP, CRM, ventas 2020–2026), agosto de 2026.', 'Plan de Crecimiento a 6 Meses, septiembre 2026 – febrero 2027.']),
+    h3('De Autos Ochoa', { before: 0 }), ...ref(['Manual de Operaciones de RH y presentación del Sistema Integral de Gestión de Talento (SIGT), Parte 1, agosto de 2026.', 'Diagnóstico Estratégico y Cuestionario de Diagnóstico (ERP, CRM, ventas 2020–2026), agosto de 2026.', 'Plan de Crecimiento a 6 Meses, septiembre 2026 – febrero 2027.']),
         h3('Leyes y normas'), ...ref(['Ley Federal del Trabajo: arts. 2, 3, 39-A a 39-D, 59, 66 a 71, 86, 132 fr. XXXIV, 133, 153-A y siguientes (capacitación y DC-3), 170 y 330-A.', 'Decreto de reducción de la jornada laboral, DOF 1 de mayo de 2026.', 'NOM-035-STPS-2018, factores de riesgo psicosocial (Guía de Referencia II).', 'NMX-R-025-SCFI-2015, Igualdad Laboral y No Discriminación.', 'Ley Federal para Prevenir y Eliminar la Discriminación; Ley Federal de Protección de Datos Personales en Posesión de los Particulares.']),
-      ]],
-      [wr, [
-        h3('Métodos', { before: 0 }), ...ref(['Kirkpatrick, D. y Kirkpatrick, J. (2006). __Evaluating Training Programs: The Four Levels__ (3.ª ed.). Berrett-Koehler.', 'Lombardo, M. y Eichinger, R. (1996). __The Career Architect Development Planner__ (modelo 70-20-10). Lominger.', 'Reichheld, F. (2003). The One Number You Need to Grow. __Harvard Business Review__ (base del eNPS).', 'Schwaber, K. y Sutherland, J. (2020). __La Guía de Scrum__. Scrum.org.', 'Anderson, D. (2010). __Kanban__. Blue Hole Press.', 'Matriz de desempeño y potencial (9-Box), derivada de la matriz GE-McKinsey.', 'Global Reporting Initiative: GRI 401, 404, 405 y 406.', 'Great Place to Work® — Trust Index©. Naciones Unidas — Agenda 2030, ODS 3, 5, 8 y 10.', 'Deming, W. E. — ciclo PDCA; Imai, M. (1986). __Kaizen__. McGraw-Hill.']),
-      ]],
-    ], { gap: 300 }),
+    h3('Métodos'), ...ref(['Kirkpatrick, D. y Kirkpatrick, J. (2006). __Evaluating Training Programs: The Four Levels__ (3.ª ed.). Berrett-Koehler.', 'Lombardo, M. y Eichinger, R. (1996). __The Career Architect Development Planner__ (modelo 70-20-10). Lominger.', 'Reichheld, F. (2003). The One Number You Need to Grow. __Harvard Business Review__ (base del eNPS).', 'Schwaber, K. y Sutherland, J. (2020). __La Guía de Scrum__. Scrum.org.', 'Anderson, D. (2010). __Kanban__. Blue Hole Press.', 'Matriz de desempeño y potencial (9-Box), derivada de la matriz GE-McKinsey.', 'Global Reporting Initiative: GRI 401, 404, 405 y 406.', 'Great Place to Work® — Trust Index©. Naciones Unidas — Agenda 2030, ODS 3, 5, 8 y 10.', 'Deming, W. E. — ciclo PDCA; Imai, M. (1986). __Kaizen__. McGraw-Hill.']),
   ];
 }
 
